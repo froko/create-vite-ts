@@ -1,0 +1,63 @@
+{
+  "name": "@froko/create-vite-ts",
+  "version": "1.0.0",
+  "description": "A CLI to bootstrap new vite-based TypeScript projects",
+  "keywords": [
+    "cli",
+    "create-vite-ts"
+  ],
+  "author": "Patrick Ineichen <github@frokonet.ch>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/froko/create-vite-ts.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install",
+    "format": "prettier . --write && eslint . --cache --fix",
+    "start": "node dist/index.js",
+    "build": "rimraf dist && node ./esbuild.js"
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "@froko/create-vite-ts": "dist/index.js",
+    "create-vite-ts": "dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "colorette": "^2.0.19",
+    "ejs": "^3.1.8",
+    "inquirer": "^9.1.1",
+    "yargs": "^17.5.1"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.1",
+    "@types/inquirer": "^9.0.1",
+    "@types/yargs": "^17.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "esbuild": "^0.15.7",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{html,css,scss,json,md}": "prettier --write"
+  }
+}
