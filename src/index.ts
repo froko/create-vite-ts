@@ -1,7 +1,12 @@
+import path from 'path';
+
+import { green } from 'colorette';
 import inquirer from 'inquirer';
 import yargs from 'yargs/yargs';
 
-import { argumentOptions, argumentQuestions, CliOptions } from './options';
+import { argumentOptions, argumentQuestions, CliOptions, getTemplate } from './options';
+import { createTasks } from './tasks';
+import { createProjectPath } from './template';
 
 const run = async () => {
   const args = await yargs(process.argv.slice(2))
@@ -14,11 +19,19 @@ const run = async () => {
     .parse();
 
   const argsWithProjectName = { ...args, projectName: args._[0] };
-  console.log(argsWithProjectName);
   const answers = await inquirer.prompt(argumentQuestions(argsWithProjectName));
-  const options = { ...argsWithProjectName, ...answers } as CliOptions;
+  const options = {
+    ...argsWithProjectName,
+    ...answers,
+    projectPath: path.join(process.cwd(), answers.projectName),
+    templatePath: path.join(__dirname, 'templates', getTemplate(answers))
+  } as CliOptions;
 
-  console.log('You have chosen the following options:', options);
+  if (await createProjectPath(options)) {
+    const tasks = createTasks(options);
+    await tasks.run();
+    console.log(green('Done.'));
+  }
 };
 
 run();

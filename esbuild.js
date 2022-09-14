@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
-import { writeFile, mkdir } from 'fs/promises';
+import { writeFile, mkdir, readdir, readFile, stat } from 'fs/promises';
+import * as path from 'path';
 
 import * as esbuild from 'esbuild';
 
@@ -24,7 +25,30 @@ const script = esbuild.buildSync({
   }
 });
 
+const copyTemplates = async (templatePath) => {
+  const ignoreFiles = ['node_modules', 'dist', 'package-lock.json', '.eslintcache'];
+  const files = await readdir(path.resolve(process.cwd(), templatePath));
+
+  files.forEach(async (file) => {
+    if (ignoreFiles.indexOf(file) >= 0) return;
+
+    const sourcePath = path.join(templatePath, file);
+    const targetPath = path.join('dist', templatePath, file);
+    const stats = await stat(sourcePath);
+
+    if (stats.isFile()) {
+      const contents = await readFile(sourcePath, 'utf8');
+      await writeFile(targetPath, contents, 'utf8');
+    } else if (stats.isDirectory()) {
+      await mkdir(targetPath);
+      await copyTemplates(path.join(templatePath, file));
+    }
+  });
+};
+
 (async () => {
   await mkdir('dist');
+  await mkdir('dist/templates');
+  await copyTemplates('templates');
   await writeFile('dist/index.js', `#!/usr/bin/env node\n${script.outputFiles[0].text}`);
 })();
