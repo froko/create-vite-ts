@@ -47,6 +47,7 @@ export class SatisfactionStar extends LitElement {
       <fa-icon
         id="${this.productId}-${this.position}"
         class="${this.styling}"
+        path-prefix=""
         size="2rem"
         @click=${this.dispatchClick}
       ></fa-icon>
