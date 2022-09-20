@@ -16,7 +16,9 @@
     "prepare": "husky install",
     "format": "prettier . --write && eslint . --cache --fix",
     "start": "node dist/index.js",
-    "build": "rimraf dist && node ./esbuild.js"
+    "build": "rimraf dist && node ./esbuild.js",
+    "preversion": "npm run build",
+    "postversion": "git push && git push --tags"
   },
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
