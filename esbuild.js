@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
-import { writeFile, mkdir, readdir, readFile, stat } from 'fs/promises';
+import { writeFile, mkdir, readdir, readFile, stat, copyFile } from 'fs/promises';
 import * as path from 'path';
 
 import * as esbuild from 'esbuild';
@@ -33,7 +33,7 @@ const copyTemplates = async (templatePath) => {
     if (ignoreFiles.indexOf(file) >= 0) return;
 
     const sourcePath = path.join(templatePath, file);
-    const targetPath = path.join('dist', templatePath, file);
+    const targetPath = path.join('dist', templatePath, file === '.gitignore' ? '_gitignore' : file);
     const stats = await stat(sourcePath);
 
     if (stats.isFile()) {

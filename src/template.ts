@@ -23,7 +23,12 @@ export const copyTemplate = async (templatePath: string, options: CliOptions, su
   const files = await readdir(templatePath);
   files.forEach(async (file) => {
     const sourcePath = path.join(templatePath, file);
-    const targetPath = path.join(currentPath, options.projectName, subDirectory, file);
+    const targetPath = path.join(
+      currentPath,
+      options.projectName,
+      subDirectory,
+      file === '_gitignore' ? '.gitignore' : file
+    );
     const stats = await stat(sourcePath);
 
     if (stats.isFile()) {
