@@ -3,15 +3,17 @@
 export interface CliOptions {
   projectName: string;
   projectPath: string;
-  lit: boolean;
-  tailwind: boolean;
   template: string;
   templatePath: string;
+  lit: boolean;
+  tailwind: boolean;
+  cypress: boolean;
 }
 
 export const argumentOptions: any = {
   lit: { type: 'boolean', alias: 'l', description: 'Add Lit dependency' },
-  tailwind: { type: 'boolean', alias: 't', description: 'Add TailwindCSS dependency' }
+  tailwind: { type: 'boolean', alias: 't', description: 'Add TailwindCSS dependency' },
+  cypress: { type: 'boolean', alias: 'c', description: 'Add Cypress.io dependency' }
 };
 
 interface Template {
@@ -47,6 +49,13 @@ export const argumentQuestions = (options: any) => {
       message: 'Chose template:',
       choices: templates,
       when: () => !typedOptions.lit && !typedOptions.tailwind
+    },
+    {
+      name: 'cypress',
+      type: 'confirm',
+      message: 'Include Cypress.io?',
+      when: () => !typedOptions.cypress,
+      default: false
     }
   ];
 };

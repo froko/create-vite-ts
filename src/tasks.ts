@@ -2,20 +2,17 @@ import { execa } from 'execa';
 import Listr from 'listr';
 import { projectInstall } from 'pkg-install';
 
+import { createCypressTasks } from './cypress';
 import { CliOptions } from './options';
 import { copyTemplate } from './template';
 
 const initGit = async (options: CliOptions) => {
-  const result = await execa('git', ['init'], {
+  await execa('git', ['init'], {
     cwd: options.projectPath
   });
-  if (result.failed) {
-    return Promise.reject(new Error('Failed to initialize git'));
-  }
-  return;
 };
 
-const initHusky = async (options: CliOptions) => {
+const installHusky = async (options: CliOptions) => {
   await execa('npx', ['husky', 'install'], {
     cwd: options.projectPath
   });
@@ -45,8 +42,13 @@ export const createTasks = (options: CliOptions): Listr => {
         })
     },
     {
-      title: 'Initialize husky',
-      task: () => initHusky(options)
+      title: 'Install Husky',
+      task: () => installHusky(options)
+    },
+    {
+      title: 'Install Cypress.io',
+      task: () => createCypressTasks(options),
+      enabled: () => options.cypress
     }
   ]);
 };

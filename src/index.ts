@@ -20,11 +20,15 @@ const run = async () => {
 
   const argsWithProjectName = { ...args, projectName: args._[0] };
   const answers = await inquirer.prompt(argumentQuestions(argsWithProjectName));
+  const template = getTemplate(answers);
   const options = {
     ...argsWithProjectName,
     ...answers,
+    template: template,
+    templatePath: path.join(__dirname, 'templates', template),
     projectPath: path.join(process.cwd(), answers.projectName),
-    templatePath: path.join(__dirname, 'templates', getTemplate(answers))
+    lit: template.includes('lit'),
+    tailwind: template.includes('tailwind')
   } as CliOptions;
 
   if (await createProjectPath(options)) {
