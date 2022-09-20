@@ -8,12 +8,14 @@ export interface CliOptions {
   lit: boolean;
   tailwind: boolean;
   cypress: boolean;
+  storybook: boolean;
 }
 
 export const argumentOptions: any = {
   lit: { type: 'boolean', alias: 'l', description: 'Add Lit dependency' },
   tailwind: { type: 'boolean', alias: 't', description: 'Add TailwindCSS dependency' },
-  cypress: { type: 'boolean', alias: 'c', description: 'Add Cypress.io dependency' }
+  cypress: { type: 'boolean', alias: 'c', description: 'Add Cypress.io dependency' },
+  storybook: { type: 'boolean', alias: 's', description: 'Add Storybook dependency' }
 };
 
 interface Template {
@@ -55,6 +57,15 @@ export const argumentQuestions = (options: any) => {
       type: 'confirm',
       message: 'Include Cypress.io?',
       when: () => !typedOptions.cypress,
+      default: false
+    },
+    {
+      name: 'storybook',
+      type: 'confirm',
+      message: 'Include Storybook',
+      when: (answers: CliOptions) => {
+        return (answers.template.includes('lit') || typedOptions.lit) && !typedOptions.storybook;
+      },
       default: false
     }
   ];

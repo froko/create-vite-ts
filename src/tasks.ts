@@ -4,6 +4,7 @@ import { projectInstall } from 'pkg-install';
 
 import { createCypressTasks } from './cypress';
 import { CliOptions } from './options';
+import { createStorybookTasks } from './storybook';
 import { copyTemplate } from './template';
 
 const initGit = async (options: CliOptions) => {
@@ -49,6 +50,11 @@ export const createTasks = (options: CliOptions): Listr => {
       title: 'Install Cypress.io',
       task: () => createCypressTasks(options),
       enabled: () => options.cypress
+    },
+    {
+      title: 'Install Storybook',
+      task: () => createStorybookTasks(options),
+      enabled: () => options.storybook
     }
   ]);
 };

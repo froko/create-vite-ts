@@ -7,6 +7,7 @@ import { TwLitElement } from './tailwind';
 @customElement('satisfaction-star')
 export class SatisfactionStar extends TwLitElement {
   @state() private styling = '';
+  @state() private pathPrefix = import.meta.env.PROD ? '' : 'node_modules';
 
   @property({ type: String, attribute: 'product-id' }) productId = '';
   @property({ type: Number }) position = 0;
@@ -33,7 +34,7 @@ export class SatisfactionStar extends TwLitElement {
       <fa-icon
         id="${this.productId}-${this.position}"
         class=${this.styling}
-        path-prefix=""
+        path-prefix="${this.pathPrefix}"
         size="2rem"
         @click=${this.dispatchClick}
       ></fa-icon>
