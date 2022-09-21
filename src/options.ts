@@ -54,7 +54,7 @@ export const argumentQuestions = (options: any) => {
       type: 'list',
       message: 'Chose template:',
       choices: templates,
-      when: () => !typedOptions.lit && !typedOptions.tailwind
+      when: () => !typedOptions.lit && !typedOptions.tailwind && !typedOptions.react
     },
     {
       name: 'cypress',
