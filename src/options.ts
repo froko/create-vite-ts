@@ -6,6 +6,7 @@ export interface CliOptions {
   template: string;
   templatePath: string;
   lit: boolean;
+  react: boolean;
   tailwind: boolean;
   cypress: boolean;
   storybook: boolean;
@@ -13,6 +14,7 @@ export interface CliOptions {
 
 export const argumentOptions: any = {
   lit: { type: 'boolean', alias: 'l', description: 'Add Lit dependency' },
+  react: { type: 'boolean', alias: 'r', description: 'Add React dependency' },
   tailwind: { type: 'boolean', alias: 't', description: 'Add TailwindCSS dependency' },
   cypress: { type: 'boolean', alias: 'c', description: 'Add Cypress.io dependency' },
   storybook: { type: 'boolean', alias: 's', description: 'Add Storybook dependency' }
@@ -27,7 +29,9 @@ const templates: Template[] = [
   { value: 'vanilla-ts', name: 'Vanilla TypeScript' },
   { value: 'vanilla-ts-tailwind', name: 'Vanilla TypeScript with TailwindCSS' },
   { value: 'lit-ts', name: 'Lit' },
-  { value: 'lit-ts-tailwind', name: 'Lit with TailwindCSS' }
+  { value: 'lit-ts-tailwind', name: 'Lit with TailwindCSS' },
+  { value: 'react-ts', name: 'React' },
+  { value: 'react-ts-tailwind', name: 'React with TailwindCSS' }
 ];
 
 export const argumentQuestions = (options: any) => {
@@ -64,7 +68,13 @@ export const argumentQuestions = (options: any) => {
       type: 'confirm',
       message: 'Include Storybook',
       when: (answers: CliOptions) => {
-        return (answers.template.includes('lit') || typedOptions.lit) && !typedOptions.storybook;
+        return (
+          (answers.template.includes('lit') ||
+            typedOptions.lit ||
+            answers.template.includes('react') ||
+            typedOptions.react) &&
+          !typedOptions.storybook
+        );
       },
       default: false
     }
@@ -76,6 +86,6 @@ export const getTemplate = (options: CliOptions): string => {
     return options.template;
   }
 
-  const mainVariant = options.lit ? 'lit-ts' : 'vanilla-ts';
+  const mainVariant = options.lit ? 'lit-ts' : options.react ? 'react-ts' : 'vanilla-ts';
   return options.tailwind ? `${mainVariant}-tailwind` : mainVariant;
 };

@@ -1,0 +1,16 @@
+.fa {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+.checked {
+  color: var(--orange500);
+}
+
+.action {
+  cursor: pointer;
+}
+
+.action:hover {
+  color: var(--orange700);
+}

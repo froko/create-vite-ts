@@ -1,0 +1,23 @@
+import RatingContainer from './RatingContainer';
+import './OverallSatisfaction.css';
+
+interface OverallSatisfactionProps {
+  rating: number;
+}
+
+const OverallSatisfaction = (props: OverallSatisfactionProps) => {
+  return (
+    <div id="overall-satisfaction" className="overall-satisfaction">
+      <h2>Overall Satisfaction</h2>
+      <span></span>
+      <RatingContainer
+        productId="overall-satisfaction"
+        rating={props.rating}
+        clickable={false}
+        productRatingChange={() => undefined}
+      />
+    </div>
+  );
+};
+
+export default OverallSatisfaction;

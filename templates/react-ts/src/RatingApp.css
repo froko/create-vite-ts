@@ -1,0 +1,24 @@
+h1 {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--indigo900);
+}
+
+.responsive-container {
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 1rem;
+  margin: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .responsive-container {
+    grid-auto-flow: column;
+    column-gap: 1rem;
+  }
+}

@@ -1,0 +1,9 @@
+.rating {
+  margin-top: 0.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .rating {
+    margin-top: 2rem;
+  }
+}
