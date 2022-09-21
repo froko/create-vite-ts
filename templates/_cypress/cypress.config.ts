@@ -7,5 +7,13 @@ export default defineConfig({
     viewportHeight: 768,
     video: false<% if (lit) { %>,
     includeShadowDom: true<% } %>
-  }
+  }<% if (react) { %>,
+  component: {
+    viewportWidth: 1024,
+    viewportHeight: 768,
+    devServer: {
+      framework: 'react',
+      bundler: 'vite'
+    }
+ }<% } %>
 });

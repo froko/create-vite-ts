@@ -29,7 +29,7 @@ const RatingApp = (props: RatingAppProps) => {
       <h1 className="mt-12 text-center text-4xl font-semibold text-indigo-900 lg:text-5xl">
         {products.map((p) => p.title).join(' - ')}
       </h1>
-      <div className="m-4 grid grid-flow-row gap-4 lg:mt-8 lg:grid-flow-col">
+      <div id="products" className="m-4 grid grid-flow-row gap-4 lg:mt-8 lg:grid-flow-col">
         {products.map((p) => (
           <ProductSatisfaction product={p} key={p.id} productRatingChange={handleProductRatingChange} />
         ))}

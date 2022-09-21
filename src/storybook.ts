@@ -9,28 +9,33 @@ import { install } from 'pkg-install';
 
 import { CliOptions } from './options';
 
-const storybookSourcePath = () => path.join(__dirname, 'templates', 'storybook');
+const subDirectory = (templatePath: string) => {
+  if (!templatePath) return '';
 
-const copyTemplate = async (options: CliOptions, subDirectory = '') => {
-  const templatePath = path.join(storybookSourcePath(), subDirectory);
-  const currentPath = process.cwd();
-  const files = await readdir(templatePath);
+  const parts = templatePath.split('/');
+  const index = parts.lastIndexOf('_storybook');
+  return parts.slice(index + 1).join('/');
+};
+
+const copyTemplate = async (templatePath: string, options: CliOptions) => {
   const ignoreFiles = options.tailwind ? [] : ['preview-body.html'];
+
+  const files = await readdir(templatePath);
   files.forEach(async (file) => {
-    if (ignoreFiles.indexOf(file) >= 0) return;
+    if (ignoreFiles.filter((pattern) => file.endsWith(pattern)).length > 0) return;
 
     const sourcePath = path.join(templatePath, file);
-    const targetPath = path.join(currentPath, options.projectName, subDirectory, file);
+    const targetPath = path.join(process.cwd(), options.projectName, subDirectory(templatePath), file);
     const stats = await stat(sourcePath);
 
     if (stats.isFile()) {
       const contents = await readFile(sourcePath, 'utf8');
-      await writeFile(targetPath, ejs.render(contents, options), 'utf8');
+      await writeFile(path.join(targetPath), ejs.render(contents, options), 'utf8');
     } else if (stats.isDirectory()) {
       if (!existsSync(targetPath)) {
         await mkdir(targetPath);
       }
-      await copyTemplate(options, file);
+      await copyTemplate(path.join(templatePath, file), options);
     }
   });
 };
@@ -45,7 +50,7 @@ export const createStorybookTasks = (options: CliOptions): Listr => {
   return new Listr([
     {
       title: 'Copy template files',
-      task: () => copyTemplate(options)
+      task: () => copyTemplate(path.join(__dirname, 'templates', '_storybook'), options)
     },
     {
       title: 'Install dependencies',

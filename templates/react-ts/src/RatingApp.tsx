@@ -28,7 +28,7 @@ const RatingApp = (props: RatingAppProps) => {
   return (
     <>
       <h1>{products.map((p) => p.title).join(' - ')}</h1>
-      <div className="responsive-container">
+      <div id="products" className="responsive-container">
         {products.map((p) => (
           <ProductSatisfaction product={p} key={p.id} productRatingChange={handleProductRatingChange} />
         ))}

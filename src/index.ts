@@ -28,6 +28,7 @@ const run = async () => {
     templatePath: path.join(__dirname, 'templates', template),
     projectPath: path.join(process.cwd(), answers.projectName),
     lit: template.includes('lit'),
+    react: template.includes('react'),
     tailwind: template.includes('tailwind')
   } as CliOptions;
 
