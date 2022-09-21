@@ -10,8 +10,8 @@ export class OverallSatisfaction extends TwLitElement {
 
   render() {
     return html`
-      <div id="overall-satisfaction" class="flex h-full flex-col rounded-lg bg-indigo-900 p-8 shadow-2xl">
-        <h2 class="mb-4 text-center text-3xl font-medium text-indigo-50">Overall Satisfaction</h2>
+      <div id="overall-satisfaction" class="flex h-full flex-col rounded-lg bg-indigo-900 p-2 drop-shadow-lg lg:p-8">
+        <h2 class="mb-4 text-center text-2xl font-medium text-indigo-50 lg:text-3xl">Overall Satisfaction</h2>
         <span class="grow"></span>
         <rating-container product-id="overall-satisfaction" rating="${this.overallRating}"></rating-container>
       </div>

@@ -8,26 +8,36 @@ import './rating-container';
 export class ProductSatisfaction extends LitElement {
   static styles = css`
     .product-satisfaction {
-      padding: 2rem;
+      padding: 0.5rem;
       border-radius: 0.5rem;
       text-align: center;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       display: flex;
       flex-direction: column;
-      height: 8rem;
     }
 
     a {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       display: block;
       color: var(--indigo900);
       font-weight: bold;
       text-decoration: none;
-      margin-bottom: 1rem;
     }
 
     .product-satisfaction span {
       flex-grow: 1;
+    }
+
+    @media screen and (min-width: 1024px) {
+      .product-satisfaction {
+        padding: 2rem;
+        height: 8rem;
+      }
+
+      a {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
     }
   `;
 

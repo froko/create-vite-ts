@@ -11,7 +11,7 @@ export class OverallSatisfaction {
   get asHtmlElement() {
     const titleElement = document.createElement('h2');
     titleElement.innerText = 'Overall Satisfaction';
-    titleElement.classList.add('mb-4', 'text-center', 'text-3xl', 'font-medium', 'text-indigo-50');
+    titleElement.classList.add('mb-4', 'text-center', 'text-2xl', 'font-medium', 'text-indigo-50', 'lg:text-3xl');
 
     const flexGrowElement = document.createElement('span');
     flexGrowElement.classList.add('grow');
@@ -19,7 +19,16 @@ export class OverallSatisfaction {
 
     const overallContainer = document.createElement('div');
     overallContainer.id = 'overall-satisfaction';
-    overallContainer.classList.add('h-full', 'flex', 'flex-col', 'rounded-lg', 'bg-indigo-900', 'p-8', 'shadow-xl');
+    overallContainer.classList.add(
+      'flex',
+      'h-full',
+      'flex-col',
+      'rounded-lg',
+      'bg-indigo-900',
+      'p-2',
+      'drop-shadow-lg',
+      'lg:p-8'
+    );
     overallContainer.appendChild(titleElement);
     overallContainer.appendChild(flexGrowElement);
     overallContainer.appendChild(ratingContainerElement);

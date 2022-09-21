@@ -24,7 +24,7 @@ export class RatingApp extends TwLitElement {
       <h1 class="mt-12 text-center text-4xl font-semibold text-indigo-900 lg:text-5xl">
         ${this.products.map((p) => p.title).join(' - ')}
       </h1>
-      <div id="products" class="m-4 mt-8 grid grid-flow-row gap-4 lg:grid-flow-col">
+      <div id="products" class="m-4 grid grid-flow-row gap-4 lg:mt-8 lg:grid-flow-col">
         ${this.products.map(
           (p) =>
             html`<product-satisfaction

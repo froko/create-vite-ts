@@ -8,7 +8,7 @@ export class ProductSatisfaction {
     const titleElement = document.createElement('a');
     titleElement.href = this.product.url;
     titleElement.innerText = this.product.title;
-    titleElement.classList.add('mb-4', 'text-center', 'text-3xl', 'font-medium', 'text-indigo-900');
+    titleElement.classList.add('mb-4', 'text-center', 'text-2xl', 'font-medium', 'text-indigo-900', 'lg:text-3xl');
 
     const descriptionElement = document.createElement('span');
     descriptionElement.innerText = this.product.description;
@@ -18,7 +18,16 @@ export class ProductSatisfaction {
 
     const productContainer = document.createElement('div');
     productContainer.id = this.product.id;
-    productContainer.classList.add('h-full', 'flex', 'flex-col', 'rounded-xl', 'p-8', 'shadow-2xl');
+    productContainer.classList.add(
+      'flex',
+      'h-full',
+      'flex-col',
+      'rounded-xl',
+      'bg-indigo-100',
+      'p-2',
+      'drop-shadow-lg',
+      'lg:p-8'
+    );
     productContainer.appendChild(titleElement);
     productContainer.appendChild(descriptionElement);
     productContainer.appendChild(ratingContainerElement);

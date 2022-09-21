@@ -10,7 +10,7 @@ export class SatisfactionStar {
     const element = document.createElement('span');
     element.id = `${this.productId}-${this.position}`;
     element.setAttribute('rating', this.position.toString());
-    element.classList.add('fa', 'fa-star', 'text-4xl', 'mx-2');
+    element.classList.add('fa', 'fa-star', 'mx-1', 'text-3xl');
 
     if (this.checked) {
       element.setAttribute('checked', '');

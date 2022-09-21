@@ -11,7 +11,7 @@ export class RatingContainer {
 
   get asHtmlElement() {
     const ratingContainer = document.createElement('div');
-    ratingContainer.classList.add('mt-8', 'text-center');
+    ratingContainer.classList.add('mt-2', 'text-center', 'lg:mt-8');
     this.stars.forEach((e) => ratingContainer.appendChild(e.asHtmlElement));
 
     return ratingContainer;
