@@ -13,44 +13,38 @@ const cypressSourcePath = () => path.join(__dirname, 'templates', '_cypress');
 const subDirectory = (templatePath: string) => {
   if (!templatePath) return '';
 
-  const parts = templatePath.split('/');
-  const index = parts.lastIndexOf('_cypress');
-  return parts
-    .slice(index + 1)
-    .join('/')
-    .replace('-react-ts', '')
-    .replace('-tailwind', '');
+  const directoryParts = templatePath.split('/');
+  const index = directoryParts.lastIndexOf('_cypress');
+  return directoryParts.slice(index + 1).join('/');
 };
 
 const copyTemplate = async (templatePath: string, options: CliOptions) => {
-  const ignoreFiles = ['e2e'];
+  let ignoreFiles = ['component'];
+  let ignoreFolders = ['e2e', 'react', 'tailwind'];
 
-  if (!options.react) {
-    ignoreFiles.push('react-ts');
-  } else {
-    ignoreFiles.push('support');
-    if (!options.tailwind) {
-      ignoreFiles.push('tailwind');
-    }
+  if (options.react) {
+    ignoreFiles = ignoreFiles.filter((f) => f !== 'component');
+    ignoreFolders = ignoreFolders.filter((f) => f !== 'react');
+  }
+
+  if (options.tailwind) {
+    ignoreFolders = ignoreFolders.filter((f) => f !== 'tailwind');
   }
 
   const files = await readdir(templatePath);
   files.forEach(async (file) => {
-    if (ignoreFiles.filter((pattern) => file.endsWith(pattern)).length > 0) return;
-
     const sourcePath = path.join(templatePath, file);
-    const targetPath = path.join(
-      process.cwd(),
-      options.projectName,
-      subDirectory(templatePath),
-      file.replace('-react-ts', '').replace('-tailwind', '')
-    );
+    const targetPath = path.join(process.cwd(), options.projectName, subDirectory(templatePath), file);
     const stats = await stat(sourcePath);
 
     if (stats.isFile()) {
+      if (ignoreFiles.filter((pattern) => file.includes(pattern)).length > 0) return;
+
       const contents = await readFile(sourcePath, 'utf8');
       await writeFile(path.join(targetPath), ejs.render(contents, options), 'utf8');
     } else if (stats.isDirectory()) {
+      if (ignoreFolders.filter((pattern) => file.includes(pattern)).length > 0) return;
+
       if (!existsSync(targetPath)) {
         await mkdir(targetPath);
       }

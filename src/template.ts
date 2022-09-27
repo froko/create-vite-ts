@@ -19,6 +19,12 @@ export const createProjectPath = async (options: CliOptions): Promise<boolean> =
 };
 
 export const copyTemplate = async (templatePath: string, options: CliOptions, subDirectory = ''): Promise<void> => {
+  let ignoreFiles = ['cy.ts'];
+
+  if (options.cypress) {
+    ignoreFiles = ignoreFiles.filter((f) => f !== 'cy.ts');
+  }
+
   const currentPath = process.cwd();
   const files = await readdir(templatePath);
   files.forEach(async (file) => {
@@ -32,6 +38,8 @@ export const copyTemplate = async (templatePath: string, options: CliOptions, su
     const stats = await stat(sourcePath);
 
     if (stats.isFile()) {
+      if (ignoreFiles.filter((pattern) => file.includes(pattern)).length > 0) return;
+
       const contents = await readFile(sourcePath, 'utf8');
       await writeFile(targetPath, ejs.render(contents, options), 'utf8');
     } else if (stats.isDirectory()) {
