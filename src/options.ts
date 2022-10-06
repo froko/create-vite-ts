@@ -34,16 +34,12 @@ const templates: Template[] = [
   { value: 'react-ts-tailwind', name: 'React with TailwindCSS' }
 ];
 
-export const argumentQuestions = (options: any) => {
-  const typedOptions = options as Partial<CliOptions>;
-  typedOptions.template = getTemplate(options);
-
+export const argumentQuestions = () => {
   return [
     {
       name: 'projectName',
       type: 'input',
       message: 'Project name:',
-      when: () => !typedOptions.projectName,
       validate: (input: string) => {
         if (/^([A-Za-z\-\\_\d])+$/.test(input)) return true;
         else return 'Project name may only include letters, numbers, underscores and hashes.';
@@ -53,14 +49,12 @@ export const argumentQuestions = (options: any) => {
       name: 'template',
       type: 'list',
       message: 'Chose template:',
-      choices: templates,
-      when: () => !typedOptions.lit && !typedOptions.tailwind && !typedOptions.react
+      choices: templates
     },
     {
       name: 'cypress',
       type: 'confirm',
       message: 'Include Cypress.io?',
-      when: () => !typedOptions.cypress,
       default: false
     },
     {
@@ -68,13 +62,7 @@ export const argumentQuestions = (options: any) => {
       type: 'confirm',
       message: 'Include Storybook',
       when: (answers: CliOptions) => {
-        return (
-          (answers.template.includes('lit') ||
-            typedOptions.lit ||
-            answers.template.includes('react') ||
-            typedOptions.react) &&
-          !typedOptions.storybook
-        );
+        return answers.template.includes('lit') || answers.template.includes('react');
       },
       default: false
     }
