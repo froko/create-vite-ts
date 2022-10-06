@@ -24,7 +24,7 @@ const run = async () => {
   const options = {
     ...argsWithProjectName,
     ...answers,
-    template: template,
+    template,
     templatePath: path.join(__dirname, 'templates', template),
     projectPath: path.join(process.cwd(), answers.projectName),
     lit: template.includes('lit'),

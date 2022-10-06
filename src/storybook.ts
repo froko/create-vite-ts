@@ -18,17 +18,25 @@ const subDirectory = (templatePath: string) => {
 };
 
 const copyTemplate = async (templatePath: string, options: CliOptions) => {
-  const ignoreFiles = options.tailwind ? [] : ['preview-body.html'];
+  let ignoreFiles = ['preview-body.html', 'preview-head.html'];
+
+  if (options.react) {
+    ignoreFiles = ignoreFiles.filter((f) => f !== 'preview-head.html');
+  }
+
+  if (options.tailwind) {
+    ignoreFiles = ignoreFiles.filter((f) => f !== 'preview-body.html');
+  }
 
   const files = await readdir(templatePath);
   files.forEach(async (file) => {
-    if (ignoreFiles.filter((pattern) => file.endsWith(pattern)).length > 0) return;
-
     const sourcePath = path.join(templatePath, file);
     const targetPath = path.join(process.cwd(), options.projectName, subDirectory(templatePath), file);
     const stats = await stat(sourcePath);
 
     if (stats.isFile()) {
+      if (ignoreFiles.filter((pattern) => file.includes(pattern)).length > 0) return;
+
       const contents = await readFile(sourcePath, 'utf8');
       await writeFile(path.join(targetPath), ejs.render(contents, options), 'utf8');
     } else if (stats.isDirectory()) {
@@ -38,6 +46,38 @@ const copyTemplate = async (templatePath: string, options: CliOptions) => {
       await copyTemplate(path.join(templatePath, file), options);
     }
   });
+};
+
+const installDependencies = async (options: CliOptions) => {
+  await install(
+    {
+      '@babel/core': undefined,
+      '@storybook/addon-essentials': undefined,
+      '@storybook/builder-vite': undefined,
+      'babel-loader': undefined
+    },
+    { cwd: options.projectPath, dev: true }
+  );
+
+  if (options.lit) {
+    await install(
+      {
+        '@storybook/web-components': undefined,
+        react: '^17.0.2',
+        'react-dom': '^17.0.2'
+      },
+      { cwd: options.projectPath, dev: true }
+    );
+  }
+
+  if (options.react) {
+    await install(
+      {
+        '@storybook/react': undefined
+      },
+      { cwd: options.projectPath, dev: true }
+    );
+  }
 };
 
 const setupNpmScripts = async (options: CliOptions) => {
@@ -54,19 +94,7 @@ export const createStorybookTasks = (options: CliOptions): Listr => {
     },
     {
       title: 'Install dependencies',
-      task: () =>
-        install(
-          {
-            '@babel/core': undefined,
-            '@storybook/addon-essentials': undefined,
-            '@storybook/builder-vite': undefined,
-            '@storybook/web-components': undefined,
-            'babel-loader': undefined,
-            react: '^17.0.2',
-            'react-dom': '^17.0.2'
-          },
-          { cwd: options.projectPath, dev: true }
-        )
+      task: () => installDependencies(options)
     },
     {
       title: 'Set up npm scripts',
