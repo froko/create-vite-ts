@@ -1,7 +1,7 @@
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-essentials'],
-  framework: <% if (lit) { %>'@storybook/web-components'<% } else if (react) { %>'@storybook/react'<% } %>,
+  framework: '@storybook/web-components',
   core: {
     builder: '@storybook/builder-vite'
   },
