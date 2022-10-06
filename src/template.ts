@@ -19,10 +19,14 @@ export const createProjectPath = async (options: CliOptions): Promise<boolean> =
 };
 
 export const copyTemplate = async (templatePath: string, options: CliOptions, subDirectory = ''): Promise<void> => {
-  let ignoreFiles = ['cy.ts'];
+  let ignoreFiles = ['cy.ts', 'stories.ts'];
 
   if (options.cypress) {
     ignoreFiles = ignoreFiles.filter((f) => f !== 'cy.ts');
+  }
+
+  if (options.storybook) {
+    ignoreFiles = ignoreFiles.filter((f) => f !== 'stories.ts');
   }
 
   const currentPath = process.cwd();
