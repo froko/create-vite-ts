@@ -5,9 +5,8 @@ export default defineConfig({
     baseUrl: 'http://localhost:3000',
     viewportWidth: 1024,
     viewportHeight: 768,
-    video: false<% if (lit) { %>,
-    includeShadowDom: true<% } %>
-  }<% if (react) { %>,
+    video: false
+  },
   component: {
     viewportWidth: 1024,
     viewportHeight: 768,
@@ -15,5 +14,5 @@ export default defineConfig({
       framework: 'react',
       bundler: 'vite'
     }
- }<% } %>
+  }
 });
