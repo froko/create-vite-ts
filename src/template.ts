@@ -22,7 +22,7 @@ export const copyTemplate = async (templatePath: string, options: CliOptions, su
   const ignoreFiles: string[] = [];
 
   if (!options.cypress) {
-    ignoreFiles.push('cy.ts');
+    ignoreFiles.push('cypress', 'cy.ts');
   }
 
   if (!options.storybook) {
