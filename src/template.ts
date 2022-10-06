@@ -18,7 +18,16 @@ export const createProjectPath = async (options: CliOptions): Promise<boolean> =
   return true;
 };
 
-export const copyTemplate = async (templatePath: string, options: CliOptions, subDirectory = ''): Promise<void> => {
+const subDirectory = (templatePath: string, templateName: string): string => {
+  if (!templatePath) return '';
+
+  const folders = templatePath.split('/');
+  const index = folders.lastIndexOf(templateName);
+  return folders.slice(index + 1).join('/');
+};
+
+export const copyTemplate = async (templatePath: string, options: CliOptions): Promise<void> => {
+  const files = await readdir(templatePath);
   const ignoreFiles: string[] = [];
 
   if (!options.cypress) {
@@ -29,26 +38,24 @@ export const copyTemplate = async (templatePath: string, options: CliOptions, su
     ignoreFiles.push('.storybook', 'stories.ts', '.npmrc');
   }
 
-  const currentPath = process.cwd();
-  const files = await readdir(templatePath);
   files.forEach(async (file) => {
     if (ignoreFiles.filter((pattern) => file.includes(pattern)).length > 0) return;
 
     const sourcePath = path.join(templatePath, file);
+    const stats = await stat(sourcePath);
     const targetPath = path.join(
-      currentPath,
+      process.cwd(),
       options.projectName,
-      subDirectory,
+      subDirectory(templatePath, options.template),
       file === '_gitignore' ? '.gitignore' : file
     );
-    const stats = await stat(sourcePath);
 
     if (stats.isFile()) {
       const contents = await readFile(sourcePath, 'utf8');
       await writeFile(targetPath, ejs.render(contents, options), 'utf8');
     } else if (stats.isDirectory()) {
       await mkdir(targetPath);
-      await copyTemplate(path.join(templatePath, file), options, file);
+      await copyTemplate(path.join(templatePath, file), options);
     }
   });
 };
