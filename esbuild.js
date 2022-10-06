@@ -26,8 +26,8 @@ const script = esbuild.buildSync({
 });
 
 const copyTemplates = async (templatePath) => {
-  const ignoreFiles = ['node_modules', 'dist', 'package-lock.json', '.eslintcache'];
   const files = await readdir(path.resolve(process.cwd(), templatePath));
+  const ignoreFiles = ['node_modules', 'dist', 'package-lock.json', '.eslintcache'];
 
   files.forEach(async (file) => {
     if (ignoreFiles.indexOf(file) >= 0) return;
