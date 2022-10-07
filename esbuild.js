@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
+import { read } from 'fs';
 import { writeFile, mkdir, readdir, readFile, stat } from 'fs/promises';
 import * as path from 'path';
 
@@ -46,9 +47,15 @@ const copyTemplates = async (templatePath) => {
   });
 };
 
+const copyReadme = async () => {
+  const contents = await readFile('README.md', 'utf-8');
+  await writeFile('dist/README.md', contents, 'utf-8');
+};
+
 (async () => {
   await mkdir('dist');
   await mkdir('dist/templates');
   await copyTemplates('templates');
+  await copyReadme();
   await writeFile('dist/index.js', `#!/usr/bin/env node\n${script.outputFiles[0].text}`);
 })();
