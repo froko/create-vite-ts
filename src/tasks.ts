@@ -17,7 +17,7 @@ const installHusky = async (options: CliOptions) => {
   await execa('npx', ['husky', 'install'], {
     cwd: options.projectPath
   });
-  await execa('npm', ['pkg', 'set', 'scripts.prepare=husky install'], {
+  await execa('npm', ['pkg', 'set', 'scripts.prepare=npx husky install -y'], {
     cwd: options.projectPath
   });
   await execa('npx', ['husky', 'add', '.husky/pre-commit', 'npx lint-staged'], {
