@@ -1,4 +1,9 @@
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
+
+library.add(faStar);
 
 import './SatisfactionStar.css';
 
@@ -14,24 +19,26 @@ const SatisfactionStar = (props: SatisfactionStarProps) => {
   const [className, setClassName] = useState('');
 
   useEffect(() => {
-    let c = 'fa fa-star';
+    let classes = 'icon';
     if (props.checked) {
-      c += ' checked';
+      classes += ' checked';
     }
     if (props.clickable) {
-      c += ' action';
+      classes += ' action';
     }
 
-    setClassName(c);
+    setClassName(classes);
   }, [props.checked, props.clickable]);
 
   return (
-    <span
+    <FontAwesomeIcon
       id={`${props.productId}-${props.position}`}
+      icon={['fas', 'star']}
+      size="2x"
       className={className}
       role="presentation"
       onClick={() => props.starClick({ productId: props.productId, rating: props.position })}
-    ></span>
+    />
   );
 };
 
