@@ -21,7 +21,30 @@ export default {
 } as Meta;
 
 export const Default: StoryObj = {
-  name: 'Default',
+  args: {
+    productId: 'storybook',
+    rating: 3,
+    clickable: false
+  }
+};
+
+export const Disappointed: StoryObj = {
+  args: {
+    productId: 'storybook',
+    rating: 1,
+    clickable: false
+  }
+};
+
+export const VerySatisfied: StoryObj = {
+  args: {
+    productId: 'storybook',
+    rating: 5,
+    clickable: false
+  }
+};
+
+export const Clickable: StoryObj = {
   args: {
     productId: 'storybook',
     rating: 3,

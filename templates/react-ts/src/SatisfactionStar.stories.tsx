@@ -18,7 +18,31 @@ const Template: ComponentStory<typeof SatisfactionStar> = (args) => <Satisfactio
 export const Default = Template.bind({});
 Default.args = {
   productId: 'storybook',
-  position: 3,
+  position: 1,
+  checked: false,
+  clickable: false
+};
+
+export const Checked = Template.bind({});
+Checked.args = {
+  productId: 'storybook',
+  position: 1,
+  checked: true,
+  clickable: false
+};
+
+export const Clickable = Template.bind({});
+Clickable.args = {
+  productId: 'storybook',
+  position: 1,
+  checked: false,
+  clickable: true
+};
+
+export const CheckedAndClickable = Template.bind({});
+CheckedAndClickable.args = {
+  productId: 'storybook',
+  position: 1,
   checked: true,
   clickable: true
 };

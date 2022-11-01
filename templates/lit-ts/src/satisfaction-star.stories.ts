@@ -22,11 +22,37 @@ export default {
 } as Meta;
 
 export const Default: StoryObj = {
-  name: 'Default',
   args: {
     productId: 'storybook',
     position: 1,
     checked: false,
+    clickable: false
+  }
+};
+
+export const Checked: StoryObj = {
+  args: {
+    productId: 'storybook',
+    position: 1,
+    checked: true,
+    clickable: false
+  }
+};
+
+export const Clickable: StoryObj = {
+  args: {
+    productId: 'storybook',
+    position: 1,
+    checked: false,
+    clickable: true
+  }
+};
+
+export const ClickableAndChecked: StoryObj = {
+  args: {
+    productId: 'storybook',
+    position: 1,
+    checked: true,
     clickable: true
   }
 };

@@ -9,7 +9,6 @@ export default {
 } as Meta;
 
 export const Default: StoryObj = {
-  name: 'Default',
   args: {
     products: [
       {
