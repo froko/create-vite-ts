@@ -1,6 +1,6 @@
 {
   "name": "@froko/create-vite-ts",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "A CLI to bootstrap new vite-based TypeScript projects",
   "keywords": [
     "cli",
