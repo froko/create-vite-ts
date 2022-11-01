@@ -13,17 +13,18 @@ A CLI to bootstrap new vite-based TypeScript projects. Rely on hand-crafted inst
 - Lit (optional)
 - React (optional)
 - Cypress.io (optional)
+- Playwright (optional)
 - Storybook (optional)
 
 ## Quick start
 
-`npm init @froko/vite-ts`
+`npm init @froko/vite-ts@latest`
 
 It will ask the following questions:
 
 - Project name
 - Template type
-- Include Cypress.io?
+- Testing framework
 - Include Storybook?
 
 The CLI will create a new directory named by the project name.
@@ -38,6 +39,12 @@ The git repo is already initialized due to the installation of Husky. It's recom
 - React
 - React with TailwindCSS
 
+## Available testing frameworks
+
+- Cypress.io
+- Playwright
+- None (if you don't want to benefit from e2e and component testing)
+
 ## npm scripts
 
 ### Available in all templates:
@@ -50,6 +57,11 @@ The git repo is already initialized due to the installation of Husky. It's recom
 
 - `npm run cypress`: Starts the application & runs Cypress.io in visual mode
 - `npm run cypress:ci`: Builds and serves the application & runs Cypress.io in headless mode
+
+### Only available with Playwright option:
+
+- `npm run playwright`: Runs your playwright e2e tests in different headless browsers
+- `npm run playwright:report`: Shows the Playwright HTML report of the last test run
 
 ### Only available with Storybook option:
 
