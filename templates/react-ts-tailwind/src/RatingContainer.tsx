@@ -1,6 +1,6 @@
 import SatisfactionStar from './SatisfactionStar';
 
-interface RatingContainerProps {
+export interface RatingContainerProps {
   productId: string;
   rating: number;
   clickable: boolean;
