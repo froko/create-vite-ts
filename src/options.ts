@@ -1,24 +1,16 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 export interface CliOptions {
   projectName: string;
-  projectPath: string;
   template: string;
+  testingFramework: string;
   templatePath: string;
+  projectPath: string;
   lit: boolean;
   react: boolean;
   tailwind: boolean;
   cypress: boolean;
+  playwright: boolean;
   storybook: boolean;
 }
-
-export const argumentOptions: any = {
-  lit: { type: 'boolean', alias: 'l', description: 'Add Lit dependency' },
-  react: { type: 'boolean', alias: 'r', description: 'Add React dependency' },
-  tailwind: { type: 'boolean', alias: 't', description: 'Add TailwindCSS dependency' },
-  cypress: { type: 'boolean', alias: 'c', description: 'Add Cypress.io dependency' },
-  storybook: { type: 'boolean', alias: 's', description: 'Add Storybook dependency' }
-};
 
 interface Template {
   value: string;
@@ -32,6 +24,12 @@ const templates: Template[] = [
   { value: 'lit-ts-tailwind', name: 'Lit with TailwindCSS' },
   { value: 'react-ts', name: 'React' },
   { value: 'react-ts-tailwind', name: 'React with TailwindCSS' }
+];
+
+const testingFrameworks: Template[] = [
+  { value: 'none', name: 'None' },
+  { value: 'cypress', name: 'Cypress.io' },
+  { value: 'playwright', name: 'Playwright' }
 ];
 
 export const argumentQuestions = () => {
@@ -52,10 +50,10 @@ export const argumentQuestions = () => {
       choices: templates
     },
     {
-      name: 'cypress',
-      type: 'confirm',
-      message: 'Include Cypress.io?',
-      default: false
+      name: 'testingFramework',
+      type: 'list',
+      message: 'Chose testing framework:',
+      choices: testingFrameworks
     },
     {
       name: 'storybook',
@@ -67,13 +65,4 @@ export const argumentQuestions = () => {
       default: false
     }
   ];
-};
-
-export const getTemplate = (options: CliOptions): string => {
-  if (options.template) {
-    return options.template;
-  }
-
-  const mainVariant = options.lit ? 'lit-ts' : options.react ? 'react-ts' : 'vanilla-ts';
-  return options.tailwind ? `${mainVariant}-tailwind` : mainVariant;
 };

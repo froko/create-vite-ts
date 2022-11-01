@@ -34,6 +34,10 @@ export const copyTemplate = async (templatePath: string, options: CliOptions): P
     ignoreFiles.push('cypress', 'cy.ts');
   }
 
+  if (!options.playwright) {
+    ignoreFiles.push('playwright', 'spec.ts');
+  }
+
   if (!options.storybook) {
     ignoreFiles.push('.storybook', 'stories.ts', '.npmrc');
   }
