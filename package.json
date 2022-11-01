@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "prepare": "npx husky install -y",
+    "prepare": "npx --yes husky install",
     "format": "prettier . --write && eslint . --cache --fix",
     "start": "node dist/index.js",
     "build": "rimraf dist && node ./esbuild.js",
