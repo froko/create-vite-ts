@@ -4,6 +4,7 @@ import { projectInstall } from 'pkg-install';
 
 import { createCypressTasks } from './cypress';
 import { CliOptions } from './options';
+import { createPlaywrightTasks } from './playwright';
 import { createStorybookTasks } from './storybook';
 import { copyTemplate } from './template';
 
@@ -50,6 +51,11 @@ export const createTasks = (options: CliOptions): Listr => {
       title: 'Install Cypress.io',
       task: () => createCypressTasks(options),
       enabled: () => options.cypress
+    },
+    {
+      title: 'Install Playwright',
+      task: () => createPlaywrightTasks(options),
+      enabled: () => options.playwright
     },
     {
       title: 'Install Storybook',
