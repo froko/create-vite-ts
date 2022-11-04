@@ -17,7 +17,9 @@ const run = async () => {
     react: answers.template.includes('react'),
     tailwind: answers.template.includes('tailwind'),
     cypress: answers.testingFramework.includes('cypress'),
-    playwright: answers.testingFramework.includes('playwright')
+    playwright: answers.testingFramework.includes('playwright'),
+    storybook: answers.componentExplorer.includes('storybook'),
+    ladle: answers.componentExplorer.includes('ladle')
   } as CliOptions;
 
   if (await createProjectPath(options)) {

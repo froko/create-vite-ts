@@ -26,6 +26,13 @@ const subDirectory = (templatePath: string, templateName: string): string => {
   return folders.slice(index + 1).join('/');
 };
 
+const rename = (file: string): string => {
+  return file
+    .replace('_gitignore', '.gitignore')
+    .replace('.storybook.tsx', '.stories.tsx')
+    .replace('.ladle.tsx', '.stories.tsx');
+};
+
 export const copyTemplate = async (templatePath: string, options: CliOptions): Promise<void> => {
   const files = await readdir(templatePath);
   const ignoreFiles: string[] = [];
@@ -39,7 +46,11 @@ export const copyTemplate = async (templatePath: string, options: CliOptions): P
   }
 
   if (!options.storybook) {
-    ignoreFiles.push('.storybook', 'stories.ts', '.npmrc');
+    ignoreFiles.push('.storybook', '.npmrc');
+  }
+
+  if (!options.ladle) {
+    ignoreFiles.push('.ladle');
   }
 
   files.forEach(async (file) => {
@@ -51,7 +62,7 @@ export const copyTemplate = async (templatePath: string, options: CliOptions): P
       process.cwd(),
       options.projectName,
       subDirectory(templatePath, options.template),
-      file === '_gitignore' ? '.gitignore' : file
+      rename(file)
     );
 
     if (stats.isFile()) {
