@@ -3,6 +3,7 @@ import Listr from 'listr';
 import { projectInstall } from 'pkg-install';
 
 import { createCypressTasks } from './cypress';
+import { createLadleTasks } from './ladle';
 import { CliOptions } from './options';
 import { createPlaywrightTasks } from './playwright';
 import { createStorybookTasks } from './storybook';
@@ -61,6 +62,11 @@ export const createTasks = (options: CliOptions): Listr => {
       title: 'Install Storybook',
       task: () => createStorybookTasks(options),
       enabled: () => options.storybook
+    },
+    {
+      title: 'Install Ladle',
+      task: () => createLadleTasks(options),
+      enabled: () => options.ladle
     }
   ]);
 };

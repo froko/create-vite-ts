@@ -2,6 +2,7 @@ export interface CliOptions {
   projectName: string;
   template: string;
   testingFramework: string;
+  componentExplorer: string;
   templatePath: string;
   projectPath: string;
   lit: boolean;
@@ -10,6 +11,7 @@ export interface CliOptions {
   cypress: boolean;
   playwright: boolean;
   storybook: boolean;
+  ladle: boolean;
 }
 
 interface Template {
@@ -30,6 +32,11 @@ const testingFrameworks: Template[] = [
   { value: 'none', name: 'None' },
   { value: 'cypress', name: 'Cypress.io' },
   { value: 'playwright', name: 'Playwright' }
+];
+
+const componentExplorers: Template[] = [
+  { value: 'none', name: 'None' },
+  { value: 'storybook', name: 'Storybook' }
 ];
 
 export const argumentQuestions = () => {
@@ -56,13 +63,18 @@ export const argumentQuestions = () => {
       choices: testingFrameworks
     },
     {
-      name: 'storybook',
-      type: 'confirm',
-      message: 'Include Storybook',
-      when: (answers: CliOptions) => {
-        return answers.template.includes('lit') || answers.template.includes('react');
-      },
-      default: false
+      name: 'componentExplorer',
+      type: 'list',
+      message: 'Chose component explorer:',
+      when: (answers: CliOptions) => !answers.template.includes('vanilla-ts'),
+      choices: (answers: CliOptions) => {
+        const choices = componentExplorers;
+        if (answers.template.includes('react')) {
+          choices.push({ value: 'ladle', name: 'Ladle' });
+        }
+
+        return choices;
+      }
     }
   ];
 };
