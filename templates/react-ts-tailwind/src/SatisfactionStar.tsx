@@ -16,6 +16,12 @@ export interface SatisfactionStarProps {
 const SatisfactionStar = (props: SatisfactionStarProps) => {
   const [className, setClassName] = useState('');
 
+  const handleStarClick = () => {
+    if (props.clickable) {
+      props.starClick({ productId: props.productId, rating: props.position });
+    }
+  };
+
   useEffect(() => {
     let classes = 'mx-1';
     if (props.checked) {
@@ -37,7 +43,7 @@ const SatisfactionStar = (props: SatisfactionStarProps) => {
       size="2x"
       className={className}
       role="presentation"
-      onClick={() => props.starClick({ productId: props.productId, rating: props.position })}
+      onClick={handleStarClick}
     />
   );
 };
