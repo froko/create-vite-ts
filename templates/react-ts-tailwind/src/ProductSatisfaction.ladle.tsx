@@ -6,11 +6,7 @@ export default {
   title: 'Components/Product Satisfaction'
 };
 
-export const Default: Story<ProductSatisfactionProps> = (props) => (
-  <div className="w-1/2">
-    <ProductSatisfaction {...props} />
-  </div>
-);
+export const Default: Story<ProductSatisfactionProps> = (args) => <ProductSatisfaction {...args} />;
 Default.args = {
   product: {
     id: 'ladle',

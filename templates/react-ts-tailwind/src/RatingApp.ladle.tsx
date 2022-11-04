@@ -6,7 +6,7 @@ export default {
   title: 'Rating App'
 };
 
-export const Default: Story<RatingAppProps> = (props) => <RatingApp {...props} />;
+export const Default: Story<RatingAppProps> = (args) => <RatingApp {...args} />;
 Default.args = {
   products: [
     {
