@@ -15,6 +15,7 @@ A CLI to bootstrap new vite-based TypeScript projects. Rely on hand-crafted inst
 - Cypress.io (optional)
 - Playwright (optional)
 - Storybook (optional)
+- Ladle (optional)
 
 ## Quick start
 
@@ -25,7 +26,7 @@ It will ask the following questions:
 - Project name
 - Template type
 - Testing framework
-- Include Storybook?
+- Component explorer
 
 The CLI will create a new directory named by the project name.
 The git repo is already initialized due to the installation of Husky. It's recommended to create an initial git commit before playing around with the new project.
@@ -45,6 +46,12 @@ The git repo is already initialized due to the installation of Husky. It's recom
 - Playwright
 - None (if you don't want to benefit from e2e and component testing)
 
+## Available component explorers
+
+- Storybook
+- Ladle (only React)
+- None (if you don't want to benefit from isolated component visualization)
+
 ## npm scripts
 
 ### Available in all templates:
@@ -60,16 +67,20 @@ The git repo is already initialized due to the installation of Husky. It's recom
 
 ### Only available with Playwright option:
 
-- `npm run playwright`: Runs your playwright e2e tests in different headless browsers
+- `npm run playwright`: Runs your èlaywright e2e tests in different headless browsers
 - `npm run playwright:report`: Shows the Playwright HTML report of the last test run
 
 ### Only available with Storybook option:
 
-- `npm run storybook`: Starts storybook at http://localhost:6006
+- `npm run storybook`: Starts Storybook at http://localhost:6006
+
+### Only available with Ladle option:
+
+- `npm run ladle`: Starts Ladle at http://localhost:61000
 
 ## Sample application
 
-All templates provide a simple rating app. While building this product, I wanted to have something more than just a Click-Counter-Button to showcase the capabilities of web components together with Cypress.io and Storybook.
+All templates provide a simple rating app. While building this product, I wanted to have something more than just a Click-Counter-Button to showcase the capabilities of web components together with sophisticated testing (Cypress.io, Playwright) and visualization (Storybook, Ladle).
 
 The rating app looks like this:
 ![Rating App](assets/rating-app.png)
@@ -78,6 +89,7 @@ Feel free to delete all the sample application related code in the `src` folder 
 
 ## What's next?
 
+- Include vuejs templates
 - Include svelte templates
 - Include solidjs templates
 - ...
