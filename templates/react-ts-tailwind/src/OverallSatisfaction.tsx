@@ -1,6 +1,6 @@
 import RatingContainer from './RatingContainer';
 
-interface OverallSatisfactionProps {
+export interface OverallSatisfactionProps {
   rating: number;
 }
 

@@ -1,7 +1,7 @@
 import { Product } from './ProductModel';
 import RatingContainer from './RatingContainer';
 
-interface ProductSatisfactionProps {
+export interface ProductSatisfactionProps {
   product: Product;
   productRatingChange: (event: { productId: string; rating: number }) => void;
 }

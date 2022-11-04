@@ -4,7 +4,7 @@ import OverallSatisfaction from './OverallSatisfaction';
 import { Product } from './ProductModel';
 import ProductSatisfaction from './ProductSatisfaction';
 
-interface RatingAppProps {
+export interface RatingAppProps {
   products: Product[];
 }
 
