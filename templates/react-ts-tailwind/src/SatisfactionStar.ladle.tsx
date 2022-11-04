@@ -17,7 +17,7 @@ const actions = {
   starClick: { action: 'starClick' }
 };
 
-const Template: Story<SatisfactionStarProps> = (props) => <SatisfactionStar {...props} />;
+const Template: Story<SatisfactionStarProps> = (args) => <SatisfactionStar {...args} />;
 
 export const Default = Template.bind({});
 Default.args = defaultProps;

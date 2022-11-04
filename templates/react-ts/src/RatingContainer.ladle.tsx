@@ -16,7 +16,7 @@ const actions = {
   productRatingChange: { action: 'productRatingChange' }
 };
 
-const Template: Story<RatingContainerProps> = (props) => <RatingContainer {...props} />;
+const Template: Story<RatingContainerProps> = (args) => <RatingContainer {...args} />;
 
 export const Default = Template.bind({});
 Default.args = defaultProps;
