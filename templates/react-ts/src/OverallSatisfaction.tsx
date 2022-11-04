@@ -1,7 +1,7 @@
 import RatingContainer from './RatingContainer';
 import './OverallSatisfaction.css';
 
-interface OverallSatisfactionProps {
+export interface OverallSatisfactionProps {
   rating: number;
 }
 

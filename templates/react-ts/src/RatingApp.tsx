@@ -5,7 +5,7 @@ import { Product } from './ProductModel';
 import ProductSatisfaction from './ProductSatisfaction';
 import './RatingApp.css';
 
-interface RatingAppProps {
+export interface RatingAppProps {
   products: Product[];
 }
 
