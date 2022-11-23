@@ -1,7 +1,6 @@
-declare global {
-  namespace Cypress {
-    interface Chainable {
-      getStar(id: string, position: number): Chainable<Subject>;
-    }
+declare namespace Cypress {
+  interface Chainable {
+    getByTestId(id: string): Chainable<Subject>;
+    getStar(id: string, position: number): Chainable<Subject>;
   }
 }

@@ -15,7 +15,7 @@ export class ProductSatisfaction {
     const ratingContainerElement = new RatingContainer(this.product.id, this.product.rating, true).asHtmlElement;
 
     const productContainer = document.createElement('div');
-    productContainer.id = this.product.id;
+    productContainer.setAttribute('data-testid', this.product.id);
     productContainer.classList.add('product-satisfaction');
     productContainer.appendChild(titleElement);
     productContainer.appendChild(descriptionElement);

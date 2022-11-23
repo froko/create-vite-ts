@@ -6,7 +6,8 @@ export class RatingApp {
   constructor(private readonly products: Product[]) {}
 
   get asHtmlElement() {
-    const element = document.createElement('div');
+    const element = document.createElement('main');
+    element.setAttribute('data-testid', 'products');
     element.classList.add('responsive-container');
 
     this.products

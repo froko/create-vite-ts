@@ -16,7 +16,7 @@ export class OverallSatisfaction {
     const ratingContainerElement = new RatingContainer('overall-satisfaction', this.overallRating, false).asHtmlElement;
 
     const overallContainer = document.createElement('div');
-    overallContainer.id = 'overall-satisfaction';
+    overallContainer.setAttribute('data-testid', 'overall-satisfaction');
     overallContainer.classList.add('overall-satisfaction');
     overallContainer.appendChild(titleElement);
     overallContainer.appendChild(flexGrowElement);
