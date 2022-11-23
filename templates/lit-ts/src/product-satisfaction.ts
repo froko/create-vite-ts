@@ -8,19 +8,19 @@ import './rating-container';
 export class ProductSatisfaction extends LitElement {
   static styles = css`
     .product-satisfaction {
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      text-align: center;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       display: flex;
       flex-direction: column;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      text-align: center;
     }
 
     a {
-      font-size: 1.5rem;
       display: block;
       color: var(--indigo900);
       font-weight: bold;
+      font-size: 1.5rem;
       text-decoration: none;
     }
 
@@ -34,9 +34,9 @@ export class ProductSatisfaction extends LitElement {
         height: 8rem;
       }
 
-      a {
-        font-size: 1.8rem;
+      .product-satisfaction a {
         margin-bottom: 1rem;
+        font-size: 1.8rem;
       }
     }
   `;
@@ -45,7 +45,7 @@ export class ProductSatisfaction extends LitElement {
 
   render() {
     return html`
-      <div id="${this.product.id}" class="product-satisfaction">
+      <div data-testid="${this.product.id}" class="product-satisfaction">
         <a href="${this.product.url}">${this.product.title}</a>
         <span>${this.product.description}</span>
         <rating-container product-id="${this.product.id}" rating="${this.product.rating}" clickable></rating-container>

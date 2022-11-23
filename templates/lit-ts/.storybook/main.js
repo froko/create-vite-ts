@@ -5,8 +5,7 @@ module.exports = {
   core: {
     builder: '@storybook/builder-vite'
   },
-  async viteFinal(config) {
-    config.plugins = [...config.plugins];
-    return config;
+  features: {
+    storyStoreV7: true
   }
 };

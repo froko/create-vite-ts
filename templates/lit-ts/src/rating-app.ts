@@ -9,10 +9,10 @@ import './overall-satisfaction';
 export class RatingApp extends LitElement {
   static styles = css`
     h1 {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 2rem;
+      margin-top: 1rem;
       color: var(--indigo900);
+      font-size: 2rem;
+      text-align: center;
     }
 
     .responsive-container {
@@ -24,6 +24,7 @@ export class RatingApp extends LitElement {
 
     @media screen and (min-width: 1024px) {
       h1 {
+        margin-top: 3rem;
         font-size: 3rem;
       }
 
@@ -47,11 +48,11 @@ export class RatingApp extends LitElement {
   render() {
     return html`
       <h1>${this.products.map((p) => p.title).join(' - ')}</h1>
-      <div class="responsive-container">
+      <div data-testid="products" class="responsive-container">
         ${this.products.map(
           (p) =>
             html`<product-satisfaction
-              id="${p.id}"
+              data-testid="${p.id}"
               .product="${p}"
               @product-rating-change="${this.handleProductRatingChange}"
             ></product-satisfaction>`

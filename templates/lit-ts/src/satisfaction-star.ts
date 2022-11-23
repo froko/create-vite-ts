@@ -6,7 +6,7 @@ import 'fa-icons';
 export class SatisfactionStar extends LitElement {
   static styles = css`
     fa-icon {
-      margin: 0.3rem;
+      margin: 0.2rem;
     }
 
     .checked {
@@ -19,6 +19,12 @@ export class SatisfactionStar extends LitElement {
 
     .action:hover {
       color: var(--orange700);
+    }
+
+    @media screen and (min-width: 360px) {
+      fa-icon {
+        margin: 0.45rem;
+      }
     }
   `;
 
@@ -46,7 +52,7 @@ export class SatisfactionStar extends LitElement {
   render() {
     return html`
       <fa-icon
-        id="${this.productId}-${this.position}"
+        data-testid="${this.productId}-${this.position}"
         class="${this.styling}"
         path-prefix="${this.pathPrefix}"
         size="2rem"

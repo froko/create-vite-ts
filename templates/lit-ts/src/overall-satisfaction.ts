@@ -7,20 +7,20 @@ import './rating-container';
 export class OverallSatisfaction extends LitElement {
   static styles = css`
     .overall-satisfaction {
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      text-align: center;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       display: flex;
       flex-direction: column;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      text-align: center;
       background-color: var(--indigo900);
       color: var(--indigo50);
     }
 
     .overall-satisfaction h2 {
-      font-size: 1.5rem;
       margin: 0;
       margin-bottom: 1rem;
+      font-size: 1.5rem;
     }
 
     .overall-satisfaction span {
@@ -43,7 +43,7 @@ export class OverallSatisfaction extends LitElement {
 
   render() {
     return html`
-      <div id="overall-satisfaction" class="overall-satisfaction">
+      <div data-testid="overall-satisfaction" class="overall-satisfaction">
         <h2>Overall Satisfaction</h2>
         <span></span>
         <rating-container product-id="overall-satisfaction" rating="${this.overallRating}"></rating-container>

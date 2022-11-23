@@ -9,12 +9,6 @@ export class RatingContainer extends LitElement {
     .rating {
       margin-top: 0.2rem;
     }
-
-    @media screen and (min-width: 1024px) {
-      .rating {
-        margin-top: 1rem;
-      }
-    }
   `;
 
   @state() private stars: { position: number; checked: boolean }[] = [];
