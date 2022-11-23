@@ -8,9 +8,9 @@ export class SatisfactionStar {
 
   get asHtmlElement() {
     const element = document.createElement('span');
-    element.id = `${this.productId}-${this.position}`;
+    element.setAttribute('data-testid', `${this.productId}-${this.position}`);
     element.setAttribute('rating', this.position.toString());
-    element.classList.add('fa', 'fa-star', 'mx-1', 'text-3xl');
+    element.classList.add('fa', 'fa-star', 'mx-[0.45rem]', 'text-3xl');
 
     if (this.checked) {
       element.setAttribute('checked', '');

@@ -6,9 +6,9 @@ export class RatingApp {
   constructor(private readonly products: Product[]) {}
 
   get asHtmlElement() {
-    const element = document.createElement('div');
-    element.id = 'products';
-    element.classList.add('m-4', 'grid', 'grid-flow-row', 'gap-4', 'lg:mt-8', 'lg:grid-flow-col');
+    const element = document.createElement('main');
+    element.setAttribute('data-testid', 'products');
+    element.classList.add('m-4', 'grid', 'grid-flow-row', 'gap-4', 'lg:grid-flow-col');
 
     this.products
       .map((p) => new ProductSatisfaction(p))

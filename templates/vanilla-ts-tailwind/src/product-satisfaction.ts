@@ -17,14 +17,14 @@ export class ProductSatisfaction {
     const ratingContainerElement = new RatingContainer(this.product.id, this.product.rating, true).asHtmlElement;
 
     const productContainer = document.createElement('div');
-    productContainer.id = this.product.id;
+    productContainer.setAttribute('data-testid', this.product.id);
     productContainer.classList.add(
       'flex',
       'h-full',
       'flex-col',
       'rounded-xl',
       'bg-indigo-100',
-      'p-2',
+      'p-4',
       'drop-shadow-lg',
       'lg:p-8'
     );

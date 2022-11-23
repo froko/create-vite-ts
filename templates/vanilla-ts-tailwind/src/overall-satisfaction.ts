@@ -18,14 +18,14 @@ export class OverallSatisfaction {
     const ratingContainerElement = new RatingContainer('overall-satisfaction', this.overallRating, false).asHtmlElement;
 
     const overallContainer = document.createElement('div');
-    overallContainer.id = 'overall-satisfaction';
+    overallContainer.setAttribute('data-testid', 'overall-satisfaction');
     overallContainer.classList.add(
       'flex',
       'h-full',
       'flex-col',
       'rounded-lg',
       'bg-indigo-900',
-      'p-2',
+      'p-4',
       'drop-shadow-lg',
       'lg:p-8'
     );
