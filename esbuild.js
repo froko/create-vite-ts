@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
-import { read } from 'fs';
 import { writeFile, mkdir, readdir, readFile, stat } from 'fs/promises';
 import * as path from 'path';
 
