@@ -16,7 +16,7 @@ export class SatisfactionStar extends TwLitElement {
 
   willUpdate(changedProperties: Map<string, object>) {
     if (changedProperties.has('checked') || changedProperties.has('clickable')) {
-      this.styling = 'fa fa-star mx-1';
+      this.styling = 'fa fa-star mx-[0.45rem]';
       if (this.checked) {
         this.styling += ' text-orange-500';
       }
@@ -32,7 +32,7 @@ export class SatisfactionStar extends TwLitElement {
   render() {
     return html`
       <fa-icon
-        id="${this.productId}-${this.position}"
+        data-testid="${this.productId}-${this.position}"
         class=${this.styling}
         path-prefix="${this.pathPrefix}"
         size="2rem"

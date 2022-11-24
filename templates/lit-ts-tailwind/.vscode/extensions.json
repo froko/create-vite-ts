@@ -3,6 +3,7 @@
     "editorconfig.editorconfig",
     "rvest.vs-code-prettier-eslint",
     "runem.lit-plugin",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss"<% if (playwright) { %>,
+    "ms-playwright.playwright"<% } %>
   ]
 }

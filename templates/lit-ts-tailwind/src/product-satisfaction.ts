@@ -11,7 +11,7 @@ export class ProductSatisfaction extends TwLitElement {
 
   render() {
     return html`
-      <div id="${this.product.id}" class="flex h-full flex-col rounded-xl bg-indigo-100 p-2 drop-shadow-lg lg:p-8">
+      <div data-testid="${this.product.id}" class="flex h-full flex-col rounded-xl bg-indigo-100 p-4 drop-shadow-lg lg:p-8">
         <a href="${this.product.url}" class="mb-4 text-center text-2xl font-medium text-indigo-900 lg:text-3xl"
           >${this.product.title}</a
         >
