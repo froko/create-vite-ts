@@ -11,8 +11,12 @@ export class RatingContainer {
 
   get asHtmlElement() {
     const ratingContainer = document.createElement('div');
-    ratingContainer.classList.add('mt-[0.2rem]', 'text-center', 'lg:mt-8');
-    this.stars.forEach((e) => ratingContainer.appendChild(e.asHtmlElement));
+
+    const rating = document.createElement('div');
+    rating.classList.add('mx-auto', 'mt-4', 'flex', 'max-w-xs', 'justify-around');
+    ratingContainer.appendChild(rating);
+
+    this.stars.forEach((e) => rating.appendChild(e.asHtmlElement));
 
     return ratingContainer;
   }

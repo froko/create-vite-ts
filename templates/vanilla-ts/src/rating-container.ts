@@ -11,8 +11,12 @@ export class RatingContainer {
 
   get asHtmlElement() {
     const ratingContainer = document.createElement('div');
-    ratingContainer.classList.add('rating');
-    this.stars.forEach((e) => ratingContainer.appendChild(e.asHtmlElement));
+
+    const rating = document.createElement('div');
+    rating.classList.add('rating');
+    ratingContainer.appendChild(rating);
+
+    this.stars.forEach((e) => rating.appendChild(e.asHtmlElement));
 
     return ratingContainer;
   }

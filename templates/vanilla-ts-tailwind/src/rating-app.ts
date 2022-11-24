@@ -8,7 +8,17 @@ export class RatingApp {
   get asHtmlElement() {
     const element = document.createElement('main');
     element.setAttribute('data-testid', 'products');
-    element.classList.add('m-4', 'grid', 'grid-flow-row', 'gap-4', 'lg:grid-flow-col');
+    element.classList.add(
+      'mx-auto',
+      'mt-4',
+      'grid',
+      'max-w-6xl',
+      'grid-flow-row',
+      'gap-4',
+      'p-4',
+      'lg:grid-flow-col',
+      'lg:grid-cols-3'
+    );
 
     this.products
       .map((p) => new ProductSatisfaction(p))

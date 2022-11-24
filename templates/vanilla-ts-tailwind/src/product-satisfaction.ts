@@ -8,11 +8,11 @@ export class ProductSatisfaction {
     const titleElement = document.createElement('a');
     titleElement.href = this.product.url;
     titleElement.innerText = this.product.title;
-    titleElement.classList.add('mb-4', 'text-center', 'text-2xl', 'font-medium', 'text-indigo-900', 'lg:text-3xl');
+    titleElement.classList.add('mb-4', 'text-center', 'text-2xl', 'font-medium', 'text-indigo-900', 'lg:text-[1.8rem]');
 
     const descriptionElement = document.createElement('span');
     descriptionElement.innerText = this.product.description;
-    descriptionElement.classList.add('text-center');
+    descriptionElement.classList.add('grow', 'text-center', 'lg:h-6');
 
     const ratingContainerElement = new RatingContainer(this.product.id, this.product.rating, true).asHtmlElement;
 
@@ -20,7 +20,6 @@ export class ProductSatisfaction {
     productContainer.setAttribute('data-testid', this.product.id);
     productContainer.classList.add(
       'flex',
-      'h-full',
       'flex-col',
       'rounded-xl',
       'bg-indigo-100',

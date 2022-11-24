@@ -11,17 +11,16 @@ export class OverallSatisfaction {
   get asHtmlElement() {
     const titleElement = document.createElement('h2');
     titleElement.innerText = 'Overall Satisfaction';
-    titleElement.classList.add('mb-4', 'text-center', 'text-2xl', 'font-medium', 'text-indigo-50', 'lg:text-3xl');
+    titleElement.classList.add('mb-4', 'text-center', 'text-2xl', 'font-medium', 'text-indigo-50', 'lg:text-[1.8rem]');
 
     const flexGrowElement = document.createElement('span');
-    flexGrowElement.classList.add('grow');
+    flexGrowElement.classList.add('grow', 'lg:h-6');
     const ratingContainerElement = new RatingContainer('overall-satisfaction', this.overallRating, false).asHtmlElement;
 
     const overallContainer = document.createElement('div');
     overallContainer.setAttribute('data-testid', 'overall-satisfaction');
     overallContainer.classList.add(
       'flex',
-      'h-full',
       'flex-col',
       'rounded-lg',
       'bg-indigo-900',
