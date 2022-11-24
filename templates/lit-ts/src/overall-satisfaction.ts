@@ -20,21 +20,25 @@ export class OverallSatisfaction extends LitElement {
     .overall-satisfaction h2 {
       margin: 0;
       margin-bottom: 1rem;
+      font-weight: 500;
       font-size: 1.5rem;
     }
 
     .overall-satisfaction span {
-      flex-grow: 1;
+      flex: 1 1 auto;
     }
 
     @media screen and (min-width: 1024px) {
       .overall-satisfaction {
         padding: 2rem;
-        height: 8rem;
       }
 
       .overall-satisfaction h2 {
         font-size: 1.8rem;
+      }
+
+      .overall-satisfaction span {
+        height: 1.5rem;
       }
     }
   `;

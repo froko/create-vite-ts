@@ -21,10 +21,13 @@ export class RatingApp extends TwLitElement {
 
   render() {
     return html`
-      <h1 class="mt-4 text-center text-3xl font-semibold text-indigo-900 lg:mt-12 lg:text-5xl">
+      <h1 class="my-4 text-center text-3xl font-semibold text-indigo-900 lg:my-12 lg:text-5xl">
         ${this.products.map((p) => p.title).join(' - ')}
       </h1>
-      <div data-testid="products" class="m-4 grid grid-flow-row gap-4 lg:grid-flow-col">
+      <main
+        data-testid="products"
+        class="mx-auto mt-4 grid max-w-6xl grid-flow-row gap-4 p-4 lg:grid-flow-col lg:grid-cols-3"
+      >
         ${this.products.map(
           (p) =>
             html`<product-satisfaction
@@ -34,7 +37,7 @@ export class RatingApp extends TwLitElement {
             ></product-satisfaction>`
         )}
         <overall-satisfaction overall-rating="${this.overallRating}"></overall-satisfaction>
-      </div>
+      </main>
     `;
   }
 

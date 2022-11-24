@@ -20,7 +20,7 @@ export class RatingContainer extends TwLitElement {
 
   render() {
     return html`
-      <div class="mt-[0.2rem] text-center lg:mt-8">
+      <div class="mx-auto mt-4 flex max-w-xs justify-around">
         ${this.stars.map(
           (star) =>
             html`<satisfaction-star

@@ -7,7 +7,11 @@ import './satisfaction-star';
 export class RatingContainer extends LitElement {
   static styles = css`
     .rating {
-      margin-top: 0.2rem;
+      display: flex;
+      justify-content: space-around;
+      max-width: 20rem;
+      margin-top: 1rem;
+      margin-inline: auto;
     }
   `;
 

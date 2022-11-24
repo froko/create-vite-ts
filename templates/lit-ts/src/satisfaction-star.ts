@@ -5,10 +5,6 @@ import 'fa-icons';
 @customElement('satisfaction-star')
 export class SatisfactionStar extends LitElement {
   static styles = css`
-    fa-icon {
-      margin: 0.2rem;
-    }
-
     .checked {
       color: var(--orange500);
     }
@@ -19,12 +15,6 @@ export class SatisfactionStar extends LitElement {
 
     .action:hover {
       color: var(--orange700);
-    }
-
-    @media screen and (min-width: 360px) {
-      fa-icon {
-        margin: 0.45rem;
-      }
     }
   `;
 

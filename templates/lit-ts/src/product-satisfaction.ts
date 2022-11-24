@@ -16,27 +16,30 @@ export class ProductSatisfaction extends LitElement {
       text-align: center;
     }
 
-    a {
+    .product-satisfaction a {
       display: block;
       color: var(--indigo900);
-      font-weight: bold;
+      font-weight: 500;
       font-size: 1.5rem;
       text-decoration: none;
+      margin-bottom: 1rem;
     }
 
     .product-satisfaction span {
-      flex-grow: 1;
+      flex: 1 1 auto;
     }
 
     @media screen and (min-width: 1024px) {
       .product-satisfaction {
         padding: 2rem;
-        height: 8rem;
       }
 
       .product-satisfaction a {
-        margin-bottom: 1rem;
         font-size: 1.8rem;
+      }
+
+      .product-satisfaction span {
+        height: 1.5rem;
       }
     }
   `;

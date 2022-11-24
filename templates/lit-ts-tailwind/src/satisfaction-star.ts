@@ -16,7 +16,7 @@ export class SatisfactionStar extends TwLitElement {
 
   willUpdate(changedProperties: Map<string, object>) {
     if (changedProperties.has('checked') || changedProperties.has('clickable')) {
-      this.styling = 'fa fa-star mx-[0.45rem]';
+      this.styling = 'fa fa-star';
       if (this.checked) {
         this.styling += ' text-orange-500';
       }

@@ -11,7 +11,9 @@ export class RatingApp extends LitElement {
     h1 {
       margin-top: 1rem;
       color: var(--indigo900);
-      font-size: 2rem;
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      font-weight: 600;
       text-align: center;
     }
 
@@ -19,17 +21,22 @@ export class RatingApp extends LitElement {
       display: grid;
       grid-auto-flow: row;
       row-gap: 1rem;
-      margin: 1rem;
+      margin-top: 1rem;
+      margin-inline: auto;
+      max-width: 72rem;
+      padding: 1rem;
     }
 
     @media screen and (min-width: 1024px) {
       h1 {
         margin-top: 3rem;
         font-size: 3rem;
+        line-height: 1;
       }
 
       .responsive-container {
         grid-auto-flow: column;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         column-gap: 1rem;
       }
     }
