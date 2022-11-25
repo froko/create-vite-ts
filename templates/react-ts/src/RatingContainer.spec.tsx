@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/experimental-ct-react';
-import { Locator } from '@playwright/test';
+import { SatisfactionStarLocator } from 'playwright/support';
 
 import RatingContainer, { RatingContainerProps } from './RatingContainer';
 
@@ -14,35 +14,19 @@ const props: RatingContainerProps = {
 test('number of filled stars eqals rating', async ({ mount }) => {
   const component = await mount(<RatingContainer {...props} />);
 
-  const getStar = (position: number) => component.locator(`#${props.productId}-${position}`);
+  const star = new SatisfactionStarLocator(component, props.productId);
 
-  const getClasses = async (locator: Locator) => {
-    const classAttribute = await locator.getAttribute('class');
-    return classAttribute ? classAttribute.split(' ') : [];
-  };
-
-  const expectToBeChecked = async (locator: Locator) => {
-    const classes = await getClasses(locator);
-    expect(classes.includes('checked')).toBeTruthy();
-  };
-
-  const expectToBeUnchecked = async (locator: Locator) => {
-    const classes = await getClasses(locator);
-    expect(classes.includes('checked')).toBeFalsy();
-  };
-
-  await expectToBeChecked(getStar(1));
-  await expectToBeChecked(getStar(2));
-  await expectToBeChecked(getStar(3));
-  await expectToBeUnchecked(getStar(4));
-  await expectToBeUnchecked(getStar(5));
+  await star.expectToBeChecked(1);
+  await star.expectToBeChecked(2);
+  await star.expectToBeChecked(3);
+  await star.expectToBeUnChecked(4);
+  await star.expectToBeUnChecked(5);
 });
 
 test('emits on click', async ({ mount }) => {
   const component = await mount(<RatingContainer {...props} />);
+  const star = new SatisfactionStarLocator(component, props.productId);
 
-  const getStar = (position: number) => component.locator(`#${props.productId}-${position}`);
-
-  await getStar(2).click();
+  await star.click(2);
   expect(clickEvent).toEqual({ productId: props.productId, rating: 2 });
 });

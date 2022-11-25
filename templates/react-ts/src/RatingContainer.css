@@ -1,9 +1,7 @@
 .rating {
-  margin-top: 0.2rem;
-}
-
-@media screen and (min-width: 1024px) {
-  .rating {
-    margin-top: 2rem;
-  }
+  display: flex;
+  justify-content: space-around;
+  max-width: 20rem;
+  margin-top: 1rem;
+  margin-inline: auto;
 }

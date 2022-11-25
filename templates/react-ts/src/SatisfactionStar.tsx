@@ -38,7 +38,7 @@ const SatisfactionStar = (props: SatisfactionStarProps) => {
 
   return (
     <FontAwesomeIcon
-      id={`${props.productId}-${props.position}`}
+      data-testid={`${props.productId}-${props.position}`}
       icon={['fas', 'star']}
       size="2x"
       className={className}

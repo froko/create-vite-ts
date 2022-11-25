@@ -29,7 +29,7 @@ const subDirectory = (templatePath: string, templateName: string): string => {
 const rename = (file: string): string => {
   return file
     .replace('_gitignore', '.gitignore')
-    .replace('.storybook.tsx', '.stories.tsx')
+    .replace('.storybook.jsx', '.stories.jsx')
     .replace('.ladle.tsx', '.stories.tsx');
 };
 

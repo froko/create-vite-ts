@@ -7,7 +7,7 @@ export interface OverallSatisfactionProps {
 
 const OverallSatisfaction = (props: OverallSatisfactionProps) => {
   return (
-    <div id="overall-satisfaction" className="overall-satisfaction">
+    <div data-testid="overall-satisfaction" className="overall-satisfaction">
       <h2>Overall Satisfaction</h2>
       <span></span>
       <RatingContainer

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/experimental-ct-react';
-import { Locator } from '@playwright/test';
+import { SatisfactionStarLocator } from 'playwright/support';
 
 import { allProducts } from './ProductModel';
 import RatingApp from './RatingApp';
@@ -12,7 +12,7 @@ test.describe('Elements', () => {
 
   test('should render Vite product card', async ({ mount }) => {
     const component = await mount(<RatingApp products={allProducts} />);
-    const viteCard = component.locator('#vite');
+    const viteCard = component.locator('[data-testid=vite]');
     const viteTitle = viteCard.locator('a');
     await expect(viteTitle).toHaveText('Vite');
     await expect(viteTitle).toHaveAttribute('href', 'https://vitejs.dev/');
@@ -20,7 +20,7 @@ test.describe('Elements', () => {
 
   test('should render React product card', async ({ mount }) => {
     const component = await mount(<RatingApp products={allProducts} />);
-    const reactCard = component.locator('#react');
+    const reactCard = component.locator('[data-testid=react]');
     const reactTitle = reactCard.locator('a');
     await expect(reactTitle).toHaveText('React');
     await expect(reactTitle).toHaveAttribute('href', 'https://reactjs.org/');
@@ -28,7 +28,7 @@ test.describe('Elements', () => {
 
   test('should render Overall Satisfaction card', async ({ mount }) => {
     const component = await mount(<RatingApp products={allProducts} />);
-    const overallSatisfactionCard = component.locator('#overall-satisfaction');
+    const overallSatisfactionCard = component.locator('[data-testid=overall-satisfaction]');
     const overallSatisfactionTitle = overallSatisfactionCard.locator('h2');
     await expect(overallSatisfactionTitle).toHaveText('Overall Satisfaction');
   });
@@ -42,7 +42,7 @@ test.describe('Responsive Design', () => {
 
     test('should display cards in a row', async ({ mount }) => {
       const component = await mount(<RatingApp products={allProducts} />);
-      await expect(component.locator('#products')).toHaveCSS('grid-auto-flow', 'column');
+      await expect(component.locator('[data-testid=products]')).toHaveCSS('grid-auto-flow', 'column');
     });
   });
 
@@ -53,52 +53,37 @@ test.describe('Responsive Design', () => {
 
     test('should display cards in a row', async ({ mount }) => {
       const component = await mount(<RatingApp products={allProducts} />);
-      await expect(component.locator('#products')).toHaveCSS('grid-auto-flow', 'row');
+      await expect(component.locator('[data-testid=products]')).toHaveCSS('grid-auto-flow', 'row');
     });
   });
 });
 
 test.describe('Star Rating', () => {
   test('Overall Satisfaction has average satisfaction of products', async ({ mount }) => {
-    const component = await mount(<RatingApp products={allProducts} />);
+    const component = await mount(RatingApp, { props });
+    const viteStar = new SatisfactionStarLocator(component, 'vite');
+    const reactStar = new SatisfactionStarLocator(component, 'react');
+    const overallSatisfactionStar = new SatisfactionStarLocator(component, 'overall-satisfaction');
 
-    const getStar = (productId: 'vite' | 'react' | 'overall-satisfaction', position: number) =>
-      component.locator(`#${productId}-${position}`);
+    await viteStar.click(1);
+    await reactStar.click(1);
+    await overallSatisfactionStar.expectToBeChecked(1);
+    await overallSatisfactionStar.expectToBeUnChecked(2);
 
-    const getClasses = async (locator: Locator) => {
-      const classAttribute = await locator.getAttribute('class');
-      return classAttribute ? classAttribute.split(' ') : [];
-    };
+    await reactStar.click(2);
+    await overallSatisfactionStar.expectToBeChecked(1);
+    await overallSatisfactionStar.expectToBeUnChecked(2);
 
-    const expectToBeChecked = async (locator: Locator) => {
-      const classes = await getClasses(locator);
-      expect(classes.includes('checked')).toBeTruthy();
-    };
+    await reactStar.click(3);
+    await overallSatisfactionStar.expectToBeChecked(2);
+    await overallSatisfactionStar.expectToBeUnChecked(3);
 
-    const expectToBeUnchecked = async (locator: Locator) => {
-      const classes = await getClasses(locator);
-      expect(classes.includes('checked')).toBeFalsy();
-    };
+    await reactStar.click(4);
+    await overallSatisfactionStar.expectToBeChecked(2);
+    await overallSatisfactionStar.expectToBeUnChecked(3);
 
-    await getStar('vite', 1).click();
-    await getStar('react', 1).click();
-    await expectToBeChecked(getStar('overall-satisfaction', 1));
-    await expectToBeUnchecked(getStar('overall-satisfaction', 2));
-
-    await getStar('react', 2).click();
-    await expectToBeChecked(getStar('overall-satisfaction', 1));
-    await expectToBeUnchecked(getStar('overall-satisfaction', 2));
-
-    await getStar('react', 3).click();
-    await expectToBeChecked(getStar('overall-satisfaction', 2));
-    await expectToBeUnchecked(getStar('overall-satisfaction', 3));
-
-    await getStar('react', 4).click();
-    await expectToBeChecked(getStar('overall-satisfaction', 2));
-    await expectToBeUnchecked(getStar('overall-satisfaction', 3));
-
-    await getStar('react', 5).click();
-    await expectToBeChecked(getStar('overall-satisfaction', 3));
-    await expectToBeUnchecked(getStar('overall-satisfaction', 4));
+    await reactStar.click(5);
+    await overallSatisfactionStar.expectToBeChecked(3);
+    await overallSatisfactionStar.expectToBeUnChecked(4);
   });
 });

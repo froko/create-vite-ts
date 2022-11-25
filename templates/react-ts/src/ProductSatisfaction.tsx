@@ -9,7 +9,7 @@ export interface ProductSatisfactionProps {
 
 const ProductSatisfaction = (props: ProductSatisfactionProps) => {
   return (
-    <div id={props.product.id} className="product-satisfaction">
+    <div data-testid={props.product.id} className="product-satisfaction">
       <a href={props.product.url}>{props.product.title}</a>
       <span>{props.product.description}</span>
       <RatingContainer

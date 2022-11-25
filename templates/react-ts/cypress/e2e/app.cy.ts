@@ -7,31 +7,34 @@ describe('App', () => {
     });
 
     it('should render Vite product card', () => {
-      cy.get('#vite').should('exist');
-      cy.get('#vite a').should('have.text', 'Vite');
-      cy.get('#vite a').should('have.attr', 'href', 'https://vitejs.dev/');
+      cy.getByTestId('vite').within(() => {
+        cy.get('a').should('have.text', 'Vite');
+        cy.get('a').should('have.attr', 'href', 'https://vitejs.dev/');
+      });
     });
 
     it('should render React product card', () => {
-      cy.get('#react').should('exist');
-      cy.get('#react a').should('have.text', 'React');
-      cy.get('#react a').should('have.attr', 'href', 'https://reactjs.org/');
+      cy.getByTestId('react').within(() => {
+        cy.get('a').should('have.text', 'React');
+        cy.get('a').should('have.attr', 'href', 'https://reactjs.org/');
+      });
     });
 
     it('should render Overall Satisfaction card', () => {
-      cy.get('#overall-satisfaction').should('exist');
-      cy.get('#overall-satisfaction h2').should('have.text', 'Overall Satisfaction');
+      cy.getByTestId('overall-satisfaction').within(() => {
+        cy.get('h2').should('have.text', 'Overall Satisfaction');
+      });
     });
   });
 
   describe('Responsive Design', () => {
     it('should display cards in a row for desktop view', () => {
-      cy.get('.responsive-container').should('have.css', 'grid-auto-flow', 'column');
+      cy.getByTestId('products').should('have.css', 'grid-auto-flow', 'column');
     });
 
     it('should display cards on top of each odher for mobile view', () => {
       cy.viewport('iphone-8');
-      cy.get('.responsive-container').should('have.css', 'grid-auto-flow', 'row');
+      cy.getByTestId('products').should('have.css', 'grid-auto-flow', 'row');
     });
   });
 

@@ -26,6 +26,19 @@ const installDependencies = async (options: CliOptions) => {
     );
   }
 
+  // todo: add other frameworks, such as vue.js
+  if (options.react) {
+    await install(
+      {
+        '@storybook/addon-a11y': undefined,
+        '@storybook/addon-interactions': undefined,
+        '@storybook/jest': undefined,
+        '@storybook/testing-library': undefined
+      },
+      { cwd: options.projectPath, dev: true }
+    );
+  }
+
   if (options.react) {
     await install(
       {

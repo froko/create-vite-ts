@@ -18,10 +18,12 @@ const RatingContainer = (props: RatingContainerProps) => {
   }));
 
   return (
-    <div className="rating">
-      {starProps.map((p) => (
-        <SatisfactionStar {...p} key={`${p.productId}-${p.position}`} />
-      ))}
+    <div>
+      <div className="rating">
+        {starProps.map((p) => (
+          <SatisfactionStar {...p} key={`${p.productId}-${p.position}`} />
+        ))}
+      </div>
     </div>
   );
 };
