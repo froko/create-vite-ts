@@ -23,7 +23,7 @@ const SatisfactionStar = (props: SatisfactionStarProps) => {
   };
 
   useEffect(() => {
-    let classes = 'mx-1';
+    let classes = '';
     if (props.checked) {
       classes += ' text-orange-500';
     }
@@ -38,7 +38,7 @@ const SatisfactionStar = (props: SatisfactionStarProps) => {
 
   return (
     <FontAwesomeIcon
-      id={`${props.productId}-${props.position}`}
+      data-testid={`${props.productId}-${props.position}`}
       icon={['fas', 'star']}
       size="2x"
       className={className}

@@ -14,7 +14,7 @@ describe('Satisfaction Star', () => {
   });
 
   it('emits on click', () => {
-    cy.get('#cypress-2').click();
+    cy.getByTestId('cypress-2').click();
     cy.get('@starClickSpy').should('have.been.calledWith', { productId: 'cypress', rating: 2 });
   });
 });

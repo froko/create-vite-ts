@@ -26,10 +26,13 @@ const RatingApp = (props: RatingAppProps) => {
 
   return (
     <>
-      <h1 className="mt-12 text-center text-4xl font-semibold text-indigo-900 lg:text-5xl">
+      <h1 className="my-4 text-center text-3xl font-semibold text-indigo-900 lg:my-12 lg:text-5xl">
         {products.map((p) => p.title).join(' - ')}
       </h1>
-      <div id="products" className="m-4 grid grid-flow-row gap-4 lg:mt-8 lg:grid-flow-col">
+      <div
+        data-testid="products"
+        className="mx-auto mt-4 grid max-w-6xl grid-flow-row gap-4 p-4 lg:grid-flow-col lg:grid-cols-3"
+      >
         {products.map((p) => (
           <ProductSatisfaction product={p} key={p.id} productRatingChange={handleProductRatingChange} />
         ))}

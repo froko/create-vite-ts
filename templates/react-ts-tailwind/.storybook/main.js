@@ -1,12 +1,24 @@
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-essentials'],
+  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
   framework: '@storybook/react',
   core: {
     builder: '@storybook/builder-vite'
   },
+  features: {
+    interactionsDebugger: true
+  },
   async viteFinal(config) {
-    config.plugins = [...config.plugins];
-    return config;
+    return {
+      ...config,
+      define: {
+        ...config.define,
+        global: 'window'
+      },
+      esbuild: {
+        ...config.esbuild,
+        jsxInject: `import React from 'react'`
+      }
+    };
   }
 };

@@ -6,9 +6,12 @@ export interface OverallSatisfactionProps {
 
 const OverallSatisfaction = (props: OverallSatisfactionProps) => {
   return (
-    <div id="overall-satisfaction" className="flex h-full flex-col rounded-lg bg-indigo-900 p-2 drop-shadow-lg lg:p-8">
-      <h2 className="mb-4 text-center text-2xl font-medium text-indigo-50 lg:text-3xl">Overall Satisfaction</h2>
-      <span className="grow"></span>
+    <div
+      data-testid="overall-satisfaction"
+      className="flex flex-col rounded-lg bg-indigo-900 p-4 drop-shadow-lg lg:p-8"
+    >
+      <h2 className="mb-4 text-center text-2xl font-medium text-indigo-50 lg:text-[1.8rem]">Overall Satisfaction</h2>
+      <span className="grow lg:h-10"></span>
       <RatingContainer
         productId="overall-satisfaction"
         rating={props.rating}

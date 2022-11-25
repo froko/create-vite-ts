@@ -17,10 +17,12 @@ const RatingContainer = (props: RatingContainerProps) => {
   }));
 
   return (
-    <div className="mt-2 text-center lg:mt-8">
-      {starProps.map((p) => (
-        <SatisfactionStar {...p} key={`${p.productId}-${p.position}`} />
-      ))}
+    <div>
+      <div className="mx-auto mt-4 flex max-w-xs justify-around">
+        {starProps.map((p) => (
+          <SatisfactionStar {...p} key={`${p.productId}-${p.position}`} />
+        ))}
+      </div>
     </div>
   );
 };
