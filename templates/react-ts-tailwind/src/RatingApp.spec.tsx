@@ -60,7 +60,7 @@ test.describe('Responsive Design', () => {
 
 test.describe('Star Rating', () => {
   test('Overall Satisfaction has average satisfaction of products', async ({ mount }) => {
-    const component = await mount(RatingApp, { props });
+    const component = await mount(<RatingApp products={allProducts} />);
     const viteStar = new SatisfactionStarLocator(component, 'vite');
     const reactStar = new SatisfactionStarLocator(component, 'react');
     const overallSatisfactionStar = new SatisfactionStarLocator(component, 'overall-satisfaction');
