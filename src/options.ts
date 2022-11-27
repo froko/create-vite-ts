@@ -7,11 +7,13 @@ export interface CliOptions {
   projectPath: string;
   lit: boolean;
   react: boolean;
+  vue: boolean;
   tailwind: boolean;
   cypress: boolean;
   playwright: boolean;
   storybook: boolean;
   ladle: boolean;
+  histoire: boolean;
 }
 
 interface Template {
@@ -25,7 +27,8 @@ const templates: Template[] = [
   { value: 'lit-ts', name: 'Lit' },
   { value: 'lit-ts-tailwind', name: 'Lit with TailwindCSS' },
   { value: 'react-ts', name: 'React' },
-  { value: 'react-ts-tailwind', name: 'React with TailwindCSS' }
+  { value: 'react-ts-tailwind', name: 'React with TailwindCSS' },
+  { value: 'vue-ts', name: 'Vue.js' }
 ];
 
 const testingFrameworks: Template[] = [
@@ -71,6 +74,10 @@ export const argumentQuestions = () => {
         const choices = componentExplorers;
         if (answers.template.includes('react')) {
           choices.push({ value: 'ladle', name: 'Ladle' });
+        }
+
+        if (answers.template.includes('vue')) {
+          choices.push({ value: 'histoire', name: 'Histoire' });
         }
 
         return choices;

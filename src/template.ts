@@ -47,10 +47,18 @@ export const copyTemplate = async (templatePath: string, options: CliOptions): P
 
   if (!options.storybook) {
     ignoreFiles.push('.storybook', '.npmrc');
+
+    if (options.vue) {
+      ignoreFiles.push('stories.js');
+    }
   }
 
   if (!options.ladle) {
     ignoreFiles.push('.ladle');
+  }
+
+  if (!options.histoire) {
+    ignoreFiles.push('histoire', 'story.vue');
   }
 
   files.forEach(async (file) => {

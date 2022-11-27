@@ -12,10 +12,12 @@ A CLI to bootstrap new vite-based TypeScript projects. Rely on hand-crafted inst
 - TailwindCSS (optional)
 - Lit (optional)
 - React (optional)
+- Vue.js (optional)
 - Cypress.io (optional)
 - Playwright (optional)
 - Storybook (optional)
 - Ladle (optional)
+- Histoire (optional)
 
 ## Quick start
 
@@ -39,6 +41,8 @@ The git repo is already initialized due to the installation of Husky. It's recom
 - Lit with TailwindCSS
 - React
 - React with TailwindCSS
+- Vue.js
+- Vue.js with TailwindCSS
 
 ## Available testing frameworks
 
@@ -50,6 +54,7 @@ The git repo is already initialized due to the installation of Husky. It's recom
 
 - Storybook
 - Ladle (only React)
+- Histoire (only Vue.js)
 - None (if you don't want to benefit from isolated component visualization)
 
 ## npm scripts
@@ -78,9 +83,13 @@ The git repo is already initialized due to the installation of Husky. It's recom
 
 - `npm run ladle`: Starts Ladle at http://localhost:61000
 
+### Only available with Histoire option:
+
+- `npm run histoire`: Starts Histoire at http://localhost:6006
+
 ## Sample application
 
-All templates provide a simple rating app. While building this product, I wanted to have something more than just a Click-Counter-Button to showcase the capabilities of web components together with sophisticated testing (Cypress.io, Playwright) and visualization (Storybook, Ladle).
+All templates provide a simple rating app. While building this product, I wanted to have something more than just a Click-Counter-Button to showcase the capabilities of web components together with sophisticated testing (Cypress.io, Playwright) and visualization (Storybook, Ladle, Histoire).
 
 The rating app looks like this:
 ![Rating App](assets/rating-app.png)
@@ -89,7 +98,6 @@ Feel free to delete all the sample application related code in the `src` folder 
 
 ## What's next?
 
-- Include vuejs templates
 - Include svelte templates
 - Include solidjs templates
 - ...

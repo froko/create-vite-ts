@@ -11,7 +11,7 @@ const setupNpmScripts = async (options: CliOptions) => {
   await execa('npm', ['pkg', 'set', 'scripts.cypress:ci=npm run build && run-p -r preview cypress:run'], {
     cwd: options.projectPath
   });
-  if (options.react) {
+  if (options.react || options.vue) {
     await execa('npm', ['pkg', 'set', 'scripts.cypress:open=cypress open'], {
       cwd: options.projectPath
     });

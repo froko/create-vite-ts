@@ -1,0 +1,6 @@
+.bind-preview-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--indigo50) !important;
+}

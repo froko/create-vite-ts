@@ -9,6 +9,9 @@ const installDependencies = async (options: CliOptions) => {
   if (options.react) {
     await install({ '@playwright/experimental-ct-react': undefined }, { cwd: options.projectPath, dev: true });
   }
+  if (options.vue) {
+    await install({ '@playwright/experimental-ct-vue': undefined }, { cwd: options.projectPath, dev: true });
+  }
 };
 
 const setupNpmScripts = async (options: CliOptions) => {

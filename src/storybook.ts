@@ -26,8 +26,7 @@ const installDependencies = async (options: CliOptions) => {
     );
   }
 
-  // todo: add other frameworks, such as vue.js
-  if (options.react) {
+  if (options.react || options.vue) {
     await install(
       {
         '@storybook/addon-a11y': undefined,
@@ -43,6 +42,15 @@ const installDependencies = async (options: CliOptions) => {
     await install(
       {
         '@storybook/react': undefined
+      },
+      { cwd: options.projectPath, dev: true }
+    );
+  }
+
+  if (options.vue) {
+    await install(
+      {
+        '@storybook/vue3': '^6.5.13'
       },
       { cwd: options.projectPath, dev: true }
     );
