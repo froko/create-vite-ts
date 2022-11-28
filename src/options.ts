@@ -28,7 +28,8 @@ const templates: Template[] = [
   { value: 'lit-ts-tailwind', name: 'Lit with TailwindCSS' },
   { value: 'react-ts', name: 'React' },
   { value: 'react-ts-tailwind', name: 'React with TailwindCSS' },
-  { value: 'vue-ts', name: 'Vue.js' }
+  { value: 'vue-ts', name: 'Vue.js' },
+  { value: 'vue-ts-tailwind', name: 'Vue.js with TailwindCSS' }
 ];
 
 const testingFrameworks: Template[] = [
