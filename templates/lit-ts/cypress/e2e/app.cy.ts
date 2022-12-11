@@ -1,5 +1,5 @@
 describe('App', () => {
-  before(() => cy.visit('/'));
+  beforeEach(() => cy.visit('/'));
 
   describe('Elements', () => {
     it('should render title', () => {
