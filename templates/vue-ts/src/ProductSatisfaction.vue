@@ -17,7 +17,7 @@ const handleRatingContainerChange = (eventArgs: ProductRatingEventArgs) => {
 </script>
 
 <template>
-  <div class="product-satisfaction">
+  <section class="product-satisfaction">
     <a :href="props.product.url">{{ props.product.title }}</a>
     <span>{{ props.product.description }}</span>
     <RatingContainer
@@ -26,7 +26,7 @@ const handleRatingContainerChange = (eventArgs: ProductRatingEventArgs) => {
       clickable
       @product-rating-change="handleRatingContainerChange"
     />
-  </div>
+  </section>
 </template>
 
 <style scoped="true">

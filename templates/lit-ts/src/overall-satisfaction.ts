@@ -47,11 +47,11 @@ export class OverallSatisfaction extends LitElement {
 
   render() {
     return html`
-      <div data-testid="overall-satisfaction" class="overall-satisfaction">
+      <section data-testid="overall-satisfaction" class="overall-satisfaction">
         <h2>Overall Satisfaction</h2>
         <span></span>
         <rating-container product-id="overall-satisfaction" rating="${this.overallRating}"></rating-container>
-      </div>
+      </section>
     `;
   }
 }

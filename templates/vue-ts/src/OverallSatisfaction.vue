@@ -7,11 +7,11 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="overall-satisfaction">
+  <section class="overall-satisfaction">
     <h2>Overall Satisfaction</h2>
     <span></span>
     <RatingContainer product-id="overall-satisfaction" :rating="props.rating" :clickable="false" />
-  </div>
+  </section>
 </template>
 
 <style scoped="true">

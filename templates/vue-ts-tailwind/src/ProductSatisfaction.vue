@@ -17,7 +17,7 @@ const handleRatingContainerChange = (eventArgs: ProductRatingEventArgs) => {
 </script>
 
 <template>
-  <div class="flex flex-col rounded-xl bg-indigo-100 p-4 drop-shadow-lg lg:p-8">
+  <section class="flex flex-col rounded-xl bg-indigo-100 p-4 drop-shadow-lg lg:p-8">
     <a :href="props.product.url" class="mb-4 text-center text-2xl font-medium text-indigo-900 lg:text-[1.8rem]">
       {{ props.product.title }}
     </a>
@@ -28,5 +28,5 @@ const handleRatingContainerChange = (eventArgs: ProductRatingEventArgs) => {
       clickable
       @product-rating-change="handleRatingContainerChange"
     />
-  </div>
+  </section>
 </template>

@@ -11,13 +11,16 @@ export class ProductSatisfaction extends TwLitElement {
 
   render() {
     return html`
-      <div data-testid="${this.product.id}" class="flex flex-col rounded-xl bg-indigo-100 p-4 drop-shadow-lg lg:p-8">
+      <section
+        data-testid="${this.product.id}"
+        class="flex flex-col rounded-xl bg-indigo-100 p-4 drop-shadow-lg lg:p-8"
+      >
         <a href="${this.product.url}" class="mb-4 text-center text-2xl font-medium text-indigo-900 lg:text-[1.8rem]">
           ${this.product.title}
         </a>
         <span class="grow text-center lg:h-6">${this.product.description}</span>
         <rating-container product-id="${this.product.id}" rating="${this.product.rating}" clickable></rating-container>
-      </div>
+      </section>
     `;
   }
 }

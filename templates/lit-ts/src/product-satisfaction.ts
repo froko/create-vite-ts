@@ -48,11 +48,11 @@ export class ProductSatisfaction extends LitElement {
 
   render() {
     return html`
-      <div data-testid="${this.product.id}" class="product-satisfaction">
+      <section data-testid="${this.product.id}" class="product-satisfaction">
         <a href="${this.product.url}">${this.product.title}</a>
         <span>${this.product.description}</span>
         <rating-container product-id="${this.product.id}" rating="${this.product.rating}" clickable></rating-container>
-      </div>
+      </section>
     `;
   }
 }

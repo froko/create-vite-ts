@@ -16,7 +16,7 @@ export class ProductSatisfaction {
 
     const ratingContainerElement = new RatingContainer(this.product.id, this.product.rating, true).asHtmlElement;
 
-    const productContainer = document.createElement('div');
+    const productContainer = document.createElement('section');
     productContainer.setAttribute('data-testid', this.product.id);
     productContainer.classList.add(
       'flex',

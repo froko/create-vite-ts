@@ -7,7 +7,7 @@ export interface OverallSatisfactionProps {
 
 const OverallSatisfaction = (props: OverallSatisfactionProps) => {
   return (
-    <div data-testid="overall-satisfaction" className="overall-satisfaction">
+    <section data-testid="overall-satisfaction" className="overall-satisfaction">
       <h2>Overall Satisfaction</h2>
       <span></span>
       <RatingContainer
@@ -16,7 +16,7 @@ const OverallSatisfaction = (props: OverallSatisfactionProps) => {
         clickable={false}
         productRatingChange={() => undefined}
       />
-    </div>
+    </section>
   );
 };
 

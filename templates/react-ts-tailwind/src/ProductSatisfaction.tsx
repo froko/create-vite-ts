@@ -8,7 +8,10 @@ export interface ProductSatisfactionProps {
 
 const ProductSatisfaction = (props: ProductSatisfactionProps) => {
   return (
-    <div data-testid={props.product.id} className="flex flex-col rounded-xl bg-indigo-100 p-4 drop-shadow-lg lg:p-8">
+    <section
+      data-testid={props.product.id}
+      className="flex flex-col rounded-xl bg-indigo-100 p-4 drop-shadow-lg lg:p-8"
+    >
       <a href={props.product.url} className="mb-4 text-center text-2xl font-medium text-indigo-900 lg:text-[1.8rem]">
         {props.product.title}
       </a>
@@ -19,7 +22,7 @@ const ProductSatisfaction = (props: ProductSatisfactionProps) => {
         clickable={true}
         productRatingChange={props.productRatingChange}
       />
-    </div>
+    </section>
   );
 };
 

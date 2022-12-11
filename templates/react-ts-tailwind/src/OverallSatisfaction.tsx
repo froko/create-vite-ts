@@ -6,7 +6,7 @@ export interface OverallSatisfactionProps {
 
 const OverallSatisfaction = (props: OverallSatisfactionProps) => {
   return (
-    <div
+    <section
       data-testid="overall-satisfaction"
       className="flex flex-col rounded-lg bg-indigo-900 p-4 drop-shadow-lg lg:p-8"
     >
@@ -18,7 +18,7 @@ const OverallSatisfaction = (props: OverallSatisfactionProps) => {
         clickable={false}
         productRatingChange={() => undefined}
       />
-    </div>
+    </section>
   );
 };
 
