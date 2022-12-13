@@ -47,11 +47,7 @@ export const copyTemplate = async (templatePath: string, options: CliOptions): P
   }
 
   if (!options.storybook) {
-    ignoreFiles.push('.storybook', '.npmrc');
-
-    if (options.vue) {
-      ignoreFiles.push('stories.js');
-    }
+    ignoreFiles.push('.storybook', '.npmrc', 'stories.js');
   }
 
   if (!options.ladle) {
