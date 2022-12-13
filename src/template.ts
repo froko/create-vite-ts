@@ -21,9 +21,10 @@ export const createProjectPath = async (options: CliOptions): Promise<boolean> =
 const subDirectory = (templatePath: string, templateName: string): string => {
   if (!templatePath) return '';
 
-  const folders = templatePath.split('/');
+  const delimiter = process.platform === 'win32' ? '\\' : '/';
+  const folders = templatePath.split(delimiter);
   const index = folders.lastIndexOf(templateName);
-  return folders.slice(index + 1).join('/');
+  return folders.slice(index + 1).join(delimiter);
 };
 
 const rename = (file: string): string => {
