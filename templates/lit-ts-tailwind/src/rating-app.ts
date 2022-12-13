@@ -31,7 +31,6 @@ export class RatingApp extends TwLitElement {
         ${this.products.map(
           (p) =>
             html`<product-satisfaction
-              id="${p.id}"
               .product="${p}"
               @product-rating-change="${this.handleProductRatingChange}"
             ></product-satisfaction>`

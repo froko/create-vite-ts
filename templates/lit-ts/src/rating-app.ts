@@ -59,7 +59,6 @@ export class RatingApp extends LitElement {
         ${this.products.map(
           (p) =>
             html`<product-satisfaction
-              data-testid="${p.id}"
               .product="${p}"
               @product-rating-change="${this.handleProductRatingChange}"
             ></product-satisfaction>`

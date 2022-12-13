@@ -8,21 +8,21 @@ describe('App', () => {
 
     it('should render Vite product card', () => {
       cy.getByTestId('vite').within(() => {
-        cy.get('a').should('have.text', 'Vite');
+        cy.get('a').should('contain.text', 'Vite');
         cy.get('a').should('have.attr', 'href', 'https://vitejs.dev/');
       });
     });
 
     it('should render Lit product card', () => {
       cy.getByTestId('lit').within(() => {
-        cy.get('a').should('have.text', 'Lit');
+        cy.get('a').should('contain.text', 'Lit');
         cy.get('a').should('have.attr', 'href', 'https://lit.dev/');
       });
     });
 
     it('should render Overall Satisfaction card', () => {
       cy.getByTestId('overall-satisfaction').within(() => {
-        cy.get('h2').should('have.text', 'Overall Satisfaction');
+        cy.get('h2').should('contain.text', 'Overall Satisfaction');
       });
     });
   });
