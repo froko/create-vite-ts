@@ -7,10 +7,8 @@ import { CliOptions } from './options';
 const installDependencies = async (options: CliOptions) => {
   await install(
     {
-      '@babel/core': undefined,
-      '@storybook/addon-essentials': undefined,
-      '@storybook/builder-vite': undefined,
-      'babel-loader': undefined
+      storybook: 'next',
+      '@storybook/addon-essentials': 'next'
     },
     { cwd: options.projectPath, dev: true }
   );
@@ -18,21 +16,8 @@ const installDependencies = async (options: CliOptions) => {
   if (options.lit) {
     await install(
       {
-        '@storybook/web-components': undefined,
-        react: '^17.0.2',
-        'react-dom': '^17.0.2'
-      },
-      { cwd: options.projectPath, dev: true }
-    );
-  }
-
-  if (options.react || options.vue) {
-    await install(
-      {
-        '@storybook/addon-a11y': undefined,
-        '@storybook/addon-interactions': undefined,
-        '@storybook/jest': undefined,
-        '@storybook/testing-library': undefined
+        '@storybook/web-components': 'next',
+        '@storybook/web-components-vite': 'next'
       },
       { cwd: options.projectPath, dev: true }
     );
@@ -41,7 +26,8 @@ const installDependencies = async (options: CliOptions) => {
   if (options.react) {
     await install(
       {
-        '@storybook/react': undefined
+        '@storybook/react': 'next',
+        '@storybook/react-vite': 'next'
       },
       { cwd: options.projectPath, dev: true }
     );
@@ -50,7 +36,30 @@ const installDependencies = async (options: CliOptions) => {
   if (options.vue) {
     await install(
       {
-        '@storybook/vue3': '^6.5.13'
+        '@storybook/vue3': 'next',
+        '@storybook/vue3-vite': 'next'
+      },
+      { cwd: options.projectPath, dev: true }
+    );
+  }
+
+  if (options.react || options.vue) {
+    await install(
+      {
+        '@storybook/addon-a11y': 'next',
+        '@storybook/addon-interactions': 'next',
+        '@storybook/jest': 'next',
+        '@storybook/testing-library': 'next'
+      },
+      { cwd: options.projectPath, dev: true }
+    );
+  }
+
+  if (options.lit || options.vue) {
+    await install(
+      {
+        react: undefined,
+        'react-dom': undefined
       },
       { cwd: options.projectPath, dev: true }
     );
@@ -58,7 +67,7 @@ const installDependencies = async (options: CliOptions) => {
 };
 
 const setupNpmScripts = async (options: CliOptions) => {
-  await execa('npm', ['pkg', 'set', 'scripts.storybook=start-storybook -p 6006'], {
+  await execa('npm', ['pkg', 'set', 'scripts.storybook=storybook dev -p 6006'], {
     cwd: options.projectPath
   });
 };

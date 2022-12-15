@@ -6,6 +6,7 @@
     "moduleResolution": "Node",
     "jsx": "preserve",
     "target": "ESNext",
+    "types": ["vue"],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

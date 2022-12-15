@@ -5,6 +5,9 @@ import { install } from 'pkg-install';
 import { CliOptions } from './options';
 
 const installDependencies = async (options: CliOptions) => {
+  // Todo: Remove if Histoire supports vite4
+  await install({ '@vitejs/plugin-vue': '^3.2.0', vite: '^3.2.4' }, { cwd: options.projectPath, dev: true });
+
   await install({ histoire: undefined }, { cwd: options.projectPath, dev: true });
 
   if (options.vue) {
