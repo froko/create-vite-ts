@@ -5,6 +5,7 @@ import ProductSatisfaction from './ProductSatisfaction.vue';
 
 export default {
   title: 'Components/Product Satisfaction',
+  component: ProductSatisfaction,
   args: {
     product: {
       id: 'storybook',
@@ -15,21 +16,16 @@ export default {
     }
   },
   argTypes: {
-    onProductRatingChange: { action: 'productRatingChange' }
+    onProductRatingChange: {
+      action: 'productRatingChange'
+    }
   }
 };
 
-const Template = (args) => ({
-  components: { ProductSatisfaction },
-  setup() {
-    return { args };
-  },
-  template: '<ProductSatisfaction v-bind="args" />'
-});
-
-export const Default = Template.bind({});
-Default.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  expect(canvas.getByText('Storybook')).toBeInTheDocument();
-  expect(canvas.getByText('Build component driven UIs faster')).toBeInTheDocument();
+export const Default = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    expect(canvas.getByText('Storybook')).toBeInTheDocument();
+    expect(canvas.getByText('Build component driven UIs faster')).toBeInTheDocument();
+  }
 };

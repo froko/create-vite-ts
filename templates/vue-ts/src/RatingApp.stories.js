@@ -5,6 +5,7 @@ import RatingApp from './RatingApp.vue';
 
 export default {
   title: 'Rating App',
+  component: RatingApp,
   args: {
     products: [
       {
@@ -25,24 +26,15 @@ export default {
   }
 };
 
-const Template = (args) => ({
-  components: { RatingApp },
-  setup() {
-    return { args };
-  },
-  template: '<RatingApp v-bind="args" />'
-});
-
-export const Default = Template.bind({});
-Default.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  expect(canvas.getByText('Vite - Storybook')).toBeInTheDocument();
-
-  userEvent.click(canvas.getByTestId('vite-1'));
-  userEvent.click(canvas.getByTestId('storybook-1'));
-  expect(await canvas.findByTestId('overall-satisfaction-2')).not.toHaveClass('checked');
-
-  userEvent.click(canvas.getByTestId('vite-4'));
-  userEvent.click(canvas.getByTestId('storybook-4'));
-  expect(await canvas.findByTestId('overall-satisfaction-5')).not.toHaveClass('checked');
+export const Default = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    expect(canvas.getByText('Vite - Storybook')).toBeInTheDocument();
+    userEvent.click(canvas.getByTestId('vite-1'));
+    userEvent.click(canvas.getByTestId('storybook-1'));
+    expect(await canvas.findByTestId('overall-satisfaction-2')).not.toHaveClass('checked');
+    userEvent.click(canvas.getByTestId('vite-4'));
+    userEvent.click(canvas.getByTestId('storybook-4'));
+    expect(await canvas.findByTestId('overall-satisfaction-5')).not.toHaveClass('checked');
+  }
 };
