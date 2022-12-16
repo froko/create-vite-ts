@@ -1,24 +1,17 @@
-<script lang="ts">
-import { defineComponent } from 'vue';
-
+<script lang="ts" setup>
 import OverallSatisfaction from './OverallSatisfaction.vue';
 
-const args = {
-  rating: 3
+const initState = () => {
+  return {
+    rating: 3
+  };
 };
-
-export default defineComponent({
-  components: { OverallSatisfaction },
-  setup() {
-    return { args };
-  }
-});
 </script>
 
 <template>
-  <Story title="Components/Overall Satisfaction">
-    <Variant title="Default">
-      <OverallSatisfaction v-bind="args" />
-    </Variant>
+  <Story title="Components/Overall Satisfaction" :init-state="initState">
+    <template #default="{ state }">
+      <OverallSatisfaction :rating="state.rating" />
+    </template>
   </Story>
 </template>
