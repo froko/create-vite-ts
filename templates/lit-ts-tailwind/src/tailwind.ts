@@ -1,6 +1,6 @@
 import { adoptStyles, LitElement, unsafeCSS } from 'lit';
 
-import style from './tailwind.css';
+import style from './tailwind.css?inline';
 
 export class TwLitElement extends LitElement {
   connectedCallback() {
