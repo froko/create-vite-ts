@@ -32,9 +32,9 @@ export const Default = {
     expect(canvas.getByText('Vite - Storybook')).toBeInTheDocument();
     userEvent.click(canvas.getByTestId('vite-1'));
     userEvent.click(canvas.getByTestId('storybook-1'));
-    expect(await canvas.findByTestId('overall-satisfaction-2')).not.toHaveClass('checked');
+    expect(await canvas.findByTestId('overall-satisfaction-2')).not.toHaveClass('text-orange-500');
     userEvent.click(canvas.getByTestId('vite-4'));
     userEvent.click(canvas.getByTestId('storybook-4'));
-    expect(await canvas.findByTestId('overall-satisfaction-5')).not.toHaveClass('checked');
+    expect(await canvas.findByTestId('overall-satisfaction-5')).not.toHaveClass('text-orange-500');
   }
 };
