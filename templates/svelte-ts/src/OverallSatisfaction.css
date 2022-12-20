@@ -1,0 +1,35 @@
+.overall-satisfaction {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.5rem;
+  background-color: var(--indigo900);
+  padding: 1rem;
+  color: var(--indigo50);
+  text-align: center;
+}
+
+.overall-satisfaction h2 {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.overall-satisfaction span {
+  flex: 1 1 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .overall-satisfaction {
+    padding: 2rem;
+  }
+
+  .overall-satisfaction h2 {
+    font-size: 1.8rem;
+  }
+
+  .overall-satisfaction span {
+    height: 2.5rem;
+  }
+}

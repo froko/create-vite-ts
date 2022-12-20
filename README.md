@@ -13,6 +13,7 @@ A CLI to bootstrap new vite-based TypeScript projects. Rely on hand-crafted inst
 - Lit (optional)
 - React (optional)
 - Vue.js (optional)
+- Svelte (optional)
 - Cypress.io (optional)
 - Playwright (optional)
 - Storybook (optional)
@@ -43,6 +44,8 @@ The git repo is already initialized due to the installation of Husky. It's recom
 - React with TailwindCSS
 - Vue.js
 - Vue.js with TailwindCSS
+- Svelte
+- Svelte with TailwindCSS
 
 ## Available testing frameworks
 
@@ -54,7 +57,7 @@ The git repo is already initialized due to the installation of Husky. It's recom
 
 - Storybook
 - Ladle (only React)
-- Histoire (only Vue.js)
+- Histoire (only Vue.js and Svelte)
 - None (if you don't want to benefit from isolated component visualization)
 
 ## npm scripts
@@ -72,7 +75,8 @@ The git repo is already initialized due to the installation of Husky. It's recom
 
 ### Only available with Playwright option:
 
-- `npm run playwright`: Runs your èlaywright e2e tests in different headless browsers
+- `npm run playwright`: Runs your playwright e2e tests in different headless browsers
+- `npm run playwright:ct`: Runs your playwright component tests in different headless browsers
 - `npm run playwright:report`: Shows the Playwright HTML report of the last test run
 
 ### Only available with Storybook option:
@@ -98,6 +102,6 @@ Feel free to delete all the sample application related code in the `src` folder 
 
 ## What's next?
 
-- Include svelte templates
 - Include solidjs templates
+- Include Angular templates
 - ...

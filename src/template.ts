@@ -55,7 +55,7 @@ export const copyTemplate = async (templatePath: string, options: CliOptions): P
   }
 
   if (!options.histoire) {
-    ignoreFiles.push('histoire', 'story.vue');
+    ignoreFiles.push('histoire', 'story.vue', 'story.svelte');
   }
 
   files.forEach(async (file) => {

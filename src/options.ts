@@ -8,6 +8,7 @@ export interface CliOptions {
   lit: boolean;
   react: boolean;
   vue: boolean;
+  svelte: boolean;
   tailwind: boolean;
   cypress: boolean;
   playwright: boolean;
@@ -29,7 +30,9 @@ const templates: Template[] = [
   { value: 'react-ts', name: 'React' },
   { value: 'react-ts-tailwind', name: 'React with TailwindCSS' },
   { value: 'vue-ts', name: 'Vue.js' },
-  { value: 'vue-ts-tailwind', name: 'Vue.js with TailwindCSS' }
+  { value: 'vue-ts-tailwind', name: 'Vue.js with TailwindCSS' },
+  { value: 'svelte-ts', name: 'Svelte' },
+  { value: 'svelte-ts-tailwind', name: 'Svelte with TailwindCSS' }
 ];
 
 const testingFrameworks: Template[] = [
@@ -77,7 +80,7 @@ export const argumentQuestions = () => {
           choices.push({ value: 'ladle', name: 'Ladle' });
         }
 
-        if (answers.template.includes('vue')) {
+        if (answers.template.includes('vue') || answers.template.includes('svelte')) {
           choices.push({ value: 'histoire', name: 'Histoire' });
         }
 

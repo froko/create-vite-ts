@@ -43,7 +43,17 @@ const installDependencies = async (options: CliOptions) => {
     );
   }
 
-  if (options.react || options.vue) {
+  if (options.svelte) {
+    await install(
+      {
+        '@storybook/svelte': 'next',
+        '@storybook/svelte-vite': 'next'
+      },
+      { cwd: options.projectPath, dev: true }
+    );
+  }
+
+  if (options.react || options.vue || options.svelte) {
     await install(
       {
         '@storybook/addon-a11y': 'next',
@@ -55,7 +65,7 @@ const installDependencies = async (options: CliOptions) => {
     );
   }
 
-  if (options.lit || options.vue) {
+  if (options.lit || options.vue || options.svelte) {
     await install(
       {
         react: undefined,

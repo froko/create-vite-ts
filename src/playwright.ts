@@ -12,13 +12,16 @@ const installDependencies = async (options: CliOptions) => {
   if (options.vue) {
     await install({ '@playwright/experimental-ct-vue': undefined }, { cwd: options.projectPath, dev: true });
   }
+  if (options.svelte) {
+    await install({ '@playwright/experimental-ct-svelte': undefined }, { cwd: options.projectPath, dev: true });
+  }
 };
 
 const setupNpmScripts = async (options: CliOptions) => {
   await execa('npm', ['pkg', 'set', 'scripts.playwright=playwright test'], {
     cwd: options.projectPath
   });
-  if (options.react || options.vue) {
+  if (options.react || options.vue || options.svelte) {
     await execa('npm', ['pkg', 'set', 'scripts.playwright:ct=playwright test -c playwright-ct.config.ts'], {
       cwd: options.projectPath
     });

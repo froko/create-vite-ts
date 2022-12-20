@@ -16,6 +16,7 @@ const run = async () => {
     lit: answers.template.includes('lit'),
     react: answers.template.includes('react'),
     vue: answers.template.includes('vue'),
+    svelte: answers.template.includes('svelte'),
     tailwind: answers.template.includes('tailwind'),
     cypress: answers.testingFramework.includes('cypress'),
     playwright: answers.testingFramework.includes('playwright'),
