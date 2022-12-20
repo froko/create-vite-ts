@@ -9,9 +9,12 @@ const initState = () => {
 </script>
 
 <template>
-  <Story title="Components/Overall Satisfaction" :init-state="initState">
+  <Story title="Components/Overall Satisfaction" :init-state="initState" auto-props-disabled>
     <template #default="{ state }">
       <OverallSatisfaction :rating="state.rating" />
+    </template>
+    <template #controls="{ state }">
+      <HstNumber v-model="state.rating" title="Rating" />
     </template>
   </Story>
 </template>
