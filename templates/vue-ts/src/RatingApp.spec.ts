@@ -22,7 +22,7 @@ test.describe('Elements', () => {
     await expect(viteTitle).toHaveAttribute('href', 'https://vitejs.dev/');
   });
 
-  test('should render vue product card', async ({ mount }) => {
+  test('should render Vue.js product card', async ({ mount }) => {
     const component = await mount(RatingApp, { props });
     const vueCard = component.locator('[data-testid=vue]');
     const vueTitle = vueCard.locator('a');
