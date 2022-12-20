@@ -18,7 +18,7 @@ const setupNpmScripts = async (options: CliOptions) => {
   await execa('npm', ['pkg', 'set', 'scripts.playwright=playwright test'], {
     cwd: options.projectPath
   });
-  if (options.react) {
+  if (options.react || options.vue) {
     await execa('npm', ['pkg', 'set', 'scripts.playwright:ct=playwright test -c playwright-ct.config.ts'], {
       cwd: options.projectPath
     });
