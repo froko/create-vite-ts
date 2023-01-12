@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
+coverage
 playwright-report/
 playwright/.cache/
 *.local
