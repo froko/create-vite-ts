@@ -1,5 +1,4 @@
 import Listr from 'listr';
-import { projectInstall } from 'pkg-install';
 
 import { createCypressTasks } from './cypress';
 import { createHistoireTasks } from './histoire';
@@ -16,34 +15,27 @@ export const createTasks = (options: CliOptions): Listr => {
       task: () => copyTemplate(options.templatePath, options)
     },
     {
-      title: 'Install dependencies',
-      task: () =>
-        projectInstall({
-          cwd: options.projectPath
-        })
-    },
-    {
-      title: 'Install Cypress.io',
+      title: 'Add Cypress.io',
       task: () => createCypressTasks(options),
       enabled: () => options.cypress
     },
     {
-      title: 'Install Playwright',
+      title: 'Add Playwright',
       task: () => createPlaywrightTasks(options),
       enabled: () => options.playwright
     },
     {
-      title: 'Install Storybook',
+      title: 'Add Storybook',
       task: () => createStorybookTasks(options),
       enabled: () => options.storybook
     },
     {
-      title: 'Install Ladle',
+      title: 'Add Ladle',
       task: () => createLadleTasks(options),
       enabled: () => options.ladle
     },
     {
-      title: 'Install Histoire',
+      title: 'Add Histoire',
       task: () => createHistoireTasks(options),
       enabled: () => options.histoire
     }
