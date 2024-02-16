@@ -1,0 +1,14 @@
+{
+  "name": "@froko/create-vite-ts",
+  "description": "A CLI to bootstrap new vite-based TypeScript projects",
+  "keywords": [
+    "cli",
+    "create-vite-ts"
+  ],
+  "author": "Patrick Ineichen <github@frokonet.ch>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/froko/create-vite-ts.git"
+  },
+  "license": "MIT"
+}
