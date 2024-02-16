@@ -14,6 +14,7 @@
     "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
     "fa-icons": "^0.2.0",
     "lit": "^2.8.0"
   },

@@ -130,6 +130,9 @@ importers:
 
   examples/lit-ts-playwright:
     dependencies:
+      '@fortawesome/fontawesome-free':
+        specifier: ^6.5.1
+        version: 6.5.1
       fa-icons:
         specifier: ^0.2.0
         version: 0.2.0
@@ -173,6 +176,9 @@ importers:
 
   examples/lit-ts-tailwind-cypress-storybook:
     dependencies:
+      '@fortawesome/fontawesome-free':
+        specifier: ^6.5.1
+        version: 6.5.1
       fa-icons:
         specifier: ^0.2.0
         version: 0.2.0
@@ -243,6 +249,9 @@ importers:
 
   examples/lit-ts-tailwind-playwright:
     dependencies:
+      '@fortawesome/fontawesome-free':
+        specifier: ^6.5.1
+        version: 6.5.1
       fa-icons:
         specifier: ^0.2.0
         version: 0.2.0
