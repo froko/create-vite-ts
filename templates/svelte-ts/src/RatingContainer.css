@@ -1,0 +1,7 @@
+.rating {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  margin-inline: auto;
+  max-width: 20rem;
+}

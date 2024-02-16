@@ -1,0 +1,19 @@
+.fa-svelte {
+  font-size: 2rem;
+}
+
+.checked {
+  color: var(--orange500);
+}
+
+.action {
+  cursor: pointer;
+}
+
+.action:hover {
+  color: var(--orange700);
+}
+
+div[role='button'] {
+  outline: none;
+}

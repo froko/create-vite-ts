@@ -1,0 +1,15 @@
+.ladle-main {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @apply bg-blue-50;
+}
+
+.ladle-aside a {
+  font-weight: unset;
+  font-size: unset;
+  margin-bottom: unset;
+}
