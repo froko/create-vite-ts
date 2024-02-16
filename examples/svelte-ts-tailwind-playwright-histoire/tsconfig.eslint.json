@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "vite.config.ts",
+    "src",
+    "tailwind.config.cjs",
+
+    "playwright",
+    "playwright.config.ts",
+    "playwright-ct.config.ts",
+
+    "histoire.config.ts"
+  ]
+}

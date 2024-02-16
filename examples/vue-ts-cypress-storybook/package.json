@@ -1,0 +1,48 @@
+{
+  "name": "vue-ts-cypress-storybook",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "format": "prettier . --write && eslint . --cache --fix",
+    "start": "vite --port 3000",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview --port 3000",
+    "cypress": "run-p start cypress:open",
+    "cypress:ci": "npm run build && run-p -rs preview cypress:run",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --spec 'cypress/e2e/*.cy.ts'",
+    "storybook": "storybook dev -p 6006"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^7.6.10",
+    "@storybook/addon-essentials": "^7.6.10",
+    "@storybook/addon-interactions": "^7.6.10",
+    "@storybook/jest": "^0.2.3",
+    "@storybook/testing-library": "^0.2.2",
+    "@storybook/vue3": "^7.6.10",
+    "@storybook/vue3-vite": "^7.6.10",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "cypress": "^13.6.3",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.2",
+    "storybook": "^7.6.10",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
+    "vue-eslint-parser": "^9.3.1",
+    "vue-loader": "^17.2.2",
+    "vue-tsc": "^1.8.8"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "rvest.vs-code-prettier-eslint",
+    "Vue.volar",
+    "ms-playwright.playwright"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "rvest.vs-code-prettier-eslint",
+    "runem.lit-plugin",
+    "bradlc.vscode-tailwindcss"
+  ]
+}
