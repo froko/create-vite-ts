@@ -1,3 +1,33 @@
+import { ArgumentConfig } from 'ts-command-line-args';
+
+export type ArgumentOptions = {
+  projectName: string;
+  template: string;
+  testingFramework: string;
+  componentExplorer: string;
+  help: boolean;
+};
+
+export const argumentConfig: ArgumentConfig<ArgumentOptions> = {
+  projectName: { type: String, defaultOption: true, defaultValue: '', description: 'Project name' },
+  template: {
+    type: String,
+    defaultValue: '',
+    description: 'Template to use: vanilla-ts | lit-ts | react-ts |vue-ts | svelte-ts'
+  },
+  testingFramework: {
+    type: String,
+    defaultValue: '',
+    description: 'Testing framework to use: none | cypress | playwright'
+  },
+  componentExplorer: {
+    type: String,
+    defaultValue: '',
+    description: 'Component explorer to use: none | storybook | ladle | histoire'
+  },
+  help: { type: Boolean, alias: 'h', description: 'Display this help message' }
+};
+
 export interface CliOptions {
   projectName: string;
   template: string;
@@ -9,7 +39,6 @@ export interface CliOptions {
   react: boolean;
   vue: boolean;
   svelte: boolean;
-  tailwind: boolean;
   cypress: boolean;
   playwright: boolean;
   storybook: boolean;
@@ -46,12 +75,14 @@ const componentExplorers: Template[] = [
   { value: 'storybook', name: 'Storybook' }
 ];
 
-export const argumentQuestions = () => {
+export const argumentQuestions = (options: ArgumentOptions) => {
   return [
     {
       name: 'projectName',
       type: 'input',
       message: 'Project name:',
+      value: options.projectName,
+      when: () => !options.projectName,
       validate: (input: string) => {
         if (/^([A-Za-z\-\\_\d])+$/.test(input)) return true;
         else return 'Project name may only include letters, numbers, underscores and hashes.';
@@ -61,26 +92,34 @@ export const argumentQuestions = () => {
       name: 'template',
       type: 'list',
       message: 'Chose template:',
-      choices: templates
+      choices: templates,
+      value: options.template,
+      when: () => !options.template
     },
     {
       name: 'testingFramework',
       type: 'list',
       message: 'Chose testing framework:',
-      choices: testingFrameworks
+      choices: testingFrameworks,
+      value: options.testingFramework,
+      when: () => !options.testingFramework
     },
     {
       name: 'componentExplorer',
       type: 'list',
       message: 'Chose component explorer:',
-      when: (answers: CliOptions) => !answers.template.includes('vanilla-ts'),
+      value: options.componentExplorer,
+      when: (answers: CliOptions) =>
+        !options.componentExplorer &&
+        !options.template?.includes('vanilla-ts') &&
+        !answers.template?.includes('vanilla-ts'),
       choices: (answers: CliOptions) => {
         const choices = componentExplorers;
-        if (answers.template.includes('react')) {
+        if (answers.template?.includes('react')) {
           choices.push({ value: 'ladle', name: 'Ladle' });
         }
 
-        if (answers.template.includes('vue') || answers.template.includes('svelte')) {
+        if (answers.template?.includes('vue') || answers.template?.includes('svelte')) {
           choices.push({ value: 'histoire', name: 'Histoire' });
         }
 

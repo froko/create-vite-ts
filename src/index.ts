@@ -2,27 +2,33 @@ import path from 'path';
 
 import { green } from 'colorette';
 import inquirer from 'inquirer';
+import { parse } from 'ts-command-line-args';
 
-import { argumentQuestions, CliOptions } from './options';
+import { argumentConfig, ArgumentOptions, argumentQuestions, CliOptions } from './options';
 import { createTasks } from './tasks';
 import { createProjectPath } from './template';
 
 const run = async () => {
-  const answers = await inquirer.prompt(argumentQuestions());
+  const args = parse<ArgumentOptions>(argumentConfig, { helpArg: 'help' });
+  const answers = await inquirer.prompt(argumentQuestions(args));
+  const template = answers.template ?? args.template
+  const projectName = answers.projectName ?? args.projectName;
+  const testingFramework = answers.testingFramework ?? args.testingFramework;
+  const componentExplorer = answers.componentExplorer ?? args.componentExplorer;
   const options = {
+    ...args,
     ...answers,
-    templatePath: path.join(__dirname, 'templates', answers.template),
-    projectPath: path.join(process.cwd(), answers.projectName),
-    lit: answers.template.includes('lit'),
-    react: answers.template.includes('react'),
-    vue: answers.template.includes('vue'),
-    svelte: answers.template.includes('svelte'),
-    tailwind: answers.template.includes('tailwind'),
-    cypress: answers.testingFramework.includes('cypress'),
-    playwright: answers.testingFramework.includes('playwright'),
-    storybook: answers.componentExplorer?.includes('storybook'),
-    ladle: answers.componentExplorer?.includes('ladle'),
-    histoire: answers.componentExplorer?.includes('histoire')
+    templatePath: path.join(__dirname, 'templates', template),
+    projectPath: path.join(process.cwd(), projectName),
+    lit: template.includes('lit'),
+    react: template.includes('react'),
+    vue: template.includes('vue'),
+    svelte: template.includes('svelte'),
+    cypress: testingFramework.includes('cypress'),
+    playwright: testingFramework.includes('playwright'),
+    storybook: componentExplorer.includes('storybook'),
+    ladle: componentExplorer.includes('ladle'),
+    histoire: componentExplorer.includes('histoire')
   } as CliOptions;
 
   if (await createProjectPath(options)) {
