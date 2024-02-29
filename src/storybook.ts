@@ -39,7 +39,7 @@ export const createStorybookTasks = (options: CliOptions): Listr => {
     },
     {
       title: 'Set up npm scripts',
-      task: () => addPackageScript('storybook', 'storybook dev -p 6006', options)
+      task: async () => await addPackageScript('storybook', 'storybook dev -p 6006', options)
     }
   ]);
 };

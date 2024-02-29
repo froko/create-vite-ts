@@ -25,11 +25,11 @@ export const createPlaywrightTasks = (options: CliOptions): Listr => {
     {
       title: 'Set up npm scripts',
       task: async () => {
-        addPackageScript('playwright', 'playwright test', options);
+        await addPackageScript('playwright', 'playwright test', options);
         if (options.react || options.vue || options.svelte) {
-          addPackageScript('playwright:ct', 'playwright test -c playwright-ct.config.ts', options);
+          await addPackageScript('playwright:ct', 'playwright test -c playwright-ct.config.ts', options);
         }
-        addPackageScript('playwright:report', 'playwright show-report', options);
+        await addPackageScript('playwright:report', 'playwright show-report', options);
       }
     }
   ]);
