@@ -23,7 +23,7 @@ const getComponentExplorer = (projectName) => {
 
 
 const runGenerator = async (args) => {
-  const { stdout } = await execa('pnpm', ['start', ...args]);
+  const { stdout } = await execa('pnpm', ['dev', ...args]);
   console.log(stdout);
 };
 

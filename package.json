@@ -14,7 +14,7 @@
   "license": "MIT",
   "scripts": {
     "format": "prettier . --write && eslint . --cache --fix",
-    "start": "node dist/index.js",
+    "dev": "node dist/index.js",
     "build": "rimraf dist && node ./esbuild.js",
     "preversion": "npm run build",
     "postversion": "git push && git push --tags"

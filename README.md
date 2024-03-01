@@ -62,7 +62,7 @@ The CLI will create a new directory named by the project name.
 
 ### Available in all templates:
 
-- `npm start`: Starts the application at http://localhost:3000
+- `npm run dev`: Starts the application at http://localhost:3000
 - `npm run build`: Builds the application into the `dist` folder
 - `npm run preview`: Serves the built application at http://localhost:3000
 
