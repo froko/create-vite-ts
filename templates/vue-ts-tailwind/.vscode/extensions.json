@@ -1,3 +1,9 @@
 {
-  "recommendations": ["editorconfig.editorconfig", "rvest.vs-code-prettier-eslint", "bradlc.vscode-tailwindcss", "Vue.volar"<% if (playwright) { %>, "ms-playwright.playwright"<% } %>]
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "rvest.vs-code-prettier-eslint",
+    "bradlc.vscode-tailwindcss",
+    "Vue.volar"<% if (playwright) { %>,
+    "ms-playwright.playwright"<% } %>
+  ]
 }
