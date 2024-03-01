@@ -3,6 +3,6 @@
     "editorconfig.editorconfig",
     "rvest.vs-code-prettier-eslint",
     "Vue.volar"<% if (playwright) { %>,
-    "ms-playwright.playwright"<% } %
+    "ms-playwright.playwright"<% } %>
   ]
 }
