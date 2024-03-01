@@ -16,6 +16,7 @@
     "format": "prettier . --write && eslint . --cache --fix",
     "dev": "node dist/index.js",
     "build": "rimraf dist && node ./esbuild.js",
+    "playground": "rimraf playground && mkdir playground && pnpm build && node playground.mjs",
     "preversion": "npm run build",
     "postversion": "git push && git push --tags"
   },
