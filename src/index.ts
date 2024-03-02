@@ -11,7 +11,7 @@ import { createProjectPath } from './template';
 const run = async () => {
   const args = parse<ArgumentOptions>(argumentConfig, { helpArg: 'help' });
   const answers = await inquirer.prompt(argumentQuestions(args));
-  const template = answers.template ?? args.template
+  const template = answers.template ?? args.template;
   const projectName = answers.projectName ?? args.projectName;
   const testingFramework = answers.testingFramework ?? args.testingFramework;
   const componentExplorer = answers.componentExplorer ?? args.componentExplorer;

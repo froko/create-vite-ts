@@ -16,7 +16,11 @@ export const createCypressTasks = (options: CliOptions): Listr => {
       title: 'Set up npm scripts',
       task: async () => {
         await addPackageScript('cypress', 'start-server-and-test dev http://localhost:3000 cypress:open', options);
-        await addPackageScript('cypress:ci', 'npm run build && start-server-and-test preview http://localhost:3000 cypress:run', options);
+        await addPackageScript(
+          'cypress:ci',
+          'npm run build && start-server-and-test preview http://localhost:3000 cypress:run',
+          options
+        );
         await addPackageScript('cypress:open', 'cypress open --e2e --browser electron', options);
         await addPackageScript('cypress:run', "cypress run --spec 'cypress/e2e/*.cy.ts'", options);
       }

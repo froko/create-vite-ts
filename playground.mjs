@@ -1,26 +1,37 @@
 import { execa } from 'execa';
 
 const getTemplate = (projectName) => {
-  const templates = ['lit-ts-tailwind', 'lit-ts', 'react-ts-tailwind', 'react-ts', 'svelte-ts-tailwind', 'svelte-ts', 'vanilla-ts-tailwind', 'vanilla-ts', 'vue-ts-tailwind', 'vue-ts'];
-  const matchingTemplate = templates.find((template) => projectName.indexOf(template) !== -1)
+  const templates = [
+    'lit-ts-tailwind',
+    'lit-ts',
+    'react-ts-tailwind',
+    'react-ts',
+    'svelte-ts-tailwind',
+    'svelte-ts',
+    'vanilla-ts-tailwind',
+    'vanilla-ts',
+    'vue-ts-tailwind',
+    'vue-ts'
+  ];
+  const matchingTemplate = templates.find((template) => projectName.indexOf(template) !== -1);
 
   return matchingTemplate ? ['--template', matchingTemplate] : [];
-}
+};
 
 const getTestingFramework = (projectName) => {
   const testingFrameworks = ['cypress', 'playwright'];
   const matchingFramework = testingFrameworks.find((framework) => projectName.indexOf(framework) !== -1) ?? 'none';
 
   return ['--testingFramework', matchingFramework];
-}
+};
 
 const getComponentExplorer = (projectName) => {
   const componentExplorers = ['storybook', 'ladle', 'histoire'];
-  const matchingComponentExplorer = componentExplorers.find((framework) => projectName.indexOf(framework) !== -1) ?? 'none';
+  const matchingComponentExplorer =
+    componentExplorers.find((framework) => projectName.indexOf(framework) !== -1) ?? 'none';
 
   return ['--componentExplorer', matchingComponentExplorer];
-}
-
+};
 
 const runGenerator = async (args) => {
   const { stdout } = await execa('pnpm', ['dev', ...args]);
@@ -41,7 +52,7 @@ const createProject = async (projectName) => {
 
   const args = [`${playgroundDirectory}${projectName}`, ...template, ...testingFramework, ...componentExplorer];
   await runGenerator(args);
-}
+};
 
 await createProject('lit-ts-cypress-storybook');
 await createProject('lit-ts-playwright');
