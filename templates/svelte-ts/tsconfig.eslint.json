@@ -1,11 +1,4 @@
 {
   "extends": "./tsconfig.json",
-  "include": [
-    "vite.config.ts",
-    "src",
-    <% if (cypress) { %>"cypress",<% } %>
-    <% if (playwright) { %>"playwright", "playwright.config.ts", "playwright-ct.config.ts",<% } %>
-    <% if (storybook) { %>".storybook",<% } %>
-    <% if (histoire) { %>"histoire.config.ts",<% } %>
-  ]
+  "include": ["vite.config.mts", "src"<% if (cypress) { %>, "cypress"<% } %><% if (playwright) { %>, "playwright", "playwright.config.ts", "playwright-ct.config.ts"<% } %><% if (storybook) { %>, ".storybook"<% } %><% if (histoire) { %>, "histoire.config.ts"<% } %>]
 }

@@ -15,5 +15,5 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "include": ["vite.config.ts", "src"]
+  "include": ["vite.config.mts", "src"]
 }

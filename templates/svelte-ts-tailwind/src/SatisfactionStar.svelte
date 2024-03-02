@@ -1,7 +1,7 @@
 <script lang="ts">
   import { faStar } from '@fortawesome/free-solid-svg-icons/faStar';
-  import Icon from 'fa-svelte';
   import { createEventDispatcher } from 'svelte';
+  import Fa from 'svelte-fa';
 
   import type { ProductRatingEventArgs } from './RatingAppModel';
 
@@ -31,12 +31,12 @@
   tabindex="0"
   on:click="{handleStarClick}"
 >
-  <Icon
+  <Fa
     {icon}
     class="text-3xl {checked ? 'text-orange-500' : ''} {clickable
       ? 'cursor-pointer hover:text-orange-700'
       : !checked
-      ? 'text-white'
-      : ''}"
+        ? 'text-white'
+        : ''}"
   />
 </div>

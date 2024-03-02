@@ -8,11 +8,11 @@ export const createHistoireTasks = (options: CliOptions): Listr => {
     {
       title: 'Add dependencies',
       task: async () => {
-        const version = '^0.17.8';
+        const version = '^0.17.9';
 
         await addDevDependency('histoire', version, options);
         if (options.vue) {
-          await addDevDependency('@histoire/plugin-vue', version, options);
+          await addDevDependency('@histoire/plugin-vue', '^0.17.12', options);
         }
         if (options.svelte) {
           await addDevDependency('@histoire/plugin-svelte', version, options);

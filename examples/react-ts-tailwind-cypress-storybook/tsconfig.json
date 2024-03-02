@@ -15,5 +15,5 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "include": ["vite.config.ts", "src", "cypress/support"]
+  "include": ["vite.config.mts", "src", "cypress/support"]
 }

@@ -1,4 +1,4 @@
 /// <reference types="svelte" />
 /// <reference types="vite/client" />
 
-declare module 'fa-svelte';
+declare module 'svelte-fa';

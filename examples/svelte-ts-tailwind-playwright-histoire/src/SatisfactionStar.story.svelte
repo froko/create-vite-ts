@@ -18,7 +18,7 @@
       {productId}
       {position}
       {checked}
-      clickable="{clickable}"
+      {clickable}
       on:starClick="{(event) => logEvent('starClick', event)}"
     />
 
