@@ -20,6 +20,7 @@ export const createStorybookTasks = (options: CliOptions): Listr => {
         if (options.react) {
           await addDevDependency('@storybook/react', version, options);
           await addDevDependency('@storybook/react-vite', version, options);
+          await addDevDependency('jest-mock', '^29.7.0', options);
         }
         if (options.vue) {
           await addDevDependency('@storybook/vue3', version, options);
@@ -32,8 +33,8 @@ export const createStorybookTasks = (options: CliOptions): Listr => {
         if (options.react || options.vue || options.svelte) {
           await addDevDependency('@storybook/addon-a11y', version, options);
           await addDevDependency('@storybook/addon-interactions', version, options);
-          await addDevDependency('@storybook/jest', version, options);
-          await addDevDependency('@storybook/testing-library', version, options);
+          await addDevDependency('@storybook/jest', '^0.2.3', options);
+          await addDevDependency('@storybook/testing-library', '^0.2.2', options);
         }
       }
     },
