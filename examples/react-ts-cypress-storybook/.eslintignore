@@ -1,5 +1,5 @@
-dist/
-coverage/
-node_modules/
-playwright/.cache/
-playwright-report/
+node_modules
+dist
+coverage
+playwright/.cache
+playgwright-report

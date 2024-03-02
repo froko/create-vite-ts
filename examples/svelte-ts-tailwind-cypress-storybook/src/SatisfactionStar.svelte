@@ -36,7 +36,7 @@
     class="text-3xl {checked ? 'text-orange-500' : ''} {clickable
       ? 'cursor-pointer hover:text-orange-700'
       : !checked
-        ? 'text-white'
-        : ''}"
+      ? 'text-white'
+      : ''}"
   />
 </div>

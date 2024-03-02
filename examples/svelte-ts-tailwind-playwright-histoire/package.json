@@ -6,7 +6,7 @@
   "scripts": {
     "format": "prettier . --write && eslint . --cache --fix",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "start": "vite --port 3000",
+    "dev": "vite --port 3000",
     "build": "tsc && vite build",
     "preview": "vite preview --port 3000",
     "playwright": "playwright test",

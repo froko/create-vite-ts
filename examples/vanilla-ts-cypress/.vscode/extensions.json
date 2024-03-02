@@ -1,3 +1,6 @@
 {
-  "recommendations": ["editorconfig.editorconfig", "rvest.vs-code-prettier-eslint"]
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "rvest.vs-code-prettier-eslint"
+  ]
 }

@@ -46,8 +46,8 @@
 
   <Hst.Variant title="Checked and Clickable">
     <SatisfactionStar
-      {productId}
-      {position}
+      productId="{productId}"
+      position="{position}"
       checked="{true}"
       clickable="{true}"
       on:starClick="{(event) => logEvent('starClick', event)}"
