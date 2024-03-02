@@ -15,10 +15,10 @@
 <Hst.Story title="Components/Satisfaction Star" layout="{{ type: 'grid', width: 200 }}">
   <Hst.Variant title="Default">
     <SatisfactionStar
-      productId="{productId}"
-      position="{position}"
-      checked="{checked}"
-      clickable="{clickable}"
+      {productId}
+      {position}
+      {checked}
+      {clickable}
       on:starClick="{(event) => logEvent('starClick', event)}"
     />
 
@@ -31,14 +31,14 @@
   </Hst.Variant>
 
   <Hst.Variant title="Checked">
-    <SatisfactionStar productId="{productId}" position="{position}" checked="{true}" clickable="{clickable}" />
+    <SatisfactionStar {productId} {position} checked="{true}" {clickable} />
   </Hst.Variant>
 
   <Hst.Variant title="Clickable">
     <SatisfactionStar
-      productId="{productId}"
-      position="{position}"
-      checked="{checked}"
+      {productId}
+      {position}
+      {checked}
       clickable="{true}"
       on:starClick="{(event) => logEvent('starClick', event)}"
     />

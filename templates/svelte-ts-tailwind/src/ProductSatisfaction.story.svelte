@@ -16,7 +16,7 @@
 
 <Hst.Story title="Components/Product Satisfaction">
   <div style="margin: 1rem;">
-    <ProductSatisfaction product="{product}" />
+    <ProductSatisfaction {product} />
   </div>
 
   <svelte:fragment slot="controls">

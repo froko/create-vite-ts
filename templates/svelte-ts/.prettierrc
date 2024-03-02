@@ -3,9 +3,7 @@
   "semi": true,
   "bracketSpacing": true,
   "trailingComma": "none",
-  "plugins": [
-    "prettier-plugin-svelte"
-  ],
+  "plugins": ["prettier-plugin-svelte"],
   "svelteSortOrder": "options-styles-scripts-markup",
   "svelteStrictMode": true,
   "svelteIndentScriptAndStyle": true

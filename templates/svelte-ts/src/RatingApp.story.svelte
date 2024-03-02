@@ -24,7 +24,7 @@
 </script>
 
 <Hst.Story title="Rating App">
-  <RatingApp products="{products}" />
+  <RatingApp {products} />
 
   <svelte:fragment slot="controls">
     <Hst.Json bind:value="{products}" title="Products" />

@@ -10,7 +10,7 @@
 
 <Hst.Story title="Components/Overall Satisfaction">
   <div style="margin: 1rem;">
-    <OverallSatisfaction rating="{rating}" />
+    <OverallSatisfaction {rating} />
   </div>
 
   <svelte:fragment slot="controls">

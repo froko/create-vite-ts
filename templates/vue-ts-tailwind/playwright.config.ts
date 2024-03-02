@@ -6,7 +6,7 @@ const config: PlaywrightTestConfig = {
   fullyParallel: true,
   reporter: 'html',
   webServer: {
-    command: 'npm run start',
+    command: 'npm run dev',
     url: 'http://localhost:3000/'
   },
   use: {

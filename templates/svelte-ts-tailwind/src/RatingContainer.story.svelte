@@ -14,9 +14,9 @@
 <Hst.Story title="Components/Rating Container" layout="{{ type: 'grid', width: 400 }}">
   <Hst.Variant title="Default">
     <RatingContainer
-      productId="{productId}"
-      rating="{rating}"
-      clickable="{clickable}"
+      {productId}
+      {rating}
+      {clickable}
       on:productRatingChange="{(event) => logEvent('productRatingChange', event)}"
     />
 
@@ -28,16 +28,16 @@
   </Hst.Variant>
 
   <Hst.Variant title="Disappointed">
-    <RatingContainer productId="{productId}" rating="{1}" clickable="{clickable}" />
+    <RatingContainer {productId} rating="{1}" {clickable} />
   </Hst.Variant>
 
   <Hst.Variant title="Very Satisfied">
-    <RatingContainer productId="{productId}" rating="{5}" clickable="{clickable}" />
+    <RatingContainer {productId} rating="{5}" {clickable} />
   </Hst.Variant>
 
   <Hst.Variant title="Clickable">
     <RatingContainer
-      productId="{productId}"
+      {productId}
       rating="{3}"
       clickable="{true}"
       on:productRatingChange="{(event) => logEvent('productRatingChange', event)}"
