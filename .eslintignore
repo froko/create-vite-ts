@@ -1,5 +1,8 @@
-dist
 node_modules
+dist
+coverage
+playwright/.cache
+playgwright-report
 
 templates
 examples

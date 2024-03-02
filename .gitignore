@@ -1,8 +1,11 @@
 # Dependencies
 node_modules
 
-# Build outputs
+# Build & Test outputs
 dist
+coverage
+playwright-report/
+playwright/.cache/
 
 # Playground
 playground
@@ -23,7 +26,9 @@ playground
 # Logs
 logs
 *.log
-.pnpm-debug.log*
+pnpm-debug.log*
+pnpm-error.log*
+npm-debug.log*
 
 # dotenv environment variable files
 .env
