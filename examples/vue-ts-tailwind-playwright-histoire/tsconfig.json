@@ -18,6 +18,6 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "include": ["src", "cypress/support", "playwright/support"],
+  "include": ["src", "playwright/support"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
