@@ -69,7 +69,7 @@ The CLI will create a new directory named by the project name.
 ### Only available with Cypress.io option:
 
 - `npm run cypress`: Starts the application & runs Cypress.io in visual mode
-- `npm run cypress:ci`: Builds and serves the application & runs Cypress.io in headless mode
+- `npm run cypress:ci`: Serves the builtapplication & runs Cypress.io in headless mode
 
 ### Only available with Playwright option:
 
