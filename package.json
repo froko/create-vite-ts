@@ -13,10 +13,12 @@
   },
   "license": "MIT",
   "scripts": {
-    "format": "prettier . --write && eslint . --cache --fix",
+    "format": "prettier . --write && eslint . --cache --fix && nx run-many -t format",
     "dev": "node dist/index.js",
-    "build": "rimraf dist && node ./esbuild.js",
+    "build": "rimraf dist && node ./esbuild.js && nx run-many -t build",
     "playground": "rimraf playground && mkdir playground && pnpm build && node playground.mjs",
+    "cypress:ci": "nx run-many -t cypress:ci --parallel 1",
+    "playwright": "nx run-many -t playwright --parallel 1",
     "preversion": "npm run build",
     "postversion": "git push && git push --tags"
   },
@@ -55,6 +57,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
+    "nx": "^18.0.6",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3"

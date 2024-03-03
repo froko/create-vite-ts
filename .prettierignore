@@ -5,5 +5,7 @@ playwright/.cache
 playgwright-report
 
 templates
+examples
+playground
 
 pnpm-lock.yaml
