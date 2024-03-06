@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "lint": "prettier . --check && eslint . --cache",
     "format": "prettier . --write && eslint . --cache --fix",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "dev": "vite --port 3000",
