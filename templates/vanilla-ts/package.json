@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "lint": "prettier . --check && eslint . --cache",
     "format": "prettier . --write && eslint . --cache --fix",
     "dev": "vite --port 3000",
     "build": "tsc && vite build",

@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "lint": "prettier . --check && eslint . --cache",
     "format": "prettier . --write && eslint . --cache --fix",
     "dev": "vite --port 3000",
     "build": "vue-tsc && vite build",
