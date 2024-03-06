@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
 import { writeFile, mkdir, readdir, readFile, stat } from 'fs/promises';
+import { rimraf } from 'rimraf';
 import * as path from 'path';
 
 import * as esbuild from 'esbuild';
@@ -52,6 +53,7 @@ const copyReadme = async () => {
 };
 
 (async () => {
+  await rimraf('dist');
   await mkdir('dist');
   await mkdir('dist/templates');
   await copyTemplates('templates');

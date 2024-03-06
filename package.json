@@ -13,14 +13,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "format": "prettier . --write && eslint . --cache --fix && nx run-many -t format",
-    "dev": "node dist/index.js",
-    "build": "rimraf dist && node ./esbuild.js && nx run-many -t build",
-    "playground": "rimraf playground && mkdir playground && pnpm build && node playground.mjs",
-    "cypress:ci": "nx run-many -t cypress:ci --parallel 1",
-    "playwright": "nx run-many -t playwright --parallel 1",
-    "preversion": "npm run build",
-    "postversion": "git push && git push --tags"
+    "lint": "prettier . --check && eslint . --cache",
+    "format": "prettier . --write && eslint . --cache --fix",
+    "build": "node ./esbuild.mjs",
+    "dev": "pnpm build && node dist/index.js",
+    "playground": "pnpm build && node playground.mjs"
   },
   "engines": {
     "node": ">=18.0.0"

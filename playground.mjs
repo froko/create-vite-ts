@@ -1,4 +1,6 @@
 import { execa } from 'execa';
+import { mkdir } from 'fs/promises';
+import { rimraf } from 'rimraf';
 
 const getTemplate = (projectName) => {
   const templates = [
@@ -53,6 +55,9 @@ const createProject = async (projectName) => {
   const args = [`${playgroundDirectory}${projectName}`, ...template, ...testingFramework, ...componentExplorer];
   await runGenerator(args);
 };
+
+await rimraf('playground');
+await mkdir('playground');
 
 await createProject('lit-ts-cypress-storybook');
 await createProject('lit-ts-playwright');
