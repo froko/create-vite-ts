@@ -17,7 +17,8 @@
     "format": "prettier . --write && eslint . --cache --fix",
     "build": "node ./esbuild.mjs",
     "dev": "pnpm build && node dist/index.js",
-    "playground": "pnpm build && node playground.mjs"
+    "playground": "pnpm build && node playground.mjs",
+    "nx": "nx"
   },
   "engines": {
     "node": ">=18.0.0"
