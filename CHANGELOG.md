@@ -1,5 +1,12 @@
 # Semantic Release Changelog
 
+# [1.0.0-next.2](https://github.com/froko/create-vite-ts/compare/v1.0.0-next.1...v1.0.0-next.2) (2024-03-09)
+
+
+### Bug Fixes
+
+* **ci:** add build step to release workflow ([f901ff8](https://github.com/froko/create-vite-ts/commit/f901ff8b114c019349885157040ef0584e618c58))
+
 # 1.0.0-next.1 (2024-03-09)
 
 

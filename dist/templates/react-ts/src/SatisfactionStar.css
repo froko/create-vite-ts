@@ -1,0 +1,11 @@
+.checked {
+  color: var(--orange500);
+}
+
+.action {
+  cursor: pointer;
+}
+
+.action:hover {
+  color: var(--orange700);
+}
