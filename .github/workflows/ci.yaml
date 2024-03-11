@@ -4,6 +4,7 @@ on:
     branches:
       - main
   pull_request:
+  workflow_dispatch:
 
 jobs:
   main:
@@ -28,16 +29,21 @@ jobs:
           path: |
             ~/.cache/Cypress
             node_modules
-          key: my-cache-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+            ${{ runner.os }}-pnpm-
 
-      - name: Cache Playwright
-        id: playwright-cache
+      - name: Get installed Playwright version
+        id: playwright-version
+        run: echo "PLAYWRIGHT_VERSION=$(node playwright-version.mjs)" >> $GITHUB_ENV
+
+      - name: Cache playwright binaries
         uses: actions/cache@v4
+        id: playwright-cache
         with:
-          path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          path: |
+            ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ env.PLAYWRIGHT_VERSION }}
           restore-keys: |
             ${{ runner.os }}-playwright-
 
