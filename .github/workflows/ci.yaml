@@ -45,11 +45,16 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Lint & Build examples
-        run: pnpm nx run-many -t lint build --all
+      - uses: nrwl/nx-set-shas@v3
+      - run: git branch --track main origin/main
 
-      - name: Run Cypress tests for examples
-        run: pnpm nx run-many -t cypress:ci --parallel 1 --all
+      - run: pnpm nx-cloud record -- nx format:check
 
-      - name: Run Playwright tests for examples
-        run: pnpm nx run-many -t playwright --parallel 1 --all
+      - name: Lint & Build affected examples
+        run: pnpm nx affected -t lint build
+
+      - name: Run Cypress tests for affected examples
+        run: pnpm nx affected -t cypress:ci --parallel 1
+
+      - name: Run Playwright tests for affected examples
+        run: pnpm nx affected -t playwright --parallel 1
