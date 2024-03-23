@@ -34,6 +34,40 @@
   "publishConfig": {
     "access": "public"
   },
+  "release": {
+    "branches": [
+      "main",
+      {
+        "name": "next",
+        "channel": "next",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md",
+          "changelogTitle": "# Semantic Release Changelog"
+        }
+      ],
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "dist",
+            "CHANGELOG.md",
+            "package.json",
+            "package-lock.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
   "dependencies": {
     "colorette": "^2.0.20",
     "ejs": "^3.1.9",
@@ -44,6 +78,9 @@
     "ts-command-line-args": "^2.5.1"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.0",
     "@types/ejs": "^3.1.5",
     "@types/inquirer": "^9.0.7",
     "@types/listr": "^0.14.9",
@@ -57,6 +94,7 @@
     "nx": "^18.0.6",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
+    "semantic-release": "^23.0.5",
     "typescript": "^5.3.3"
   }
 }
