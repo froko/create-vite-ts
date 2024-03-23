@@ -1,0 +1,55 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: false
+
+      - name: Cache node_modules and Cypress
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/Cypress
+            node_modules
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright Browsers
+        run: pnpx playwright install --with-deps
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Build
+        run: pnpm build
+
+      - name: Lint & Build examples
+        run: pnpm nx run-many -t lint build --all
+
+      - name: Run Cypress tests for examples
+        run: pnpm nx run-many -t cypress:ci --parallel 1 --all
+
+      - name: Run Playwright tests for examples
+        run: pnpm nx run-many -t playwright --parallel 1 --all
