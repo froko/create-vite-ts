@@ -45,8 +45,12 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - uses: nrwl/nx-set-shas@v3
-      - run: git branch --track main origin/main
+      - name: Derive appropriate SHAs
+        uses: nrwl/nx-set-shas@v3
+
+      - name: Track main branch
+        run: git branch --track main origin/main
+        if: github.ref != 'refs/heads/main'
 
       - run: pnpm nx-cloud record -- nx format:check
 
