@@ -8,7 +8,7 @@ export const createStorybookTasks = (options: CliOptions): Listr => {
     {
       title: 'Install dependencies',
       task: async () => {
-        const version = '^7.6.17';
+        const version = '^8.0.5';
 
         await addDevDependency('storybook', version, options);
         await addDevDependency('@storybook/addon-essentials', version, options);
@@ -29,7 +29,6 @@ export const createStorybookTasks = (options: CliOptions): Listr => {
         if (options.svelte) {
           await addDevDependency('@storybook/svelte', version, options);
           await addDevDependency('@storybook/svelte-vite', version, options);
-          await addDevDependency('vite', '^4.5.2', options);
         }
         if (options.react || options.vue || options.svelte) {
           await addDevDependency('@storybook/addon-a11y', version, options);
