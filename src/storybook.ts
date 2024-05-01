@@ -8,7 +8,7 @@ export const createStorybookTasks = (options: CliOptions): Listr => {
     {
       title: 'Install dependencies',
       task: async () => {
-        const version = '^8.0.5';
+        const version = '^8.0.9';
 
         await addDevDependency('storybook', version, options);
         await addDevDependency('@storybook/addon-essentials', version, options);
