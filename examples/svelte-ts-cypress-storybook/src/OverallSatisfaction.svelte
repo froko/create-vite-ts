@@ -1,8 +1,9 @@
 <script lang="ts">
-  import RatingContainer from './RatingContainer.svelte';
   import './OverallSatisfaction.css';
 
-  export let rating: number;
+  import RatingContainer from './RatingContainer.svelte';
+
+  export let rating;
 </script>
 
 <section data-testid="overall-satisfaction" class="overall-satisfaction">

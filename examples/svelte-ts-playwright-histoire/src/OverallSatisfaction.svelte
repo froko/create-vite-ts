@@ -1,6 +1,7 @@
 <script lang="ts">
-  import RatingContainer from './RatingContainer.svelte';
   import './OverallSatisfaction.css';
+
+  import RatingContainer from './RatingContainer.svelte';
 
   export let rating: number;
 </script>

@@ -1,7 +1,8 @@
 <script lang="ts">
+  import './ProductSatisfaction.css';
+
   import type { Product } from './ProductModel';
   import RatingContainer from './RatingContainer.svelte';
-  import './ProductSatisfaction.css';
 
   export let product: Product;
 </script>
