@@ -1,5 +1,6 @@
-import { html } from 'lit';
 import './rating-app';
+
+import { html } from 'lit';
 
 export default {
   title: 'Rating App',

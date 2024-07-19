@@ -1,10 +1,11 @@
 <script lang="ts">
+  import './SatisfactionStar.css';
+
   import { faStar } from '@fortawesome/free-solid-svg-icons/faStar';
   import { createEventDispatcher } from 'svelte';
   import Fa from 'svelte-fa';
 
   import type { ProductRatingEventArgs } from './RatingAppModel';
-  import './SatisfactionStar.css';
 
   const icon = faStar;
   const dispatch = createEventDispatcher<{ starClick: ProductRatingEventArgs }>();

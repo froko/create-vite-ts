@@ -1,5 +1,5 @@
 {
-  "name": "<%= projectName.split('\/').pop() %>",
+  "name": "<%= projectName.split('/').pop() %>",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,25 +11,25 @@
     "preview": "vite preview --port 3000"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@fortawesome/fontawesome-free": "^6.6.0",
     "fa-icons": "^0.2.0",
-    "lit": "^3.1.2"
+    "lit": "^3.1.4"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.4.0",
-    "@typescript-eslint/parser": "^7.4.0",
+    "@eslint/js": "^9.7.0",
     "autoprefixer": "^10.4.19",
-    "eslint": "^8.57.0",
+    "eslint": "^9.7.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-prettier": "^5.1.3",
-    "postcss": "^8.4.38",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.13",
-    "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.3",
-    "vite": "^5.2.7",
-    "vite-plugin-static-copy": "^1.0.2"
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^15.8.0",
+    "postcss": "^8.4.39",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.1",
+    "vite": "^5.3.4",
+    "vite-plugin-static-copy": "^1.0.6"
   },
   "postcss": {
     "plugins": {

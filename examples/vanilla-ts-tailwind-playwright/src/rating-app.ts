@@ -1,6 +1,6 @@
 import { OverallSatisfaction } from './overall-satisfaction';
-import { ProductSatisfaction } from './product-satisfaction';
 import { Product } from './product.model';
+import { ProductSatisfaction } from './product-satisfaction';
 
 export class RatingApp {
   constructor(private readonly products: Product[]) {}

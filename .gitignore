@@ -6,6 +6,7 @@ dist
 coverage
 playwright-report/
 playwright/.cache/
+test-results/
 
 # Playground
 playground
@@ -20,7 +21,7 @@ playground
 !.vscode/*.code-snippets
 
 # Tooling
-.nx/cache
+.nx
 .eslintcache
 
 # Logs

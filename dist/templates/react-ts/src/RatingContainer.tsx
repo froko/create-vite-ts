@@ -1,5 +1,6 @@
-import SatisfactionStar from './SatisfactionStar';
 import './RatingContainer.css';
+
+import SatisfactionStar from './SatisfactionStar';
 
 export interface RatingContainerProps {
   productId: string;

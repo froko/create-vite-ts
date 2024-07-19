@@ -1,9 +1,8 @@
-import { existsSync } from 'fs';
-import { mkdir, readdir, readFile, writeFile, stat } from 'fs/promises';
-import path from 'path';
-
 import { red } from 'colorette';
 import ejs from 'ejs';
+import { existsSync } from 'fs';
+import { mkdir, readdir, readFile, stat, writeFile } from 'fs/promises';
+import path from 'path';
 
 import { CliOptions } from './options';
 

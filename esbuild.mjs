@@ -1,10 +1,7 @@
-/* eslint-disable no-undef */
-/* eslint-disable @typescript-eslint/no-var-requires */
-import { writeFile, mkdir, readdir, readFile, stat } from 'fs/promises';
-import { rimraf } from 'rimraf';
-import * as path from 'path';
-
 import * as esbuild from 'esbuild';
+import { mkdir, readdir, readFile, stat, writeFile } from 'fs/promises';
+import * as path from 'path';
+import { rimraf } from 'rimraf';
 
 const script = esbuild.buildSync({
   entryPoints: ['src/index.ts'],

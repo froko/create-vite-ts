@@ -1,6 +1,7 @@
-import { LitElement, css, html } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
 import 'fa-icons';
+
+import { css, html, LitElement } from 'lit';
+import { customElement, property, state } from 'lit/decorators.js';
 
 @customElement('satisfaction-star')
 export class SatisfactionStar extends LitElement {

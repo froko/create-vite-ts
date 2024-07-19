@@ -1,11 +1,11 @@
+import './product-satisfaction';
+import './overall-satisfaction';
+
 import { html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 
 import { allProducts, Product } from './product.model';
 import { TwLitElement } from './tailwind';
-
-import './product-satisfaction';
-import './overall-satisfaction';
 
 @customElement('rating-app')
 export class RatingApp extends TwLitElement {

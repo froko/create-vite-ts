@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/experimental-ct-svelte';
+import { expect, test } from '@playwright/experimental-ct-svelte';
 
 import type { ProductRatingEventArgs } from './RatingAppModel';
 import SatisfactionStar from './SatisfactionStar.svelte';

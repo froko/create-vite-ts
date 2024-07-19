@@ -1,9 +1,10 @@
+import './RatingApp.css';
+
 import { useState } from 'react';
 
 import OverallSatisfaction from './OverallSatisfaction';
 import { Product } from './ProductModel';
 import ProductSatisfaction from './ProductSatisfaction';
-import './RatingApp.css';
 
 export interface RatingAppProps {
   products: Product[];

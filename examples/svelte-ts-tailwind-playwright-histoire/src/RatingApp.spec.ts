@@ -1,7 +1,6 @@
-import { test, expect } from '@playwright/experimental-ct-svelte';
+import { expect, test } from '@playwright/experimental-ct-svelte';
 
 import { SatisfactionStarLocator } from '../playwright/support/index.js';
-
 import { allProducts } from './ProductModel.js';
 import RatingApp from './RatingApp.svelte';
 

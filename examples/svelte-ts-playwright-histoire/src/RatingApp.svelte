@@ -1,9 +1,10 @@
 <script lang="ts">
+  import './RatingApp.css';
+
   import OverallSatisfaction from './OverallSatisfaction.svelte';
   import type { Product } from './ProductModel';
   import ProductSatisfaction from './ProductSatisfaction.svelte';
   import type { ProductRatingEventArgs } from './RatingAppModel';
-  import './RatingApp.css';
 
   const totalRating = (total: number, product: Product) => total + product.rating;
   const averageRating = (products: Product[]) => Math.floor(products.reduce(totalRating, 0) / products.length);

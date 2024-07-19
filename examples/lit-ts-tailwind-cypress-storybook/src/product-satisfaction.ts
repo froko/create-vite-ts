@@ -1,8 +1,9 @@
+import './rating-container';
+
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 import { Product } from './product.model';
-import './rating-container';
 import { TwLitElement } from './tailwind';
 
 @customElement('product-satisfaction')

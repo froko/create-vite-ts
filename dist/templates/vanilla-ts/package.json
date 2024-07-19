@@ -1,5 +1,5 @@
 {
-  "name": "<%= projectName.split('\/').pop() %>",
+  "name": "<%= projectName.split('/').pop() %>",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -10,14 +10,14 @@
     "preview": "vite preview --port 3000"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.4.0",
-    "@typescript-eslint/parser": "^7.4.0",
-    "eslint": "^8.57.0",
+    "@eslint/js": "^9.7.0",
+    "eslint": "^9.7.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-prettier": "^5.1.3",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.3",
-    "vite": "^5.2.7"
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^15.8.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.1",
+    "vite": "^5.3.4"
   }
 }

@@ -7,7 +7,7 @@ export const createLadleTasks = (options: CliOptions): Listr => {
   return new Listr([
     {
       title: 'Add dependencies',
-      task: async () => await addDevDependency('@ladle/react', '^4.0.3', options)
+      task: async () => await addDevDependency('@ladle/react', '^4.1.0', options)
     },
     {
       title: 'Set up npm scripts',

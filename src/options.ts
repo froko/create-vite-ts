@@ -1,12 +1,12 @@
 import { ArgumentConfig } from 'ts-command-line-args';
 
-export type ArgumentOptions = {
+export interface ArgumentOptions {
   projectName: string;
   template: string;
   testingFramework: string;
   componentExplorer: string;
   help: boolean;
-};
+}
 
 export const argumentConfig: ArgumentConfig<ArgumentOptions> = {
   projectName: { type: String, defaultOption: true, defaultValue: '', description: 'Project name' },

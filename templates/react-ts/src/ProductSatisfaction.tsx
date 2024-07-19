@@ -1,6 +1,7 @@
+import './ProductSatisfaction.css';
+
 import { Product } from './ProductModel';
 import RatingContainer from './RatingContainer';
-import './ProductSatisfaction.css';
 
 export interface ProductSatisfactionProps {
   product: Product;

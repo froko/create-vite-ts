@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/experimental-ct-vue';
+import { expect, test } from '@playwright/experimental-ct-vue';
 
 import { ProductRatingEventArgs } from './RatingAppModel';
 import SatisfactionStar from './SatisfactionStar.vue';

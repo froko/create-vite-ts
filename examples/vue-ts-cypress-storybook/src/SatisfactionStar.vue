@@ -8,9 +8,7 @@ const props = defineProps<{
   clickable: boolean;
 }>();
 
-const emit = defineEmits<{
-  (event: 'starClick', args: ProductRatingEventArgs): void;
-}>();
+const emit = defineEmits<(event: 'starClick', args: ProductRatingEventArgs) => void>();
 
 const handleStarClick = () => {
   if (props.clickable) {

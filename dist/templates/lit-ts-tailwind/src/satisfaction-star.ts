@@ -1,7 +1,8 @@
+import 'fa-icons';
+
 import { html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 
-import 'fa-icons';
 import { TwLitElement } from './tailwind';
 
 @customElement('satisfaction-star')

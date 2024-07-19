@@ -10,9 +10,7 @@ const props = defineProps<{
   clickable: boolean;
 }>();
 
-const emit = defineEmits<{
-  (event: 'productRatingChange', args: ProductRatingEventArgs): void;
-}>();
+const emit = defineEmits<(event: 'productRatingChange', args: ProductRatingEventArgs) => void>();
 
 const starProps = computed(() =>
   [1, 2, 3, 4, 5].map((position) => ({

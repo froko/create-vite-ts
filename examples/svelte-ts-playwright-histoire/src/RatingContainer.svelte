@@ -1,9 +1,10 @@
 <script lang="ts">
+  import './RatingContainer.css';
+
   import { createEventDispatcher } from 'svelte';
 
   import type { ProductRatingEventArgs } from './RatingAppModel';
   import SatisfactionStar from './SatisfactionStar.svelte';
-  import './RatingContainer.css';
 
   const dispatch = createEventDispatcher<{ productRatingChange: ProductRatingEventArgs }>();
 

@@ -1,5 +1,6 @@
-import RatingContainer from './RatingContainer';
 import './OverallSatisfaction.css';
+
+import RatingContainer from './RatingContainer';
 
 export interface OverallSatisfactionProps {
   rating: number;
