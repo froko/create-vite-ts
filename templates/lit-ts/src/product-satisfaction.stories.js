@@ -1,5 +1,6 @@
-import { html } from 'lit';
 import './product-satisfaction';
+
+import { html } from 'lit';
 
 export default {
   title: 'Components/Product Satisfaction',

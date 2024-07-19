@@ -1,5 +1,6 @@
-import { html } from 'lit';
 import './satisfaction-star';
+
+import { html } from 'lit';
 
 export default {
   title: 'Components/Satisfaction Star',
