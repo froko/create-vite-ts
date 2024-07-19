@@ -1,9 +1,10 @@
-import { LitElement, css, html } from 'lit';
+import './product-satisfaction';
+import './overall-satisfaction';
+
+import { css, html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 
 import { allProducts, Product } from './product.model';
-import './product-satisfaction';
-import './overall-satisfaction';
 
 @customElement('rating-app')
 export class RatingApp extends LitElement {

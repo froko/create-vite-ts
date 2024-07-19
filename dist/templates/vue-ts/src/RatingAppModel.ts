@@ -1,4 +1,4 @@
-export type ProductRatingEventArgs = {
+export interface ProductRatingEventArgs {
   productId: string;
   rating: number;
-};
+}

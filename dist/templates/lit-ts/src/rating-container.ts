@@ -1,7 +1,7 @@
-import { LitElement, css, html } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
-
 import './satisfaction-star';
+
+import { css, html, LitElement } from 'lit';
+import { customElement, property, state } from 'lit/decorators.js';
 
 @customElement('rating-container')
 export class RatingContainer extends LitElement {
