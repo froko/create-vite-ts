@@ -7,9 +7,7 @@ const props = defineProps<{
   product: Product;
 }>();
 
-const emit = defineEmits<{
-  (e: 'productRatingChange', args: ProductRatingEventArgs): void;
-}>();
+const emit = defineEmits<(e: 'productRatingChange', args: ProductRatingEventArgs) => void>();
 
 const handleRatingContainerChange = (eventArgs: ProductRatingEventArgs) => {
   emit('productRatingChange', eventArgs);
