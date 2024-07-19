@@ -1,7 +1,6 @@
-import path from 'path';
-
 import { green } from 'colorette';
 import inquirer from 'inquirer';
+import path from 'path';
 import { parse } from 'ts-command-line-args';
 
 import { argumentConfig, ArgumentOptions, argumentQuestions, CliOptions } from './options';

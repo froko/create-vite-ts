@@ -20,7 +20,7 @@ playground
 !.vscode/*.code-snippets
 
 # Tooling
-.nx/cache
+.nx
 .eslintcache
 
 # Logs
