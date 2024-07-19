@@ -1,5 +1,6 @@
-import { html } from 'lit';
 import './rating-container';
+
+import { html } from 'lit';
 
 export default {
   title: 'Components/Rating Container',
