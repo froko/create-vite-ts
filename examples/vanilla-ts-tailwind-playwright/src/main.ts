@@ -1,6 +1,7 @@
+import './style.css';
+
 import { allProducts } from './product.model';
 import { RatingApp } from './rating-app';
-import './style.css';
 
 let ratingApp = new RatingApp(allProducts);
 
