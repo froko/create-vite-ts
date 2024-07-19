@@ -1,5 +1,19 @@
 # Semantic Release Changelog
 
+# [7.2.0](https://github.com/froko/create-vite-ts/compare/v7.1.0...v7.2.0) (2024-07-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency inquirer to v10.0.4 ([#33](https://github.com/froko/create-vite-ts/issues/33)) ([1c84f05](https://github.com/froko/create-vite-ts/commit/1c84f054a5a4490f6cca01219e48b183c85c6a5e))
+
+
+### Features
+
+* **examples:** update dependencies ([4e01bdc](https://github.com/froko/create-vite-ts/commit/4e01bdcda2c345f4e8de97549169c9fdd6e63186))
+* **main:** update dependencies ([af9e9a6](https://github.com/froko/create-vite-ts/commit/af9e9a6bb938e2dc604dfae6fabf996a478e48c7))
+* **templates:** update dependencies ([f328514](https://github.com/froko/create-vite-ts/commit/f3285143b81f4e424045fd619ce3b515c17a7c81))
+
 # [7.1.0](https://github.com/froko/create-vite-ts/compare/v7.0.0...v7.1.0) (2024-04-01)
 
 
