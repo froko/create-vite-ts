@@ -3,7 +3,7 @@
 
   import RatingContainer from './RatingContainer.svelte';
 
-  export let rating;
+  export let rating: number;
 </script>
 
 <section data-testid="overall-satisfaction" class="overall-satisfaction">
