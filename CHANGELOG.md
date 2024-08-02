@@ -1,5 +1,21 @@
 # Semantic Release Changelog
 
+# [8.0.0](https://github.com/froko/create-vite-ts/compare/v7.2.0...v8.0.0) (2024-08-02)
+
+
+### Features
+
+* update dependencies ([#41](https://github.com/froko/create-vite-ts/issues/41)) ([8598247](https://github.com/froko/create-vite-ts/commit/859824777ef7a37d1e78dc9818c21f2a28866536))
+
+
+### BREAKING CHANGES
+
+* major updates
+
+* feat(main): update main dependencies
+* feat(examples): update dependencies
+* feat(templates): update dependencies
+
 # [7.2.0](https://github.com/froko/create-vite-ts/compare/v7.1.0...v7.2.0) (2024-07-19)
 
 
