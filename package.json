@@ -97,7 +97,8 @@
     "rimraf": "^6.0.1",
     "semantic-release": "^24.0.0",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.0.0"
+    "typescript-eslint": "^8.0.0",
+    "nx-cloud": "latest"
   },
   "packageManager": "pnpm@9.10.0"
 }
