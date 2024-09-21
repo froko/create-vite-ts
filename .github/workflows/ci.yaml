@@ -39,9 +39,6 @@ jobs:
       - name: Install Playwright Browsers
         run: pnpx playwright install --with-deps
 
-      - name: Lint
-        run: pnpm lint
-
       - name: Build
         run: pnpm build
 
@@ -51,8 +48,6 @@ jobs:
       - name: Track main branch
         run: git branch --track main origin/main
         if: github.ref != 'refs/heads/main'
-
-      - run: pnpm nx-cloud record -- nx format:check
 
       - name: Lint & Build affected examples
         run: pnpm nx affected -t lint build
