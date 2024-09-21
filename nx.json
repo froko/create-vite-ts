@@ -1,20 +1,22 @@
 {
-  "nxCloudAccessToken": "NmI5MDk0ZjgtYTYzMy00MjM4LWExMGUtMjBmNWViMTViYjUwfHJlYWQtd3JpdGU=",
+  "nxCloudAccessToken": "ZDZmNGI0NjMtZDNmOC00MGExLWI3OWYtYjk4NGYwZjE4ODQyfHJlYWQtd3JpdGU=",
   "nxCloudUrl": "https://cloud.nx.app",
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx-cloud",
       "options": {
-        "cacheableOperations": ["lint", "format", "build", "cypress:ci", "playwright"]
+        "cacheableOperations": [
+          "lint",
+          "format",
+          "build",
+          "cypress:ci",
+          "playwright"
+        ]
       }
     }
   },
   "targetDefaults": {
-    "build": {
-      "dependsOn": ["^build"]
-    },
-    "cypress:ci": {
-      "dependsOn": ["build"]
-    }
+    "build": { "dependsOn": ["^build"] },
+    "cypress:ci": { "dependsOn": ["build"] }
   }
 }
