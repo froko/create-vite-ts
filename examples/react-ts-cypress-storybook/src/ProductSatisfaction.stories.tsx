@@ -1,9 +1,9 @@
-import { expect } from '@storybook/jest';
-import { within } from '@storybook/testing-library';
+import type { Meta, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
 
 import ProductSatisfaction from './ProductSatisfaction';
 
-export default {
+const meta: Meta<typeof ProductSatisfaction> = {
   title: 'Components/Product Satisfaction',
   component: ProductSatisfaction,
   args: {
@@ -22,7 +22,10 @@ export default {
   }
 };
 
-export const Default = {
+export default meta;
+type Story = StoryObj<typeof ProductSatisfaction>;
+
+export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText('Storybook')).toBeInTheDocument();
