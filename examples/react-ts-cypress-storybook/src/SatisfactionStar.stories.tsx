@@ -1,36 +1,35 @@
-import { expect } from '@storybook/jest';
-import { userEvent, within } from '@storybook/testing-library';
+import type { Meta, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, within } from '@storybook/test';
 
 import SatisfactionStar from './SatisfactionStar';
 
-export default {
+const meta: Meta<typeof SatisfactionStar> = {
   title: 'Components/Satisfaction Star',
   component: SatisfactionStar,
   args: {
     productId: 'storybook',
     position: 1,
     checked: false,
-    clickable: false
-  },
-  argTypes: {
-    starClick: {
-      action: 'starClick'
-    }
+    clickable: false,
+    starClick: fn()
   }
 };
 
-const clickOnStar = async (canvasElement) => {
+export default meta;
+type Story = StoryObj<typeof SatisfactionStar>;
+
+const clickOnStar = async (canvasElement: HTMLElement) => {
   const canvas = within(canvasElement);
   await userEvent.click(canvas.getByTestId('storybook-1'));
 };
 
-export const Default = {
+export const Default: Story = {
   play: async ({ args, canvasElement }) => {
     await clickOnStar(canvasElement);
     expect(args.starClick).not.toHaveBeenCalled();
   }
 };
-export const Checked = {
+export const Checked: Story = {
   ...Default,
   args: {
     checked: true
@@ -41,7 +40,7 @@ export const Checked = {
   }
 };
 
-export const Clickable = {
+export const Clickable: Story = {
   ...Default,
   args: {
     clickable: true
@@ -55,7 +54,7 @@ export const Clickable = {
   }
 };
 
-export const CheckedAndClickable = {
+export const CheckedAndClickable: Story = {
   ...Default,
   args: {
     clickable: true,
