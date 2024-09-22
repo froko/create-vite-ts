@@ -1,9 +1,9 @@
-import { expect } from '@storybook/jest';
-import { userEvent, within } from '@storybook/testing-library';
+import { expect, userEvent, within } from '@storybook/test';
+import type { Meta, StoryObj } from '@storybook/vue3';
 
 import RatingApp from './RatingApp.vue';
 
-export default {
+const meta: Meta<typeof RatingApp> = {
   title: 'Rating App',
   component: RatingApp,
   args: {
@@ -26,15 +26,18 @@ export default {
   }
 };
 
-export const Default = {
+export default meta;
+type Story = StoryObj<typeof RatingApp>;
+
+export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText('Vite - Storybook')).toBeInTheDocument();
     await userEvent.click(canvas.getByTestId('vite-1'));
     await userEvent.click(canvas.getByTestId('storybook-1'));
-    expect(await canvas.findByTestId('overall-satisfaction-2')).not.toHaveClass('text-orange-500');
+    expect(await canvas.findByTestId('overall-satisfaction-2')).not.toHaveClass('checked');
     await userEvent.click(canvas.getByTestId('vite-4'));
     await userEvent.click(canvas.getByTestId('storybook-4'));
-    expect(await canvas.findByTestId('overall-satisfaction-5')).not.toHaveClass('text-orange-500');
+    expect(await canvas.findByTestId('overall-satisfaction-5')).not.toHaveClass('checked');
   }
 };
