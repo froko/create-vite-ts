@@ -1,8 +1,9 @@
 import './satisfaction-star';
 
+import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
 
-export default {
+const meta: Meta = {
   title: 'Components/Satisfaction Star',
   args: {
     productId: 'storybook',
@@ -25,23 +26,26 @@ export default {
     ></satisfaction-star>`
 };
 
-export const Default = {};
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Checked = {
+export const Default: Story = {};
+
+export const Checked: Story = {
   ...Default,
   args: {
     checked: true
   }
 };
 
-export const Clickable = {
+export const Clickable: Story = {
   ...Default,
   args: {
     clickable: true
   }
 };
 
-export const ClickableAndChecked = {
+export const ClickableAndChecked: Story = {
   ...Default,
   args: {
     clickable: true,

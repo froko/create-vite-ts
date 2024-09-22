@@ -1,8 +1,9 @@
 import './product-satisfaction';
 
+import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
 
-export default {
+const meta: Meta = {
   title: 'Components/Product Satisfaction',
   args: {
     product: {
@@ -16,4 +17,7 @@ export default {
   render: (args) => html`<product-satisfaction .product=${args.product}></product-satisfaction>`
 };
 
-export const Default = {};
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

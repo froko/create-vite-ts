@@ -1,8 +1,9 @@
 import './rating-container';
 
+import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
 
-export default {
+const meta: Meta = {
   title: 'Components/Rating Container',
   args: {
     productId: 'storybook',
@@ -23,23 +24,26 @@ export default {
     ></rating-container>`
 };
 
-export const Default = {};
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Disappointed = {
+export const Default: Story = {};
+
+export const Disappointed: Story = {
   ...Default,
   args: {
     rating: 1
   }
 };
 
-export const VerySatisfied = {
+export const VerySatisfied: Story = {
   ...Default,
   args: {
     rating: 5
   }
 };
 
-export const Clickable = {
+export const Clickable: Story = {
   ...Default,
   args: {
     clickable: true
