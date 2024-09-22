@@ -1,4 +1,4 @@
-import eslint from '@eslint/js';
+import js from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import eslintPluginSvelte from 'eslint-plugin-svelte';
@@ -7,7 +7,7 @@ import svelteEslintParser from 'svelte-eslint-parser';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  eslint.configs.recommended,
+  js.configs.recommended,
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
   ...eslintPluginSvelte.configs['flat/recommended'],
