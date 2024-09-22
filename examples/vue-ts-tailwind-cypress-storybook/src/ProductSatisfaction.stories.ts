@@ -1,9 +1,9 @@
-import { expect } from '@storybook/jest';
-import { within } from '@storybook/testing-library';
+import { expect, fn, within } from '@storybook/test';
+import type { Meta, StoryObj } from '@storybook/vue3';
 
 import ProductSatisfaction from './ProductSatisfaction.vue';
 
-export default {
+const meta: Meta<typeof ProductSatisfaction> = {
   title: 'Components/Product Satisfaction',
   component: ProductSatisfaction,
   args: {
@@ -13,16 +13,15 @@ export default {
       url: 'https://storybook.js.org/',
       description: 'Build component driven UIs faster',
       rating: 3
-    }
-  },
-  argTypes: {
-    onProductRatingChange: {
-      action: 'productRatingChange'
-    }
+    },
+    onProductRatingChange: fn()
   }
 };
 
-export const Default = {
+export default meta;
+type Story = StoryObj<typeof ProductSatisfaction>;
+
+export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText('Storybook')).toBeInTheDocument();

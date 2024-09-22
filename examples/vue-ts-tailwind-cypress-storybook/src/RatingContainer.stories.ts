@@ -1,35 +1,35 @@
-import { expect } from '@storybook/jest';
-import { userEvent, within } from '@storybook/testing-library';
+import { expect, fn, userEvent, within } from '@storybook/test';
+import type { Meta, StoryObj } from '@storybook/vue3';
 
 import RatingContainer from './RatingContainer.vue';
 
-export default {
+const meta: Meta<typeof RatingContainer> = {
   title: 'Components/Rating Container',
   component: RatingContainer,
   args: {
     productId: 'storybook',
     rating: 3,
-    clickable: false
-  },
-  argTypes: {
-    onProductRatingChange: {
-      action: 'productRatingChange'
-    }
+    clickable: false,
+    onProductRatingChange: fn()
   }
 };
 
-export const Default = {
+export default meta;
+type Story = StoryObj<typeof RatingContainer>;
+
+export const Default: Story = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
     const thirdStar = canvas.getByTestId('storybook-3');
     const fourthStar = canvas.getByTestId('storybook-4');
-    expect(thirdStar).toHaveClass('checked');
-    expect(fourthStar).not.toHaveClass('checked');
+    expect(thirdStar).toHaveClass('text-orange-500');
+    expect(fourthStar).not.toHaveClass('text-orange-500');
     await userEvent.click(fourthStar);
     expect(args.onProductRatingChange).not.toHaveBeenCalled();
   }
 };
-export const Disappointed = {
+
+export const Disappointed: Story = {
   ...Default,
   args: {
     rating: 1
@@ -38,13 +38,14 @@ export const Disappointed = {
     const canvas = within(canvasElement);
     const firstStar = canvas.getByTestId('storybook-1');
     const secondStar = canvas.getByTestId('storybook-2');
-    expect(firstStar).toHaveClass('checked');
-    expect(secondStar).not.toHaveClass('checked');
+    expect(firstStar).toHaveClass('text-orange-500');
+    expect(secondStar).not.toHaveClass('text-orange-500');
     await userEvent.click(secondStar);
     expect(args.onProductRatingChange).not.toHaveBeenCalled();
   }
 };
-export const VerySatisfied = {
+
+export const VerySatisfied: Story = {
   ...Default,
   args: {
     rating: 5
@@ -52,13 +53,14 @@ export const VerySatisfied = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
     const fifthStar = canvas.getByTestId('storybook-5');
-    expect(fifthStar).toHaveClass('checked');
+    expect(fifthStar).toHaveClass('text-orange-500');
     const fourthStar = canvas.getByTestId('storybook-4');
     await userEvent.click(fourthStar);
     expect(args.onProductRatingChange).not.toHaveBeenCalled();
   }
 };
-export const Clickable = {
+
+export const Clickable: Story = {
   ...Default,
   args: {
     clickable: true
