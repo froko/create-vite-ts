@@ -88,7 +88,7 @@
     "@types/ejs": "^3.1.5",
     "@types/inquirer": "^9.0.7",
     "@types/listr": "^0.14.9",
-    "esbuild": "^0.23.0",
+    "esbuild": "^0.24.0",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.9.0",
@@ -100,5 +100,5 @@
     "typescript-eslint": "^8.0.0",
     "nx-cloud": "latest"
   },
-  "packageManager": "pnpm@9.10.0"
+  "packageManager": "pnpm@9.11.0"
 }
