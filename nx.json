@@ -20,7 +20,8 @@
       "cache": true
     },
     "cypress:ci": {
-      "dependsOn": ["build"]
+      "dependsOn": ["build"],
+      "cache": true
     },
     "playwright": {
       "cache": true
