@@ -22,7 +22,7 @@ const meta: Meta = {
       action: 'product-rating-change'
     }
   },
-  render: (args: Args) =>
+  render: (args) =>
     html`<rating-container
       product-id=${args.productId}
       rating=${args.rating}
