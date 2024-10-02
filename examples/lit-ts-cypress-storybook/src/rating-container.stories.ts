@@ -3,6 +3,13 @@ import './rating-container';
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
 
+interface Args {
+  productId: string;
+  rating: number;
+  clickable: boolean;
+  productRatingChange: (event: CustomEvent) => void;
+}
+
 const meta: Meta = {
   title: 'Components/Rating Container',
   args: {
@@ -15,7 +22,7 @@ const meta: Meta = {
       action: 'product-rating-change'
     }
   },
-  render: (args) =>
+  render: (args: Args) =>
     html`<rating-container
       product-id=${args.productId}
       rating=${args.rating}
@@ -25,7 +32,7 @@ const meta: Meta = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta & Args>;
 
 export const Default: Story = {};
 

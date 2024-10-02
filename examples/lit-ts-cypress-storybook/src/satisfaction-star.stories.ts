@@ -3,6 +3,13 @@ import './satisfaction-star';
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
 
+interface Args {
+  productId: string;
+  position: number;
+  checked: boolean;
+  clickable: boolean;
+}
+
 const meta: Meta = {
   title: 'Components/Satisfaction Star',
   args: {
@@ -27,7 +34,7 @@ const meta: Meta = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta & Args>;
 
 export const Default: Story = {};
 
