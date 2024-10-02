@@ -29,7 +29,7 @@ const subDirectory = (templatePath: string, templateName: string): string => {
 const rename = (file: string): string => {
   return file
     .replace('_gitignore', '.gitignore')
-    .replace('.storybook.jsx', '.stories.jsx')
+    .replace('.storybook.tsx', '.stories.tsx')
     .replace('.ladle.tsx', '.stories.tsx');
 };
 
@@ -46,7 +46,7 @@ export const copyTemplate = async (templatePath: string, options: CliOptions): P
   }
 
   if (!options.storybook) {
-    ignoreFiles.push('.storybook', '.npmrc', 'stories.js');
+    ignoreFiles.push('.storybook', '.npmrc', 'stories.ts');
   }
 
   if (!options.ladle) {
