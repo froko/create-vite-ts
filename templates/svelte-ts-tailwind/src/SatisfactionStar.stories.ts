@@ -3,7 +3,15 @@ import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import SatisfactionStar from './SatisfactionStar.svelte';
 
-const meta: Meta<typeof SatisfactionStar> = {
+interface Args {
+  productId: string;
+  position: number;
+  checked: boolean;
+  clickable: boolean;
+  starClick: (event: CustomEvent<{ productId: string; rating: number }>) => void;
+}
+
+const meta: Meta<typeof SatisfactionStar & Args> = {
   title: 'Components/Satisfaction Star',
   component: SatisfactionStar,
   args: {
@@ -19,7 +27,7 @@ const meta: Meta<typeof SatisfactionStar> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof SatisfactionStar>;
+type Story = StoryObj<typeof SatisfactionStar & Args>;
 
 const clickOnStar = async (canvasElement: HTMLElement) => {
   const canvas = within(canvasElement);
