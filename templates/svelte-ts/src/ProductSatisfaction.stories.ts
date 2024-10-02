@@ -3,7 +3,18 @@ import { expect, within } from '@storybook/test';
 
 import ProductSatisfaction from './ProductSatisfaction.svelte';
 
-const meta: Meta<typeof ProductSatisfaction> = {
+interface Args {
+  product: {
+    id: string;
+    title: string;
+    url: string;
+    description: string;
+    rating: number;
+  };
+  onProductRatingChange: (rating: number) => void;
+}
+
+const meta: Meta<typeof ProductSatisfaction & Args> = {
   title: 'Components/Product Satisfaction',
   component: ProductSatisfaction,
   args: {
@@ -23,7 +34,7 @@ const meta: Meta<typeof ProductSatisfaction> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof ProductSatisfaction>;
+type Story = StoryObj<typeof ProductSatisfaction & Args>;
 
 export const Default: Story = {
   play: async ({ canvasElement }) => {
