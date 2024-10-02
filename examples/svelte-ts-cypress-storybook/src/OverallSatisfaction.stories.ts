@@ -1,9 +1,9 @@
-import { expect } from '@storybook/jest';
-import { within } from '@storybook/testing-library';
+import type { Meta, StoryObj } from '@storybook/svelte';
+import { expect, within } from '@storybook/test';
 
 import OverallSatisfaction from './OverallSatisfaction.svelte';
 
-export default {
+const meta: Meta<typeof OverallSatisfaction> = {
   title: 'Components/Overall Satisfaction',
   component: OverallSatisfaction,
   args: {
@@ -11,7 +11,10 @@ export default {
   }
 };
 
-export const Default = {
+export default meta;
+type Story = StoryObj<typeof OverallSatisfaction>;
+
+export const Default: Story = {
   play: ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText('Overall Satisfaction')).toBeInTheDocument();

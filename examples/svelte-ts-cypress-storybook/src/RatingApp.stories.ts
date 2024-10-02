@@ -1,9 +1,9 @@
-import { expect } from '@storybook/jest';
-import { userEvent, within } from '@storybook/testing-library';
+import type { Meta, StoryObj } from '@storybook/svelte';
+import { expect, userEvent, within } from '@storybook/test';
 
 import RatingApp from './RatingApp.svelte';
 
-export default {
+const meta: Meta<typeof RatingApp> = {
   title: 'Rating App',
   component: RatingApp,
   args: {
@@ -26,7 +26,10 @@ export default {
   }
 };
 
-export const Default = {
+export default meta;
+type Story = StoryObj<typeof RatingApp>;
+
+export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText('Vite - Storybook')).toBeInTheDocument();
