@@ -3,7 +3,14 @@ import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import RatingContainer from './RatingContainer.svelte';
 
-const maeta: Meta<typeof RatingContainer> = {
+interface Args {
+  productId: string;
+  rating: number;
+  clickable: boolean;
+  productRatingChange: (event: CustomEvent<{ productId: string; rating: number }>) => void;
+}
+
+const maeta: Meta<typeof RatingContainer & Args> = {
   title: 'Components/Rating Container',
   component: RatingContainer,
   args: {
@@ -18,7 +25,7 @@ const maeta: Meta<typeof RatingContainer> = {
 };
 
 export default maeta;
-type Story = StoryObj<typeof RatingContainer>;
+type Story = StoryObj<typeof RatingContainer & Args>;
 
 export const Default: Story = {
   play: async ({ args, canvasElement }) => {

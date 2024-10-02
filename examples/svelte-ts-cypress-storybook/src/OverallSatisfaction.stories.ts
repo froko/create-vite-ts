@@ -3,7 +3,11 @@ import { expect, within } from '@storybook/test';
 
 import OverallSatisfaction from './OverallSatisfaction.svelte';
 
-const meta: Meta<typeof OverallSatisfaction> = {
+interface Args {
+  rating: number;
+}
+
+const meta: Meta<typeof OverallSatisfaction & Args> = {
   title: 'Components/Overall Satisfaction',
   component: OverallSatisfaction,
   args: {
@@ -12,7 +16,7 @@ const meta: Meta<typeof OverallSatisfaction> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof OverallSatisfaction>;
+type Story = StoryObj<typeof OverallSatisfaction & Args>;
 
 export const Default: Story = {
   play: ({ canvasElement }) => {
