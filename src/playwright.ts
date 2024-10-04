@@ -8,7 +8,7 @@ export const createPlaywrightTasks = (options: CliOptions): Listr => {
     {
       title: 'Add dependencies',
       task: async () => {
-        const version = '^1.45.3';
+        const version = '^1.47.2';
 
         await addDevDependency('@playwright/test', version, options);
         if (options.react) {
