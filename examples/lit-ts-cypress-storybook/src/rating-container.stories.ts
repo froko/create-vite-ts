@@ -7,7 +7,6 @@ interface Args {
   productId: string;
   rating: number;
   clickable: boolean;
-  productRatingChange: (event: CustomEvent) => void;
 }
 
 const meta: Meta = {
