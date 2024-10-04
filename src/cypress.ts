@@ -8,8 +8,8 @@ export const createCypressTasks = (options: CliOptions): Listr => {
     {
       title: 'Add dependencies',
       task: async () => {
-        await addDevDependency('cypress', '^13.13.2', options);
-        await addDevDependency('start-server-and-test', '^2.0.5', options);
+        await addDevDependency('cypress', '^13.15.0', options);
+        await addDevDependency('start-server-and-test', '^2.0.8', options);
       }
     },
     {

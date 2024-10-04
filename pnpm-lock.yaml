@@ -100,26 +100,26 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
       lit:
-        specifier: ^3.1.4
+        specifier: ^3.2.0
         version: 3.2.0
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@storybook/addon-essentials':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(webpack-sources@3.2.3)
       '@storybook/web-components':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(lit@3.2.0)(storybook@8.3.5)
       '@storybook/web-components-vite':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(lit@3.2.0)(storybook@8.3.5)(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(webpack-sources@3.2.3)
       cypress:
-        specifier: ^13.13.2
+        specifier: ^13.15.0
         version: 13.15.0
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -128,25 +128,25 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       start-server-and-test:
-        specifier: ^2.0.5
+        specifier: ^2.0.8
         version: 2.0.8
       storybook:
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
       vite-plugin-static-copy:
         specifier: ^1.0.6
@@ -161,17 +161,17 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
       lit:
-        specifier: ^3.1.4
+        specifier: ^3.2.0
         version: 3.2.0
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@playwright/test':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -180,19 +180,19 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
       vite-plugin-static-copy:
         specifier: ^1.0.6
@@ -207,29 +207,29 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
       lit:
-        specifier: ^3.1.4
+        specifier: ^3.2.0
         version: 3.2.0
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@storybook/addon-essentials':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(webpack-sources@3.2.3)
       '@storybook/web-components':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(lit@3.2.0)(storybook@8.3.5)
       '@storybook/web-components-vite':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(lit@3.2.0)(storybook@8.3.5)(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(webpack-sources@3.2.3)
       autoprefixer:
-        specifier: ^10.4.19
+        specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
       cypress:
-        specifier: ^13.13.2
+        specifier: ^13.15.0
         version: 13.15.0
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -238,34 +238,34 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       postcss:
-        specifier: ^8.4.40
+        specifier: ^8.4.47
         version: 8.4.47
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.5
+        specifier: ^0.6.8
         version: 0.6.8(prettier-plugin-svelte@3.2.7(prettier@3.3.3)(svelte@4.2.19))(prettier@3.3.3)
       start-server-and-test:
-        specifier: ^2.0.5
+        specifier: ^2.0.8
         version: 2.0.8
       storybook:
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5
       tailwindcss:
-        specifier: ^3.4.7
+        specifier: ^3.4.13
         version: 3.4.13
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
       vite-plugin-static-copy:
         specifier: ^1.0.6
@@ -280,20 +280,20 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
       lit:
-        specifier: ^3.1.4
+        specifier: ^3.2.0
         version: 3.2.0
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@playwright/test':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2
       autoprefixer:
-        specifier: ^10.4.19
+        specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -302,28 +302,28 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       postcss:
-        specifier: ^8.4.40
+        specifier: ^8.4.47
         version: 8.4.47
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.5
+        specifier: ^0.6.8
         version: 0.6.8(prettier-plugin-svelte@3.2.7(prettier@3.3.3)(svelte@4.2.19))(prettier@3.3.3)
       tailwindcss:
-        specifier: ^3.4.7
+        specifier: ^3.4.13
         version: 3.4.13
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
       vite-plugin-static-copy:
         specifier: ^1.0.6
@@ -348,46 +348,46 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@storybook/addon-a11y':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/addon-essentials':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(webpack-sources@3.2.3)
       '@storybook/addon-interactions':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/react':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(@storybook/test@8.3.5(storybook@8.3.5))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.5)(typescript@5.6.2)
       '@storybook/react-vite':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(@storybook/test@8.3.5(storybook@8.3.5))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(storybook@8.3.5)(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(webpack-sources@3.2.3)
       '@storybook/test':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@types/react':
-        specifier: ^18.3.3
+        specifier: ^18.3.11
         version: 18.3.11
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
       '@vitejs/plugin-react':
-        specifier: ^4.3.1
+        specifier: ^4.3.2
         version: 4.3.2(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       cypress:
-        specifier: ^13.13.2
+        specifier: ^13.15.0
         version: 13.15.0
       eslint:
-        specifier: ^9.11.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-react:
-        specifier: ^7.35.0
+        specifier: ^7.37.1
         version: 7.37.1(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.1
@@ -399,19 +399,19 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       start-server-and-test:
-        specifier: ^2.0.5
+        specifier: ^2.0.8
         version: 2.0.8
       storybook:
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
 
   examples/react-ts-playwright-ladle:
@@ -433,34 +433,34 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@ladle/react':
-        specifier: ^4.1.0
+        specifier: ^4.1.1
         version: 4.1.1(@types/node@22.7.4)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(terser@5.34.1)(typescript@5.6.2)
       '@playwright/experimental-ct-react':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2(@types/node@22.7.4)(terser@5.34.1)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       '@playwright/test':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2
       '@types/react':
-        specifier: ^18.3.3
+        specifier: ^18.3.11
         version: 18.3.11
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
       '@vitejs/plugin-react':
-        specifier: ^4.3.1
+        specifier: ^4.3.2
         version: 4.3.2(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       eslint:
-        specifier: ^9.11.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-react:
-        specifier: ^7.35.0
+        specifier: ^7.37.1
         version: 7.37.1(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.1
@@ -469,13 +469,13 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
 
   examples/react-ts-tailwind-cypress-storybook:
@@ -497,49 +497,49 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@storybook/addon-a11y':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/addon-essentials':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(webpack-sources@3.2.3)
       '@storybook/addon-interactions':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/react':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(@storybook/test@8.3.5(storybook@8.3.5))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.5)(typescript@5.6.2)
       '@storybook/react-vite':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(@storybook/test@8.3.5(storybook@8.3.5))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(storybook@8.3.5)(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(webpack-sources@3.2.3)
       '@storybook/test':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@types/react':
-        specifier: ^18.3.3
+        specifier: ^18.3.11
         version: 18.3.11
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
       '@vitejs/plugin-react':
-        specifier: ^4.3.1
+        specifier: ^4.3.2
         version: 4.3.2(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       autoprefixer:
-        specifier: ^10.4.19
+        specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
       cypress:
-        specifier: ^13.13.2
+        specifier: ^13.15.0
         version: 13.15.0
       eslint:
-        specifier: ^9.11.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-react:
-        specifier: ^7.35.0
+        specifier: ^7.37.1
         version: 7.37.1(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.1
@@ -548,31 +548,31 @@ importers:
         specifier: ^29.7.0
         version: 29.7.0
       postcss:
-        specifier: ^8.4.40
+        specifier: ^8.4.47
         version: 8.4.47
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.5
+        specifier: ^0.6.8
         version: 0.6.8(prettier-plugin-svelte@3.2.7(prettier@3.3.3)(svelte@4.2.19))(prettier@3.3.3)
       start-server-and-test:
-        specifier: ^2.0.5
+        specifier: ^2.0.8
         version: 2.0.8
       storybook:
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5
       tailwindcss:
-        specifier: ^3.4.7
+        specifier: ^3.4.13
         version: 3.4.13
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
 
   examples/react-ts-tailwind-playwright-ladle:
@@ -594,61 +594,61 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@ladle/react':
-        specifier: ^4.1.0
+        specifier: ^4.1.1
         version: 4.1.1(@types/node@22.7.4)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(terser@5.34.1)(typescript@5.6.2)
       '@playwright/experimental-ct-react':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2(@types/node@22.7.4)(terser@5.34.1)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       '@playwright/test':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2
       '@types/react':
-        specifier: ^18.3.3
+        specifier: ^18.3.11
         version: 18.3.11
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
       '@vitejs/plugin-react':
-        specifier: ^4.3.1
+        specifier: ^4.3.2
         version: 4.3.2(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       autoprefixer:
-        specifier: ^10.4.19
+        specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
       eslint:
-        specifier: ^9.11.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-react:
-        specifier: ^7.35.0
+        specifier: ^7.37.1
         version: 7.37.1(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       postcss:
-        specifier: ^8.4.40
+        specifier: ^8.4.47
         version: 8.4.47
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.5
+        specifier: ^0.6.8
         version: 0.6.8(prettier-plugin-svelte@3.2.7(prettier@3.3.3)(svelte@4.2.19))(prettier@3.3.3)
       tailwindcss:
-        specifier: ^3.4.7
+        specifier: ^3.4.13
         version: 3.4.13
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
 
   examples/svelte-ts-cypress-storybook:
@@ -657,41 +657,41 @@ importers:
         specifier: ^6.6.0
         version: 6.6.0
       svelte-fa:
-        specifier: ^4.0.2
+        specifier: ^4.0.3
         version: 4.0.3(svelte@4.2.19)
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@storybook/addon-a11y':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/addon-essentials':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(webpack-sources@3.2.3)
       '@storybook/addon-interactions':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/svelte':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(svelte@4.2.19)
       '@storybook/svelte-vite':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(@babel/core@7.25.7)(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1)))(postcss-load-config@4.0.2(postcss@8.4.47))(postcss@8.4.47)(pug@3.0.3)(storybook@8.3.5)(svelte@4.2.19)(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(webpack-sources@3.2.3)
       '@storybook/test':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@sveltejs/vite-plugin-svelte':
-        specifier: ^3.1.1
+        specifier: ^3.1.2
         version: 3.1.2(svelte@4.2.19)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       '@tsconfig/svelte':
         specifier: ^5.0.4
         version: 5.0.4
       cypress:
-        specifier: ^13.13.2
+        specifier: ^13.15.0
         version: 13.15.0
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -700,46 +700,46 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-svelte:
-        specifier: ^2.43.0
+        specifier: ^2.44.1
         version: 2.44.1(eslint@9.11.1(jiti@1.21.6))(svelte@4.2.19)
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-svelte:
-        specifier: ^3.2.6
+        specifier: ^3.2.7
         version: 3.2.7(prettier@3.3.3)(svelte@4.2.19)
       start-server-and-test:
-        specifier: ^2.0.5
+        specifier: ^2.0.8
         version: 2.0.8
       storybook:
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5
       svelte:
-        specifier: ^4.2.18
+        specifier: ^4.2.19
         version: 4.2.19
       svelte-check:
-        specifier: ^3.8.5
+        specifier: ^3.8.6
         version: 3.8.6(@babel/core@7.25.7)(postcss-load-config@4.0.2(postcss@8.4.47))(postcss@8.4.47)(pug@3.0.3)(svelte@4.2.19)
       svelte-eslint-parser:
-        specifier: ^0.41.0
+        specifier: ^0.41.1
         version: 0.41.1(svelte@4.2.19)
       svelte-loader:
         specifier: ^3.2.3
         version: 3.2.3(svelte@4.2.19)
       svelte-preprocess:
-        specifier: ^6.0.2
+        specifier: ^6.0.3
         version: 6.0.3(@babel/core@7.25.7)(postcss-load-config@4.0.2(postcss@8.4.47))(postcss@8.4.47)(pug@3.0.3)(svelte@4.2.19)(typescript@5.6.2)
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
 
   examples/svelte-ts-playwright-histoire:
@@ -748,29 +748,29 @@ importers:
         specifier: ^6.6.0
         version: 6.6.0
       svelte-fa:
-        specifier: ^4.0.2
+        specifier: ^4.0.3
         version: 4.0.3(svelte@4.2.19)
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@histoire/plugin-svelte':
         specifier: ^0.17.17
         version: 0.17.17(histoire@0.17.17(@types/node@22.7.4)(terser@5.34.1)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1)))(svelte@4.2.19)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       '@playwright/experimental-ct-svelte':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2(@types/node@22.7.4)(svelte@4.2.19)(terser@5.34.1)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       '@playwright/test':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2
       '@sveltejs/vite-plugin-svelte':
-        specifier: ^3.1.1
+        specifier: ^3.1.2
         version: 3.1.2(svelte@4.2.19)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       '@tsconfig/svelte':
         specifier: ^5.0.4
         version: 5.0.4
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -779,10 +779,10 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-svelte:
-        specifier: ^2.43.0
+        specifier: ^2.44.1
         version: 2.44.1(eslint@9.11.1(jiti@1.21.6))(svelte@4.2.19)
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       histoire:
         specifier: ^0.17.17
@@ -791,31 +791,31 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-svelte:
-        specifier: ^3.2.6
+        specifier: ^3.2.7
         version: 3.2.7(prettier@3.3.3)(svelte@4.2.19)
       svelte:
-        specifier: ^4.2.18
+        specifier: ^4.2.19
         version: 4.2.19
       svelte-check:
-        specifier: ^3.8.5
+        specifier: ^3.8.6
         version: 3.8.6(@babel/core@7.25.7)(postcss-load-config@4.0.2(postcss@8.4.47))(postcss@8.4.47)(pug@3.0.3)(svelte@4.2.19)
       svelte-eslint-parser:
-        specifier: ^0.41.0
+        specifier: ^0.41.1
         version: 0.41.1(svelte@4.2.19)
       svelte-loader:
         specifier: ^3.2.3
         version: 3.2.3(svelte@4.2.19)
       svelte-preprocess:
-        specifier: ^6.0.2
+        specifier: ^6.0.3
         version: 6.0.3(@babel/core@7.25.7)(postcss-load-config@4.0.2(postcss@8.4.47))(postcss@8.4.47)(pug@3.0.3)(svelte@4.2.19)(typescript@5.6.2)
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
 
   examples/svelte-ts-tailwind-cypress-storybook:
@@ -824,44 +824,44 @@ importers:
         specifier: ^6.6.0
         version: 6.6.0
       svelte-fa:
-        specifier: ^4.0.2
+        specifier: ^4.0.3
         version: 4.0.3(svelte@4.2.19)
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@storybook/addon-a11y':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/addon-essentials':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(webpack-sources@3.2.3)
       '@storybook/addon-interactions':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/svelte':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(svelte@4.2.19)
       '@storybook/svelte-vite':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(@babel/core@7.25.7)(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1)))(postcss-load-config@4.0.2(postcss@8.4.47))(postcss@8.4.47)(pug@3.0.3)(storybook@8.3.5)(svelte@4.2.19)(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(webpack-sources@3.2.3)
       '@storybook/test':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@sveltejs/vite-plugin-svelte':
-        specifier: ^3.1.1
+        specifier: ^3.1.2
         version: 3.1.2(svelte@4.2.19)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       '@tsconfig/svelte':
         specifier: ^5.0.4
         version: 5.0.4
       autoprefixer:
-        specifier: ^10.4.19
+        specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
       cypress:
-        specifier: ^13.13.2
+        specifier: ^13.15.0
         version: 13.15.0
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -870,55 +870,55 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-svelte:
-        specifier: ^2.43.0
+        specifier: ^2.44.1
         version: 2.44.1(eslint@9.11.1(jiti@1.21.6))(svelte@4.2.19)
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       postcss:
-        specifier: ^8.4.40
+        specifier: ^8.4.47
         version: 8.4.47
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-svelte:
-        specifier: ^3.2.6
+        specifier: ^3.2.7
         version: 3.2.7(prettier@3.3.3)(svelte@4.2.19)
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.5
+        specifier: ^0.6.8
         version: 0.6.8(prettier-plugin-svelte@3.2.7(prettier@3.3.3)(svelte@4.2.19))(prettier@3.3.3)
       start-server-and-test:
-        specifier: ^2.0.5
+        specifier: ^2.0.8
         version: 2.0.8
       storybook:
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5
       svelte:
-        specifier: ^4.2.18
+        specifier: ^4.2.19
         version: 4.2.19
       svelte-check:
-        specifier: ^3.8.5
+        specifier: ^3.8.6
         version: 3.8.6(@babel/core@7.25.7)(postcss-load-config@4.0.2(postcss@8.4.47))(postcss@8.4.47)(pug@3.0.3)(svelte@4.2.19)
       svelte-eslint-parser:
-        specifier: ^0.41.0
+        specifier: ^0.41.1
         version: 0.41.1(svelte@4.2.19)
       svelte-loader:
         specifier: ^3.2.3
         version: 3.2.3(svelte@4.2.19)
       svelte-preprocess:
-        specifier: ^6.0.2
+        specifier: ^6.0.3
         version: 6.0.3(@babel/core@7.25.7)(postcss-load-config@4.0.2(postcss@8.4.47))(postcss@8.4.47)(pug@3.0.3)(svelte@4.2.19)(typescript@5.6.2)
       tailwindcss:
-        specifier: ^3.4.7
+        specifier: ^3.4.13
         version: 3.4.13
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
 
   examples/svelte-ts-tailwind-playwright-histoire:
@@ -927,32 +927,32 @@ importers:
         specifier: ^6.6.0
         version: 6.6.0
       svelte-fa:
-        specifier: ^4.0.2
+        specifier: ^4.0.3
         version: 4.0.3(svelte@4.2.19)
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@histoire/plugin-svelte':
         specifier: ^0.17.17
         version: 0.17.17(histoire@0.17.17(@types/node@22.7.4)(terser@5.34.1)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1)))(svelte@4.2.19)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       '@playwright/experimental-ct-svelte':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2(@types/node@22.7.4)(svelte@4.2.19)(terser@5.34.1)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       '@playwright/test':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2
       '@sveltejs/vite-plugin-svelte':
-        specifier: ^3.1.1
+        specifier: ^3.1.2
         version: 3.1.2(svelte@4.2.19)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       '@tsconfig/svelte':
         specifier: ^5.0.4
         version: 5.0.4
       autoprefixer:
-        specifier: ^10.4.19
+        specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -961,64 +961,64 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-svelte:
-        specifier: ^2.43.0
+        specifier: ^2.44.1
         version: 2.44.1(eslint@9.11.1(jiti@1.21.6))(svelte@4.2.19)
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       histoire:
         specifier: ^0.17.17
         version: 0.17.17(@types/node@22.7.4)(terser@5.34.1)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       postcss:
-        specifier: ^8.4.40
+        specifier: ^8.4.47
         version: 8.4.47
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-svelte:
-        specifier: ^3.2.6
+        specifier: ^3.2.7
         version: 3.2.7(prettier@3.3.3)(svelte@4.2.19)
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.5
+        specifier: ^0.6.8
         version: 0.6.8(prettier-plugin-svelte@3.2.7(prettier@3.3.3)(svelte@4.2.19))(prettier@3.3.3)
       svelte:
-        specifier: ^4.2.18
+        specifier: ^4.2.19
         version: 4.2.19
       svelte-check:
-        specifier: ^3.8.5
+        specifier: ^3.8.6
         version: 3.8.6(@babel/core@7.25.7)(postcss-load-config@4.0.2(postcss@8.4.47))(postcss@8.4.47)(pug@3.0.3)(svelte@4.2.19)
       svelte-eslint-parser:
-        specifier: ^0.41.0
+        specifier: ^0.41.1
         version: 0.41.1(svelte@4.2.19)
       svelte-loader:
         specifier: ^3.2.3
         version: 3.2.3(svelte@4.2.19)
       svelte-preprocess:
-        specifier: ^6.0.2
+        specifier: ^6.0.3
         version: 6.0.3(@babel/core@7.25.7)(postcss-load-config@4.0.2(postcss@8.4.47))(postcss@8.4.47)(pug@3.0.3)(svelte@4.2.19)(typescript@5.6.2)
       tailwindcss:
-        specifier: ^3.4.7
+        specifier: ^3.4.13
         version: 3.4.13
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
 
   examples/vanilla-ts-cypress:
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       cypress:
-        specifier: ^13.13.2
+        specifier: ^13.15.0
         version: 13.15.0
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -1027,34 +1027,34 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       start-server-and-test:
-        specifier: ^2.0.5
+        specifier: ^2.0.8
         version: 2.0.8
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
 
   examples/vanilla-ts-playwright:
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@playwright/test':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -1063,34 +1063,34 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
 
   examples/vanilla-ts-tailwind-cypress:
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       autoprefixer:
-        specifier: ^10.4.19
+        specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
       cypress:
-        specifier: ^13.13.2
+        specifier: ^13.15.0
         version: 13.15.0
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -1099,46 +1099,46 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       postcss:
-        specifier: ^8.4.40
+        specifier: ^8.4.47
         version: 8.4.47
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.5
+        specifier: ^0.6.8
         version: 0.6.8(prettier-plugin-svelte@3.2.7(prettier@3.3.3)(svelte@4.2.19))(prettier@3.3.3)
       start-server-and-test:
-        specifier: ^2.0.5
+        specifier: ^2.0.8
         version: 2.0.8
       tailwindcss:
-        specifier: ^3.4.7
+        specifier: ^3.4.13
         version: 3.4.13
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
 
   examples/vanilla-ts-tailwind-playwright:
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@playwright/test':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2
       autoprefixer:
-        specifier: ^10.4.19
+        specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -1147,28 +1147,28 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       postcss:
-        specifier: ^8.4.40
+        specifier: ^8.4.47
         version: 8.4.47
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.5
+        specifier: ^0.6.8
         version: 0.6.8(prettier-plugin-svelte@3.2.7(prettier@3.3.3)(svelte@4.2.19))(prettier@3.3.3)
       tailwindcss:
-        specifier: ^3.4.7
+        specifier: ^3.4.13
         version: 3.4.13
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
 
   examples/vue-ts-cypress-storybook:
@@ -1183,38 +1183,38 @@ importers:
         specifier: ^3.0.8
         version: 3.0.8(@fortawesome/fontawesome-svg-core@6.6.0)(vue@3.5.11(typescript@5.6.2))
       vue:
-        specifier: ^3.4.35
+        specifier: ^3.5.11
         version: 3.5.11(typescript@5.6.2)
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@storybook/addon-a11y':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/addon-essentials':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(webpack-sources@3.2.3)
       '@storybook/addon-interactions':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/test':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/vue3':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(vue@3.5.11(typescript@5.6.2))
       '@storybook/vue3-vite':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(vue@3.5.11(typescript@5.6.2))(webpack-sources@3.2.3)
       '@vitejs/plugin-vue':
-        specifier: ^5.1.2
+        specifier: ^5.1.4
         version: 5.1.4(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(vue@3.5.11(typescript@5.6.2))
       cypress:
-        specifier: ^13.13.2
+        specifier: ^13.15.0
         version: 13.15.0
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -1223,28 +1223,28 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-vue:
-        specifier: ^9.27.0
+        specifier: ^9.28.0
         version: 9.28.0(eslint@9.11.1(jiti@1.21.6))
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       start-server-and-test:
-        specifier: ^2.0.5
+        specifier: ^2.0.8
         version: 2.0.8
       storybook:
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
       vue-eslint-parser:
         specifier: ^9.4.3
@@ -1253,7 +1253,7 @@ importers:
         specifier: ^17.4.2
         version: 17.4.2(vue@3.5.11(typescript@5.6.2))(webpack@5.95.0(@swc/core@1.7.26)(esbuild@0.24.0))
       vue-tsc:
-        specifier: ^2.0.29
+        specifier: ^2.1.6
         version: 2.1.6(typescript@5.6.2)
 
   examples/vue-ts-playwright-histoire:
@@ -1268,26 +1268,26 @@ importers:
         specifier: ^3.0.8
         version: 3.0.8(@fortawesome/fontawesome-svg-core@6.6.0)(vue@3.5.11(typescript@5.6.2))
       vue:
-        specifier: ^3.4.35
+        specifier: ^3.5.11
         version: 3.5.11(typescript@5.6.2)
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@histoire/plugin-vue':
         specifier: ^0.17.17
         version: 0.17.17(histoire@0.17.17(@types/node@22.7.4)(terser@5.34.1)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1)))(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(vue@3.5.11(typescript@5.6.2))
       '@playwright/experimental-ct-vue':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2(@types/node@22.7.4)(terser@5.34.1)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(vue@3.5.11(typescript@5.6.2))
       '@playwright/test':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2
       '@vitejs/plugin-vue':
-        specifier: ^5.1.2
+        specifier: ^5.1.4
         version: 5.1.4(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(vue@3.5.11(typescript@5.6.2))
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -1296,10 +1296,10 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-vue:
-        specifier: ^9.27.0
+        specifier: ^9.28.0
         version: 9.28.0(eslint@9.11.1(jiti@1.21.6))
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       histoire:
         specifier: ^0.17.17
@@ -1308,13 +1308,13 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
       vue-eslint-parser:
         specifier: ^9.4.3
@@ -1323,7 +1323,7 @@ importers:
         specifier: ^17.4.2
         version: 17.4.2(vue@3.5.11(typescript@5.6.2))(webpack@5.95.0(@swc/core@1.7.26)(esbuild@0.24.0))
       vue-tsc:
-        specifier: ^2.0.29
+        specifier: ^2.1.6
         version: 2.1.6(typescript@5.6.2)
 
   examples/vue-ts-tailwind-cypress-storybook:
@@ -1338,41 +1338,41 @@ importers:
         specifier: ^3.0.8
         version: 3.0.8(@fortawesome/fontawesome-svg-core@6.6.0)(vue@3.5.11(typescript@5.6.2))
       vue:
-        specifier: ^3.4.35
+        specifier: ^3.5.11
         version: 3.5.11(typescript@5.6.2)
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@storybook/addon-a11y':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/addon-essentials':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(webpack-sources@3.2.3)
       '@storybook/addon-interactions':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/test':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
       '@storybook/vue3':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(vue@3.5.11(typescript@5.6.2))
       '@storybook/vue3-vite':
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(vue@3.5.11(typescript@5.6.2))(webpack-sources@3.2.3)
       '@vitejs/plugin-vue':
-        specifier: ^5.1.2
+        specifier: ^5.1.4
         version: 5.1.4(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(vue@3.5.11(typescript@5.6.2))
       autoprefixer:
-        specifier: ^10.4.19
+        specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
       cypress:
-        specifier: ^13.13.2
+        specifier: ^13.15.0
         version: 13.15.0
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -1381,37 +1381,37 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-vue:
-        specifier: ^9.27.0
+        specifier: ^9.28.0
         version: 9.28.0(eslint@9.11.1(jiti@1.21.6))
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       postcss:
-        specifier: ^8.4.40
+        specifier: ^8.4.47
         version: 8.4.47
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.5
+        specifier: ^0.6.8
         version: 0.6.8(prettier-plugin-svelte@3.2.7(prettier@3.3.3)(svelte@4.2.19))(prettier@3.3.3)
       start-server-and-test:
-        specifier: ^2.0.5
+        specifier: ^2.0.8
         version: 2.0.8
       storybook:
-        specifier: ^8.2.7
+        specifier: ^8.3.5
         version: 8.3.5
       tailwindcss:
-        specifier: ^3.4.7
+        specifier: ^3.4.13
         version: 3.4.13
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
       vue-eslint-parser:
         specifier: ^9.4.3
@@ -1420,7 +1420,7 @@ importers:
         specifier: ^17.4.2
         version: 17.4.2(vue@3.5.11(typescript@5.6.2))(webpack@5.95.0(@swc/core@1.7.26)(esbuild@0.24.0))
       vue-tsc:
-        specifier: ^2.0.29
+        specifier: ^2.1.6
         version: 2.1.6(typescript@5.6.2)
 
   examples/vue-ts-tailwind-playwright-histoire:
@@ -1435,29 +1435,29 @@ importers:
         specifier: ^3.0.8
         version: 3.0.8(@fortawesome/fontawesome-svg-core@6.6.0)(vue@3.5.11(typescript@5.6.2))
       vue:
-        specifier: ^3.4.35
+        specifier: ^3.5.11
         version: 3.5.11(typescript@5.6.2)
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@histoire/plugin-vue':
         specifier: ^0.17.17
         version: 0.17.17(histoire@0.17.17(@types/node@22.7.4)(terser@5.34.1)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1)))(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(vue@3.5.11(typescript@5.6.2))
       '@playwright/experimental-ct-vue':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2(@types/node@22.7.4)(terser@5.34.1)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(vue@3.5.11(typescript@5.6.2))
       '@playwright/test':
-        specifier: ^1.45.3
+        specifier: ^1.47.2
         version: 1.47.2
       '@vitejs/plugin-vue':
-        specifier: ^5.1.2
+        specifier: ^5.1.4
         version: 5.1.4(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(vue@3.5.11(typescript@5.6.2))
       autoprefixer:
-        specifier: ^10.4.19
+        specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -1466,34 +1466,34 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@1.21.6))
       eslint-plugin-vue:
-        specifier: ^9.27.0
+        specifier: ^9.28.0
         version: 9.28.0(eslint@9.11.1(jiti@1.21.6))
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       histoire:
         specifier: ^0.17.17
         version: 0.17.17(@types/node@22.7.4)(terser@5.34.1)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))
       postcss:
-        specifier: ^8.4.40
+        specifier: ^8.4.47
         version: 8.4.47
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.5
+        specifier: ^0.6.8
         version: 0.6.8(prettier-plugin-svelte@3.2.7(prettier@3.3.3)(svelte@4.2.19))(prettier@3.3.3)
       tailwindcss:
-        specifier: ^3.4.7
+        specifier: ^3.4.13
         version: 3.4.13
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
       vite:
-        specifier: ^5.3.5
+        specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)(terser@5.34.1)
       vue-eslint-parser:
         specifier: ^9.4.3
@@ -1502,7 +1502,7 @@ importers:
         specifier: ^17.4.2
         version: 17.4.2(vue@3.5.11(typescript@5.6.2))(webpack@5.95.0(@swc/core@1.7.26)(esbuild@0.24.0))
       vue-tsc:
-        specifier: ^2.0.29
+        specifier: ^2.1.6
         version: 2.1.6(typescript@5.6.2)
 
 packages:
