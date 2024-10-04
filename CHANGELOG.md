@@ -1,5 +1,21 @@
 # Semantic Release Changelog
 
+# [8.1.0](https://github.com/froko/create-vite-ts/compare/v8.0.0...v8.1.0) (2024-10-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency inquirer to v10.1.7 ([#35](https://github.com/froko/create-vite-ts/issues/35)) ([d82e822](https://github.com/froko/create-vite-ts/commit/d82e822c86db4bc0b4ecce9d27304b1f62001109))
+* **deps:** update dependency inquirer to v10.1.8 ([#43](https://github.com/froko/create-vite-ts/issues/43)) ([6a5871d](https://github.com/froko/create-vite-ts/commit/6a5871dbce0c843feb54d7403273caa13a96a762))
+
+
+### Features
+
+* add eslint v9 for react ([#68](https://github.com/froko/create-vite-ts/issues/68)) ([1b1e2e3](https://github.com/froko/create-vite-ts/commit/1b1e2e34f4f60511c7cb03e87341d29bc55f94e9))
+* add typescript support for storybook ([#69](https://github.com/froko/create-vite-ts/issues/69)) ([6247e1f](https://github.com/froko/create-vite-ts/commit/6247e1f0f4beaa8aaf62ecd7c31c892280ec9c13))
+* **nx-cloud:** setup nx workspace ([#61](https://github.com/froko/create-vite-ts/issues/61)) ([b7b84dc](https://github.com/froko/create-vite-ts/commit/b7b84dca801366179874ef0814c16d097be9b6a4))
+* update dependencies ([#70](https://github.com/froko/create-vite-ts/issues/70)) ([ccb35c9](https://github.com/froko/create-vite-ts/commit/ccb35c931cecee2fb076db4bf8ee2bb44751de1e))
+
 # [8.0.0](https://github.com/froko/create-vite-ts/compare/v7.2.0...v8.0.0) (2024-08-02)
 
 
