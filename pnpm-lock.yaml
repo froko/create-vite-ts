@@ -18,10 +18,10 @@ importers:
         specifier: ^3.1.10
         version: 3.1.10
       execa:
-        specifier: ^9.3.0
+        specifier: ^9.4.0
         version: 9.4.0
       inquirer:
-        specifier: ^10.1.6
+        specifier: ^10.2.2
         version: 10.2.2
       listr:
         specifier: ^0.14.3
@@ -37,7 +37,7 @@ importers:
         version: 2.5.1
     devDependencies:
       '@eslint/js':
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1
       '@semantic-release/changelog':
         specifier: ^6.0.3
@@ -61,16 +61,16 @@ importers:
         specifier: ^0.24.0
         version: 0.24.0
       eslint:
-        specifier: ^9.8.0
+        specifier: ^9.11.1
         version: 9.11.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.11.1(jiti@1.21.6))
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.10.0
         version: 15.10.0
       nx:
-        specifier: ^19.5.6
+        specifier: ^19.8.3
         version: 19.8.3(@swc/core@1.7.26)
       nx-cloud:
         specifier: latest
@@ -82,13 +82,13 @@ importers:
         specifier: ^6.0.1
         version: 6.0.1
       semantic-release:
-        specifier: ^24.0.0
+        specifier: ^24.1.2
         version: 24.1.2(typescript@5.6.2)
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.2
         version: 5.6.2
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.8.0
         version: 8.8.0(eslint@9.11.1(jiti@1.21.6))(typescript@5.6.2)
 
   examples/lit-ts-cypress-storybook:
