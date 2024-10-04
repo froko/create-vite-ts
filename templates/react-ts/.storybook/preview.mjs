@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 import * as jest from 'jest-mock';
 window.jest = jest;
 

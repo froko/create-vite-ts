@@ -1,33 +1,31 @@
 import js from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import pkg from 'eslint-plugin-react';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
-import eslintPluginSvelte from 'eslint-plugin-svelte';
 import globals from 'globals';
-import svelteEslintParser from 'svelte-eslint-parser';
 import tseslint from 'typescript-eslint';
+
+const { react, hooks } = pkg;
 
 export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
-  ...eslintPluginSvelte.configs['flat/recommended'],
-  ...eslintPluginSvelte.configs['flat/prettier'],
   eslintConfigPrettier,
   {
-    files: ['**/*.svelte'],
+    files: ['**/*..js,jsx,mjs,cjs,ts,tsx'],
+    plugins: { react, hooks },
     languageOptions: {
-      parser: svelteEslintParser,
       parserOptions: {
-        parser: tseslint.parser
+        ecmaFeatures: {
+          jsx: true
+        }
       }
-    }
-  },
-  {
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node
-      }
+    },
+    globals: {
+      ...globals.browser,
+      ...globals.node,
+      ...globals.react
     }
   },
   {
