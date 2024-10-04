@@ -26,18 +26,8 @@ jobs:
           version: 9
           run_install: false
 
-      - name: Cache node_modules and Cypress
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.cache/Cypress
-            node_modules
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
-
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: Install Playwright Browsers
         run: pnpx playwright install --with-deps
@@ -45,18 +35,11 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Derive appropriate SHAs
-        uses: nrwl/nx-set-shas@v4
+      - name: Lint & Build examples
+        run: pnpm nx run-many -t lint build
 
-      - name: Track main branch
-        run: git branch --track main origin/main
-        if: github.ref != 'refs/heads/main'
+      - name: Run Cypress tests for examples
+        run: pnpm nx run-many -t cypress:ci --parallel 1
 
-      - name: Lint & Build affected examples
-        run: pnpm nx affected -t lint build
-
-      - name: Run Cypress tests for affected examples
-        run: pnpm nx affected -t cypress:ci --parallel 1
-
-      - name: Run Playwright tests for affected examples
-        run: pnpm nx affected -t playwright --parallel 1
+      - name: Run Playwright tests for examples
+        run: pnpm nx run-many -t playwright --parallel 1
