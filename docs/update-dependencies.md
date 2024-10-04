@@ -23,9 +23,7 @@
 ## Rebuild examples using the playground script
 
 - `pnpm playground`
-- `cd plaground`
-- `find . | grep -Ei '.gitignore|.gitattributes' | xargs rm -fR`
-- `cd ..`
+- `find playground/ | grep -Ei '.gitignore|.gitattributes' | xargs rm -fR`
 - `rm -rf examples && mv playground examples`
 - `pnpm i`
 - `nx run-many -t format`
