@@ -392,6 +392,9 @@ importers:
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@2.1.2))
+      globals:
+        specifier: ^15.10.0
+        version: 15.10.0
       jest-mock:
         specifier: ^29.7.0
         version: 29.7.0
@@ -465,6 +468,9 @@ importers:
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@2.1.2))
+      globals:
+        specifier: ^15.10.0
+        version: 15.10.0
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -544,6 +550,9 @@ importers:
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@2.1.2))
+      globals:
+        specifier: ^15.10.0
+        version: 15.10.0
       jest-mock:
         specifier: ^29.7.0
         version: 29.7.0
@@ -629,6 +638,9 @@ importers:
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.11.1(jiti@2.1.2))
+      globals:
+        specifier: ^15.10.0
+        version: 15.10.0
       postcss:
         specifier: ^8.4.47
         version: 8.4.47
