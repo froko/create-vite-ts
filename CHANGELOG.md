@@ -1,5 +1,12 @@
 # Semantic Release Changelog
 
+## [8.1.1](https://github.com/froko/create-vite-ts/compare/v8.1.0...v8.1.1) (2024-10-04)
+
+
+### Bug Fixes
+
+* **react:** add missing globals package ([#72](https://github.com/froko/create-vite-ts/issues/72)) ([ee43665](https://github.com/froko/create-vite-ts/commit/ee436658bce391eab8da6ececd5671ddf78cbdc3))
+
 # [8.1.0](https://github.com/froko/create-vite-ts/compare/v8.0.0...v8.1.0) (2024-10-04)
 
 
