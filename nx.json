@@ -1,13 +1,5 @@
 {
-  "nxCloudUrl": "https://cloud.nx.app",
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "nx-cloud",
-      "options": {
-        "nxCloudId": "66ef180a9fa371a926807bb7"
-      }
-    }
-  },
+  "nxCloudId": "66ef180a9fa371a926807bb7",
   "targetDefaults": {
     "lint": {
       "cache": true
