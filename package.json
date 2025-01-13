@@ -90,7 +90,7 @@
     "@types/listr": "^0.14.9",
     "esbuild": "^0.24.0",
     "eslint": "^9.11.1",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier": "^10.0.0",
     "globals": "^15.10.0",
     "nx": "^19.8.3",
     "nx-cloud": "^19.1.0",
